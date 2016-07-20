@@ -1,0 +1,10 @@
+com/quadkey/Longitude.class
+com/quadkey/QuadKey$Quadrant.class
+com/quadkey/QuadKey.class
+com/quadkey/GeoCoordinate2d.class
+com/quadkey/SwigQuadKeyJNI.class
+com/quadkey/SwigQuadKey.class
+com/quadkey/GeoCoordinateBoundingBox2d.class
+com/quadkey/Latitude.class
+com/quadkey/Type.class
+com/quadkey/QuadKeyVector.class

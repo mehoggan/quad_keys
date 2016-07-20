@@ -1,0 +1,11 @@
+UlpQnrSystemTest.class
+LatLongSystemTest.class
+MortonSystemTest.class
+NoneSystemTest.class
+OsGeoSystemTest.class
+SystemTest.class
+MortonSystemTest$Pair.class
+BingSystemTest.class
+GeoCoordinateBoundingBox2dTest.class
+GeoCoordinate2dTest.class
+QuadKeyTest.class
