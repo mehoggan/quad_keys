@@ -14,9 +14,6 @@
 
 namespace QuadKeys
 {
-    // Consult,
-    // https://confluence.in.here.com/display/PDOD/Quadtrees,+Quadkeys,+and+Morton+Codes
-    // for more information.
     class MortonSystem : public System
     {
     private:
