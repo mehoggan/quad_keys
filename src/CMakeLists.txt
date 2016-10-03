@@ -40,12 +40,6 @@ if(QUADKEY_SWIG_LANGUAGE)
         message("-- Could not find installed version")
         message(FATAL_ERROR "--    ${QUADKEY_SWIG_VERSION} of swig")
     endif()
-    generate_swig_stubs(
-        CPP_SRC SRC
-        SWIG_LANGUAGE ${QUADKEY_SWIG_LANGUAGE}
-        SWIG_SOURCE_DIR ${CMAKE_SOURCE_DIR}/Swig
-        SWIG_OUTPUT_DIR ${CMAKE_SOURCE_DIR}/Swig)
-    set(SRC "${src}") # src is set in generate_swig
 endif()
 
 if(BUILD_SHARED_LIBS)
@@ -56,27 +50,11 @@ else()
     add_definitions(-DQUADKEY_STATIC)
 endif()
 
-if(QUADKEY_SWIG_LANGUAGE)
-    add_swig_includes(
-        TARGET QuadKey
-        SWIG_LANGUAGE ${QUADKEY_SWIG_LANGUAGE})
-    add_swig_dependency_checking(
-        TARGET QuadKey
-        SWIG_SOURCE_DIR ${CMAKE_SOURCE_DIR}/Swig
-        SWIG_OUTPUT_DIR ${CMAKE_SOURCE_DIR}/Swig
-        SWIG_LANGUAGE ${QUADKEY_SWIG_LANGUAGE}
-        INCLUDE_PATHS ${CMAKE_SOURCE_DIR}
-        ADDITIONAL_SRC ${SRC})
-    if("${QUADKEY_SWIG_LANGUAGE}" STREQUAL "csharp" AND
-        ${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-        include_external_msproject(QuadKeyCSharp
-            "${CMAKE_SOURCE_DIR}/Swig/QuadKeyCSharp.csproj")
-        include_external_msproject(UnitTestCSharp
-            "${CMAKE_SOURCE_DIR}/UnitTestCSharp/UnitTestCSharp.csproj")
-        add_dependencies(QuadKeyCSharp QuadKey)
-        add_dependencies(UnitTestCSharp QuadKeyCSharp)
-    endif()
-endif()
+#if(QUADKEY_SWIG_LANGUAGE)
+#    add_swig_includes(
+#       TARGET QuadKey
+#       SWIG_LANGUAGE ${QUADKEY_SWIG_LANGUAGE})
+#endif()
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
     include(${CMAKE_SOURCE_DIR}/CMake/win32.cmake)
