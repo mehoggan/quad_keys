@@ -86,46 +86,46 @@ namespace quad_keys
     { // Depth 1
       key = quad_key(type::lat_long, 0, 0, 1);
       key.get_geo_coordinate_bounds2d(bbox);
-      EXPECT_TRUE(bbox.lower_left().longitude().near(
+      EXPECT_TRUE(bbox.lower_left().get_longitude().near(
         longitude(-180.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.lower_left().latitude().near(
+      EXPECT_TRUE(bbox.lower_left().get_latitude().near(
         latitude(-90.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.upper_right().longitude().near(
+      EXPECT_TRUE(bbox.upper_right().get_longitude().near(
         longitude(+0.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.upper_right().latitude().near(
+      EXPECT_TRUE(bbox.upper_right().get_latitude().near(
         latitude(+0.0), std::numeric_limits<float>::epsilon()));
 
       key = quad_key(type::lat_long, 0, 1, 1);
       key.get_geo_coordinate_bounds2d(bbox);
-      EXPECT_TRUE(bbox.lower_left().longitude().near(
+      EXPECT_TRUE(bbox.lower_left().get_longitude().near(
         longitude(+0.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.lower_left().latitude().near(
+      EXPECT_TRUE(bbox.lower_left().get_latitude().near(
         latitude(-90.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.upper_right().longitude().near(
+      EXPECT_TRUE(bbox.upper_right().get_longitude().near(
         longitude(+180.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.upper_right().latitude().near(
+      EXPECT_TRUE(bbox.upper_right().get_latitude().near(
         latitude(+0.0), std::numeric_limits<float>::epsilon()));
 
       key = quad_key(type::lat_long, 1, 0, 1);
       key.get_geo_coordinate_bounds2d(bbox);
-      EXPECT_TRUE(bbox.lower_left().longitude().near(
+      EXPECT_TRUE(bbox.lower_left().get_longitude().near(
         longitude(-180.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.lower_left().latitude().near(
+      EXPECT_TRUE(bbox.lower_left().get_latitude().near(
         latitude(+0.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.upper_right().longitude().near(
+      EXPECT_TRUE(bbox.upper_right().get_longitude().near(
         longitude(+0.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.upper_right().latitude().near(
+      EXPECT_TRUE(bbox.upper_right().get_latitude().near(
         latitude(+90.0), std::numeric_limits<float>::epsilon()));
 
       key = quad_key(type::lat_long, 1, 1, 1);
       key.get_geo_coordinate_bounds2d(bbox);
-      EXPECT_TRUE(bbox.lower_left().longitude().near(
+      EXPECT_TRUE(bbox.lower_left().get_longitude().near(
         longitude(+0.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.lower_left().latitude().near(
+      EXPECT_TRUE(bbox.lower_left().get_latitude().near(
         latitude(+0.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.upper_right().longitude().near(
+      EXPECT_TRUE(bbox.upper_right().get_longitude().near(
         longitude(+180.0), std::numeric_limits<float>::epsilon()));
-      EXPECT_TRUE(bbox.upper_right().latitude().near(
+      EXPECT_TRUE(bbox.upper_right().get_latitude().near(
         latitude(+90.0), std::numeric_limits<float>::epsilon()));
     }
   }

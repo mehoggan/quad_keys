@@ -757,13 +757,13 @@ namespace quad_keys
       key = quad_key::from_internal_string(type::bing, "");
       key.get_geo_coordinate_bounds2d(bbox);
       EXPECT_FLOAT_EQ(-180.0f,
-        static_cast<float>(bbox.lower_left().longitude().val()));
+        static_cast<float>(bbox.lower_left().get_longitude().val()));
       EXPECT_FLOAT_EQ(-84.928322f,
-        static_cast<float>(bbox.lower_left().latitude().val()));
+        static_cast<float>(bbox.lower_left().get_latitude().val()));
       EXPECT_FLOAT_EQ(178.593750f,
-        static_cast<float>(bbox.upper_right().longitude().val()));
+        static_cast<float>(bbox.upper_right().get_longitude().val()));
       EXPECT_FLOAT_EQ(85.051132f,
-        static_cast<float>(bbox.upper_right().latitude().val()));
+        static_cast<float>(bbox.upper_right().get_latitude().val()));
     }
   }
 
@@ -779,13 +779,13 @@ namespace quad_keys
         latitude(-84.0)), 0u);
       EXPECT_EQ(quad_key(type::bing, 0, 0, 0), key);
       key.get_geo_coordinate_bounds2d(bbox);
-      diff = std::fabs(bbox.lower_left().longitude() - longitude(-180.0));
+      diff = std::fabs(bbox.lower_left().get_longitude() - longitude(-180.0));
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.lower_left().latitude() - latitude(-85.0));
+      diff = std::fabs(bbox.lower_left().get_latitude() - latitude(-85.0));
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().longitude() - longitude(+180.0));
+      diff = std::fabs(bbox.upper_right().get_longitude() - longitude(+180.0));
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().latitude() - latitude(+85.0));
+      diff = std::fabs(bbox.upper_right().get_latitude() - latitude(+85.0));
       EXPECT_GT(2.0, diff);
     }
 
@@ -820,13 +820,13 @@ namespace quad_keys
         type::bing, geo_coordinate2d(midLeft, top), 1u);
       EXPECT_EQ(quad_key(type::bing, 1, 0, 1), key);
       key.get_geo_coordinate_bounds2d(bbox);
-      diff = std::fabs(bbox.lower_left().longitude() - left);
+      diff = std::fabs(bbox.lower_left().get_longitude() - left);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.lower_left().latitude() - midTop);
+      diff = std::fabs(bbox.lower_left().get_latitude() - midTop);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().longitude() - midLeft);
+      diff = std::fabs(bbox.upper_right().get_longitude() - midLeft);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().latitude() - latitude(+85.0));
+      diff = std::fabs(bbox.upper_right().get_latitude() - latitude(+85.0));
       EXPECT_GT(2.0, diff);
 
       key = quad_key::get_key_from_longitude_latitude_at_depth( // Q1 ul
@@ -842,13 +842,13 @@ namespace quad_keys
         type::bing, geo_coordinate2d(right, top), 1u);
       EXPECT_EQ(quad_key(type::bing, 1, 1, 1), key);
       key.get_geo_coordinate_bounds2d(bbox);
-      diff = std::fabs(bbox.lower_left().longitude() - midRight);
+      diff = std::fabs(bbox.lower_left().get_longitude() - midRight);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.lower_left().latitude() - midTop);
+      diff = std::fabs(bbox.lower_left().get_latitude() - midTop);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().longitude() - right);
+      diff = std::fabs(bbox.upper_right().get_longitude() - right);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().latitude() - latitude(+85.0));
+      diff = std::fabs(bbox.upper_right().get_latitude() - latitude(+85.0));
       EXPECT_GT(2.0, diff);
 
       key = quad_key::get_key_from_longitude_latitude_at_depth( // Q2 ul
@@ -864,13 +864,13 @@ namespace quad_keys
         type::bing, geo_coordinate2d(midLeft, midBottom), 1u);
       EXPECT_EQ(quad_key(type::bing, 0, 0, 1), key);
       key.get_geo_coordinate_bounds2d(bbox);
-      diff = std::fabs(bbox.lower_left().longitude() - left);
+      diff = std::fabs(bbox.lower_left().get_longitude() - left);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.lower_left().latitude() - latitude(-85.0));
+      diff = std::fabs(bbox.lower_left().get_latitude() - latitude(-85.0));
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().longitude() - midLeft);
+      diff = std::fabs(bbox.upper_right().get_longitude() - midLeft);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().latitude() - midBottom);
+      diff = std::fabs(bbox.upper_right().get_latitude() - midBottom);
       EXPECT_GT(2.0, diff);
 
       key = quad_key::get_key_from_longitude_latitude_at_depth( // Q3 ul
@@ -886,13 +886,13 @@ namespace quad_keys
         type::bing, geo_coordinate2d(right, midBottom), 1u);
       EXPECT_EQ(quad_key(type::bing, 0, 1, 1), key);
       key.get_geo_coordinate_bounds2d(bbox);
-      diff = std::fabs(bbox.lower_left().longitude() - midRight);
+      diff = std::fabs(bbox.lower_left().get_longitude() - midRight);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.lower_left().latitude() - latitude(-85.0));
+      diff = std::fabs(bbox.lower_left().get_latitude() - latitude(-85.0));
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().longitude() - right);
+      diff = std::fabs(bbox.upper_right().get_longitude() - right);
       EXPECT_GT(2.0, diff);
-      diff = std::fabs(bbox.upper_right().latitude() - midBottom);
+      diff = std::fabs(bbox.upper_right().get_latitude() - midBottom);
       EXPECT_GT(2.0, diff);
     }
   }
@@ -979,13 +979,13 @@ namespace quad_keys
   TEST(BINGSYSTEM, SelectedCities)
   {
     quad_key key;
-    const type type = type::bing;
+    const type t = type::bing;
 
     { // Chicago 41.822, -87.635
       const std::uint8_t depth = 16;
       geo_coordinate2d coords(longitude(-87.635), latitude(41.822));
 
-      key = quad_key::get_key_from_longitude_latitude_at_depth(type,
+      key = quad_key::get_key_from_longitude_latitude_at_depth(t,
         coords, depth);
       std::string key_str = key.to_internal_string();
       EXPECT_EQ("0302222310321132", key_str);
@@ -995,7 +995,7 @@ namespace quad_keys
 
       // Note that Bing will return a bounding box of all sides inclusive
       std::vector<quad_key> keys;
-      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(type,
+      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(t,
         bbox, depth);
       EXPECT_EQ(4u, keys.size());
       EXPECT_NE(keys.end(), std::find(keys.begin(), keys.end(), key));
@@ -1005,7 +1005,7 @@ namespace quad_keys
       const std::uint8_t depth = 17;
       geo_coordinate2d coords(longitude(-43.1964), latitude(-22.9083));
 
-      key = quad_key::get_key_from_longitude_latitude_at_depth(type,
+      key = quad_key::get_key_from_longitude_latitude_at_depth(t,
         coords, depth);
       std::string key_str = key.to_internal_string();
       EXPECT_EQ("21120001212232200", key_str);
@@ -1015,7 +1015,7 @@ namespace quad_keys
 
       // Note that Bing will return a bounding box of all sides inclusive
       std::vector<quad_key> keys;
-      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(type,
+      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(t,
         bbox, depth);
       EXPECT_EQ(4u, keys.size());
       EXPECT_NE(keys.end(), std::find(keys.begin(), keys.end(), key));
@@ -1025,7 +1025,7 @@ namespace quad_keys
       const std::uint8_t depth = 17;
       geo_coordinate2d coords(longitude(24.9375), latitude(60.1708));
 
-      key = quad_key::get_key_from_longitude_latitude_at_depth(type, coords,
+      key = quad_key::get_key_from_longitude_latitude_at_depth(t, coords,
         depth);
       std::string key_str = key.to_internal_string();
       EXPECT_EQ("12012021101330131", key_str);
@@ -1035,7 +1035,7 @@ namespace quad_keys
 
       // Note that Bing will return a bounding box of all sides inclusive
       std::vector<quad_key> keys;
-      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(type,
+      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(t,
         bbox, depth);
       EXPECT_EQ(4u, keys.size());
       EXPECT_NE(keys.end(), std::find(keys.begin(), keys.end(), key));
@@ -1045,7 +1045,7 @@ namespace quad_keys
       const std::uint8_t depth = 17;
       geo_coordinate2d coords(longitude(18.4239), latitude(-33.9253));
 
-      key = quad_key::get_key_from_longitude_latitude_at_depth(type, coords,
+      key = quad_key::get_key_from_longitude_latitude_at_depth(t, coords,
         depth);
       std::string key_str = key.to_internal_string();
       EXPECT_EQ("30023103202132011", key_str);
@@ -1055,7 +1055,7 @@ namespace quad_keys
 
       // Note that Bing will return a bounding box of all sides inclusive
       std::vector<quad_key> keys;
-      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(type,
+      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(t,
         bbox, depth);
       EXPECT_EQ(4u, keys.size());
       EXPECT_NE(keys.end(), std::find(keys.begin(), keys.end(), key));
@@ -1065,7 +1065,7 @@ namespace quad_keys
       const std::uint8_t depth = 17;
       geo_coordinate2d coords(longitude(-78.5836), latitude(-0.25));
 
-      key = quad_key::get_key_from_longitude_latitude_at_depth(type, coords,
+      key = quad_key::get_key_from_longitude_latitude_at_depth(t, coords,
         depth);
       std::string key_str = key.to_internal_string();
       EXPECT_EQ("21001000002133122", key_str);
@@ -1075,7 +1075,7 @@ namespace quad_keys
 
       // Note that Bing will return a bounding box of all sides inclusive
       std::vector<quad_key> keys;
-      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(type,
+      keys = quad_key::get_keys_from_longitude_latitude_bounding_box(t,
         bbox, depth);
       EXPECT_EQ(4u, keys.size());
       EXPECT_NE(keys.end(), std::find(keys.begin(), keys.end(), key));

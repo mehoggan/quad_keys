@@ -228,7 +228,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(-180.0), latitude(-90.0)),
         geo_coordinate2d(longitude(180.0), latitude(90.0))), 0);
     qk = quad_key::from_internal_string(type::ulp_qnr, "1");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -239,7 +239,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(-0.1), latitude(-0.1)),
         geo_coordinate2d(longitude(0.1), latitude(0.1))), 0);
     qk = quad_key::from_internal_string(type::ulp_qnr, "1");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -250,7 +250,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(-180.0), latitude(-90.0)),
         geo_coordinate2d(longitude(0.0), latitude(90.0))), 1);
     qk = quad_key::from_internal_string(type::ulp_qnr, "4");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -261,7 +261,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(0.1), latitude(-90.0)),
         geo_coordinate2d(longitude(180), latitude(90.0))), 1);
     qk = quad_key::from_internal_string(type::ulp_qnr, "5");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -273,7 +273,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(180), latitude(90.0))), 1);
     quad_key qka = quad_key::from_internal_string(type::ulp_qnr, "4");
     quad_key qkb = quad_key::from_internal_string(type::ulp_qnr, "5");
-    EXPECT_EQ(2, out_keys.size());
+    EXPECT_EQ(2u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qka),
         out_keys.end());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qkb),
@@ -286,7 +286,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(-180.0), latitude(-90.0)),
         geo_coordinate2d(longitude(-90.0), latitude(0.0))), 2);
     qk = quad_key::from_internal_string(type::ulp_qnr, "16");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -297,7 +297,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(-89.9), latitude(-90.0)),
         geo_coordinate2d(longitude(0.0), latitude(0.0))), 2);
     qk = quad_key::from_internal_string(type::ulp_qnr, "17");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -308,7 +308,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(-180.0), latitude(0.1)),
         geo_coordinate2d(longitude(-90.0), latitude(90.0))), 2);
     qk = quad_key::from_internal_string(type::ulp_qnr, "20");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -319,7 +319,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(-89.9), latitude(0.1)),
         geo_coordinate2d(longitude(0.0), latitude(90.0))), 2);
     qk = quad_key::from_internal_string(type::ulp_qnr, "21");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -330,7 +330,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(0.1), latitude(-90.0)),
         geo_coordinate2d(longitude(90.0), latitude(0.0))), 2);
     qk = quad_key::from_internal_string(type::ulp_qnr, "18");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -341,7 +341,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(90.1), latitude(-90.0)),
         geo_coordinate2d(longitude(180.0), latitude(0.0))), 2);
     qk = quad_key::from_internal_string(type::ulp_qnr, "19");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
       out_keys.end());
 
@@ -352,7 +352,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(0.1), latitude(0.1)),
         geo_coordinate2d(longitude(90.0), latitude(90.0))), 2);
     qk = quad_key::from_internal_string(type::ulp_qnr, "22");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
         out_keys.end());
 
@@ -363,7 +363,7 @@ namespace quad_keys
         geo_coordinate2d(longitude(90.1), latitude(0.1)),
         geo_coordinate2d(longitude(180.0), latitude(90.0))), 2);
     qk = quad_key::from_internal_string(type::ulp_qnr, "23");
-    EXPECT_EQ(1, out_keys.size());
+    EXPECT_EQ(1u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk),
         out_keys.end());
 
@@ -381,7 +381,7 @@ namespace quad_keys
     quad_key qk5 = quad_key::from_internal_string(type::ulp_qnr, "21");
     quad_key qk6 = quad_key::from_internal_string(type::ulp_qnr, "22");
     quad_key qk7 = quad_key::from_internal_string(type::ulp_qnr, "23");
-    EXPECT_EQ(8, out_keys.size());
+    EXPECT_EQ(8u, out_keys.size());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk0),
       out_keys.end());
     EXPECT_NE(std::find(out_keys.begin(), out_keys.end(), qk1),

@@ -6,4 +6,7 @@ $ make -j 18
 
 ***TEST***
 # First follow build steps.
-$ ctest -D ExperimentalMemCheck
+$ pushd tests
+$ ctest 'unit_test'
+$ popd
+$ popd

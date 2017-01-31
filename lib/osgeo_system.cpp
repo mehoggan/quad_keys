@@ -17,9 +17,9 @@ namespace quad_keys
       const double r = earth_radius;
 
       geo_coordinate2d loc = coords;
-      loc.latitude(mercator_latitude_clamp(coords.latitude()));
-      double mx = degrees_to_radians(loc.longitude().val()) * r;
-      double my = mercator_tangent_half_angle_formula(loc.latitude()) * r;
+      loc.set_latitude(mercator_latitude_clamp(coords.get_latitude()));
+      double mx = degrees_to_radians(loc.get_longitude().val()) * r;
+      double my = mercator_tangent_half_angle_formula(loc.get_latitude()) * r;
       return meters_xy(mx, my);
     }
 
@@ -175,15 +175,15 @@ namespace quad_keys
   quad_key osgeo_system::get_key_from_longitude_latitude_at_depth(
     const geo_coordinate2d &coords, std::uint8_t depth) const
   {
-    type type = type::osgeo;
+    type t = type::osgeo;
     meters_xy xy = detail::lat_lon_to_meters(coords);
     f_pixel pxy = detail::meters_to_pixels(xy, depth);
     tile txy = detail::pixels_to_tile(pxy);
     std::int32_t max_rows_index = to_int32(
-      quad_key::max_rows(type, depth) - 1);
+      quad_key::max_rows(t, depth) - 1);
     txy.y = std::min(txy.y, max_rows_index);
     std::int32_t max_cols_index =
-      to_int32(quad_key::max_cols(type, depth) - 1);
+      to_int32(quad_key::max_cols(t, depth) - 1);
     txy.x = std::min(txy.x, max_cols_index);
     return quad_key(type::osgeo, to_uint32(txy.y), to_uint32(txy.x), depth);
   }

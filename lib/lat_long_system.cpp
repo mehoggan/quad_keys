@@ -11,10 +11,10 @@ namespace quad_keys
   { 
     u_tile lat_long_to_ulp(const geo_coordinate2d &coords)
     {
-      double longitude = coords.longitude().val();
+      double longitude = coords.get_longitude().val();
       std::uint32_t x = (std::uint32_t)(((longitude + 180.0) / total_lon)
         * ulp_lon);
-      double latitude = coords.latitude().val();
+      double latitude = coords.get_latitude().val();
       std::uint32_t y = (std::uint32_t)(((latitude + 90.0) / total_lat)
         * ulp_lat);
       return u_tile(x, y);

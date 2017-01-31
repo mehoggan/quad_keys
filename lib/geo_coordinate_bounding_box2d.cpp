@@ -23,10 +23,10 @@ namespace quad_keys
     bool is_in = true;
 
     is_in &= is_valid();
-    is_in &= (coordinate.longitude() >= lower_left().longitude());
-    is_in &= (coordinate.latitude() >= lower_left().latitude());
-    is_in &= (coordinate.longitude() <= upper_right().longitude());
-    is_in &= (coordinate.latitude() <= upper_right().latitude());
+    is_in &= (coordinate.get_longitude() >= lower_left().get_longitude());
+    is_in &= (coordinate.get_latitude() >= lower_left().get_latitude());
+    is_in &= (coordinate.get_longitude() <= upper_right().get_longitude());
+    is_in &= (coordinate.get_latitude() <= upper_right().get_latitude());
 
     return is_in;
   }
@@ -35,11 +35,11 @@ namespace quad_keys
     const geo_coordinate2d &coordinate)
   {
     geo_coordinate2d lower_left(
-      std::min(m_lower_left.longitude(), coordinate.longitude()),
-      std::min(m_lower_left.latitude(), coordinate.latitude()));
+      std::min(m_lower_left.get_longitude(), coordinate.get_longitude()),
+      std::min(m_lower_left.get_latitude(), coordinate.get_latitude()));
     geo_coordinate2d upper_right(
-      std::max(m_upper_right.longitude(), coordinate.longitude()),
-      std::max(m_upper_right.latitude(), coordinate.latitude()));
+      std::max(m_upper_right.get_longitude(), coordinate.get_longitude()),
+      std::max(m_upper_right.get_latitude(), coordinate.get_latitude()));
 
     m_lower_left = lower_left;
     m_upper_right = upper_right;
@@ -49,8 +49,8 @@ namespace quad_keys
   {
     bool valid = true;
 
-    valid &= (m_lower_left.longitude() <= m_upper_right.longitude());
-    valid &= (m_lower_left.latitude() <= m_upper_right.latitude());
+    valid &= (m_lower_left.get_longitude() <= m_upper_right.get_longitude());
+    valid &= (m_lower_left.get_latitude() <= m_upper_right.get_latitude());
 
     return valid;
   }

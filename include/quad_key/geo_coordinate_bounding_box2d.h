@@ -27,13 +27,13 @@ namespace quad_keys
     const geo_coordinate2d &upper_right() const {return m_upper_right;}
     const geo_coordinate2d upper_left() const
     {
-      return geo_coordinate2d(m_lower_left.longitude(),
-        m_upper_right.latitude());
+      return geo_coordinate2d(m_lower_left.get_longitude(),
+        m_upper_right.get_latitude());
     }
     const geo_coordinate2d lower_right() const
     {
-      return geo_coordinate2d(m_upper_right.longitude(),
-        m_lower_left.latitude());
+      return geo_coordinate2d(m_upper_right.get_longitude(),
+        m_lower_left.get_latitude());
     }
     bool operator==(const geo_coordinate_bounding_box2d &rhs) const
     {

@@ -25,8 +25,8 @@ namespace quad_keys
     {
       const double map_size = static_cast<double>(pixels_per_tile << depth);
 
-      double longit = coords.longitude().val();
-      double latit = mercator_latitude_clamp(coords.latitude()).val();
+      double longit = coords.get_longitude().val();
+      double latit = mercator_latitude_clamp(coords.get_latitude()).val();
       double x = (longit + 180.0) / 360.0;
       double y = 0.5 - mercator_formula_sinusoidal(latitude(latit));
 
@@ -149,8 +149,8 @@ namespace quad_keys
       bottom_right_pixel, depth);
 
     out_bounds = geo_coordinate_bounding_box2d(
-      geo_coordinate2d(tl_coords.longitude(), br_coords.latitude()),
-      geo_coordinate2d(br_coords.longitude(), tl_coords.latitude()));
+      geo_coordinate2d(tl_coords.get_longitude(), br_coords.get_latitude()),
+      geo_coordinate2d(br_coords.get_longitude(), tl_coords.get_latitude()));
   }
 
   std::string bing_system::to_internal_string(const quad_key &self) const
@@ -249,10 +249,10 @@ namespace quad_keys
   {
     std::vector<quad_key> out_keys;
 
-    geo_coordinate2d top_left(bounds.lower_left().longitude(),
-      bounds.upper_right().latitude());
-    geo_coordinate2d bottom_right(bounds.upper_right().longitude(),
-      bounds.lower_left().latitude());
+    geo_coordinate2d top_left(bounds.lower_left().get_longitude(),
+      bounds.upper_right().get_latitude());
+    geo_coordinate2d bottom_right(bounds.upper_right().get_longitude(),
+      bounds.lower_left().get_latitude());
 
     u_pixel ul_pixel = detail::lat_long_to_pixel(top_left, depth);
     u_tile ul_tile = detail::pixel_to_tile(ul_pixel);

@@ -140,13 +140,15 @@ namespace quad_keys
     geo_coordinate2d(const geo_coordinate2d &other);
     geo_coordinate2d &operator=(const geo_coordinate2d &rhs);
 
-    void longitude(double longit);
-    void latitude(double latit);
-    void longitude(const struct longitude &longit) {m_longitude = longit;}
-    void latitude(const struct latitude &latit) {m_latitude = latit;}
+    void set_longitude(double longit);
+    void set_latitude(double latit);
+    void set_longitude(const struct longitude &longit)
+    {m_longitude = longit;}
+    void set_latitude(const struct latitude &latit)
+    {m_latitude = latit;}
 
-    const struct longitude &longitude() const {return m_longitude;}
-    const struct latitude &latitude() const {return m_latitude;}
+    const struct longitude &get_longitude() const {return m_longitude;}
+    const struct latitude &get_latitude() const {return m_latitude;}
 
     bool near(const geo_coordinate2d &other,
       const double eps = std::numeric_limits<double>::epsilon()) const;

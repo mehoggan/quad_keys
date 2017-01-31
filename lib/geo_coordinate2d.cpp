@@ -71,13 +71,13 @@ namespace quad_keys
     m_latitude(latit)
   {}
 
-  void geo_coordinate2d::longitude(double longit)
+  void geo_coordinate2d::set_longitude(double longit)
   {
     struct longitude l(longit);
     m_longitude = l;
   }
 
-  void geo_coordinate2d::latitude(double latit)
+  void geo_coordinate2d::set_latitude(double latit)
   {
     struct latitude l(latit);
     m_latitude = l;

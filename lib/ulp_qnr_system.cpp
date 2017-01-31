@@ -8,7 +8,7 @@ namespace quad_keys
   {
     u_position geopt32_from_lat_lon(const geo_coordinate2d &coords)
     {
-      double lon = coords.longitude().val();
+      double lon = coords.get_longitude().val();
       lon += 180.0;
       while (lon < 0.0) {
         lon += 360.0;
@@ -18,7 +18,7 @@ namespace quad_keys
       }
       lon /= 360.0;
 
-      double lat = coords.latitude().val();
+      double lat = coords.get_latitude().val();
       lat += 90.0;
       while (lat < 0.0) {
         lat += 360.0;
@@ -172,8 +172,8 @@ namespace quad_keys
     u_position sw = detail::geopt32_from_qnr(qnr);
     geo_coordinate2d sw_coord = detail::lat_lon_from_geopt32(sw);
     geo_coordinate2d ne_coord(
-      longitude(sw_coord.longitude().val() + lon_step),
-      latitude(sw_coord.latitude().val() + lat_step));
+      longitude(sw_coord.get_longitude().val() + lon_step),
+      latitude(sw_coord.get_latitude().val() + lat_step));
 
     ret = geo_coordinate_bounding_box2d(sw_coord, ne_coord);
 

@@ -16,40 +16,40 @@ namespace quad_keys
   TEST(GEOCOORDINATE2D, default_ctor)
   {
     geo_coordinate2d empty;
-    EXPECT_EQ(longitude(0.0), empty.longitude());
-    EXPECT_EQ(latitude(0.0), empty.latitude());
+    EXPECT_EQ(longitude(0.0), empty.get_longitude());
+    EXPECT_EQ(latitude(0.0), empty.get_latitude());
   }
 
   TEST(GEOCOORDINATE2D, ctor)
   {
     {
       geo_coordinate2d coord(longitude(0.0), latitude(0.0));
-      EXPECT_EQ(longitude(0.0), coord.longitude());
-      EXPECT_EQ(latitude(0.0), coord.latitude());
+      EXPECT_EQ(longitude(0.0), coord.get_longitude());
+      EXPECT_EQ(latitude(0.0), coord.get_latitude());
     }
 
     {
       geo_coordinate2d coord(longitude(-180.001), latitude(-95.0));
-      EXPECT_EQ(longitude(-180.0), coord.longitude());
-      EXPECT_EQ(latitude(-90.0), coord.latitude());
+      EXPECT_EQ(longitude(-180.0), coord.get_longitude());
+      EXPECT_EQ(latitude(-90.0), coord.get_latitude());
     }
 
     {
       geo_coordinate2d coord(longitude(-180.001), latitude(95.0));
-      EXPECT_EQ(longitude(-180.0), coord.longitude());
-      EXPECT_EQ(latitude(90.0), coord.latitude());
+      EXPECT_EQ(longitude(-180.0), coord.get_longitude());
+      EXPECT_EQ(latitude(90.0), coord.get_latitude());
     }
 
     {
       geo_coordinate2d coord(longitude(180.001), latitude(95.0));
-      EXPECT_EQ(longitude(180.0), coord.longitude());
-      EXPECT_EQ(latitude(90.0), coord.latitude());
+      EXPECT_EQ(longitude(180.0), coord.get_longitude());
+      EXPECT_EQ(latitude(90.0), coord.get_latitude());
     }
 
     {
       geo_coordinate2d coord(longitude(180.001), latitude(-95.0));
-      EXPECT_EQ(longitude(180.0), coord.longitude());
-      EXPECT_EQ(latitude(-90.0), coord.latitude());
+      EXPECT_EQ(longitude(180.0), coord.get_longitude());
+      EXPECT_EQ(latitude(-90.0), coord.get_latitude());
     }
   }
 
@@ -99,8 +99,8 @@ namespace quad_keys
     geo_coordinate2d sw(longitude(-0.1), latitude(-0.1));
     geo_coordinate2d ne(longitude(+0.1), latitude(+0.1));
 
-    EXPECT_TRUE(sw.longitude() < ne.longitude());
-    EXPECT_TRUE(sw.latitude() < ne.latitude());
+    EXPECT_TRUE(sw.get_longitude() < ne.get_longitude());
+    EXPECT_TRUE(sw.get_latitude() < ne.get_latitude());
   }
 
   TEST(GEOCOORDINATE2D, operator_lteq)
@@ -109,16 +109,16 @@ namespace quad_keys
       geo_coordinate2d sw(longitude(-0.1), latitude(-0.1));
       geo_coordinate2d ne(longitude(+0.1), latitude(+0.1));
 
-      EXPECT_TRUE(sw.longitude() <= ne.longitude());
-      EXPECT_TRUE(sw.latitude() <= ne.latitude());
+      EXPECT_TRUE(sw.get_longitude() <= ne.get_longitude());
+      EXPECT_TRUE(sw.get_latitude() <= ne.get_latitude());
     }
 
     {
       geo_coordinate2d sw(longitude(-0.1), latitude(-0.1));
       geo_coordinate2d ne(longitude(-0.1), latitude(-0.1));
 
-      EXPECT_TRUE(sw.longitude() <= ne.longitude());
-      EXPECT_TRUE(sw.latitude() <= ne.latitude());
+      EXPECT_TRUE(sw.get_longitude() <= ne.get_longitude());
+      EXPECT_TRUE(sw.get_latitude() <= ne.get_latitude());
     }
   }
 
@@ -127,7 +127,7 @@ namespace quad_keys
     geo_coordinate2d sw(longitude(-0.1), latitude(-0.1));
     geo_coordinate2d ne(longitude(-0.1), latitude(-0.1));
 
-    EXPECT_TRUE(sw.longitude() == ne.longitude());
-    EXPECT_TRUE(sw.latitude() == ne.latitude());
+    EXPECT_TRUE(sw.get_longitude() == ne.get_longitude());
+    EXPECT_TRUE(sw.get_latitude() == ne.get_latitude());
   }
 }

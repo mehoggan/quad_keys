@@ -860,11 +860,11 @@ namespace quad_keys
           "262151")}) {
       const auto &bbox = pair.first;
       geo_coordinate2d ll(bbox.lower_left());
-      geo_coordinate2d lr(bbox.upper_right().longitude(),
-        bbox.lower_left().latitude());
+      geo_coordinate2d lr(bbox.upper_right().get_longitude(),
+        bbox.lower_left().get_latitude());
       geo_coordinate2d ur(bbox.upper_right());
-      geo_coordinate2d ul(bbox.lower_left().longitude(),
-        bbox.upper_right().latitude());
+      geo_coordinate2d ul(bbox.lower_left().get_longitude(),
+        bbox.upper_right().get_latitude());
       quad_key morton_key;
       morton_key = quad_key::get_key_from_longitude_latitude_at_depth(
         type::morton, ll, depth);

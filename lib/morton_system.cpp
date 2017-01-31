@@ -62,8 +62,8 @@ namespace quad_keys
       std::int32_t x = 0;
       std::int32_t y = 0;
 
-      double percent_x = coords.longitude().val() / (longitude_range);
-      double percent_y = coords.latitude().val() / (latitude_range);
+      double percent_x = coords.get_longitude().val() / (longitude_range);
+      double percent_y = coords.get_latitude().val() / (latitude_range);
 
       double lon = std::floor(percent_x * (double)x_domain);
       double lat = std::floor(percent_y * (double)y_domain);
