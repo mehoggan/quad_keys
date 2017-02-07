@@ -1,0 +1,35 @@
+cmake_minimum_required(VERSION 3.0.2)
+
+project(swig-download NONE)
+include(ExternalProject)
+
+if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+  message(STATUS "Adding swig for windows.")
+  ExternalProject_Add(swig
+    URL "https://downloads.sourceforge.net/project/swig/swigwin/swigwin-3.0.12/swigwin-3.0.12.zip"
+    SOURCE_DIR "${CMAKE_BINARY_DIR}/swig-src"
+    BINARY_DIR "${CMAKE_BINARY_DIR}/swig-build"
+    CONFIGURE_COMMAND ""
+    BUILD_COMMAND ""
+    INSTALL_COMMAND ""
+    TEST_COMMAND ""
+    LOG_DOWNLOAD 1
+    LOG_CONFIGURE 1
+    LOG_BUILD 1
+    LOG_INSTALL 1)
+else()
+  message(STATUS "Adding swig for mac of linux.")
+  ExternalProject_Add(swig
+    URL "https://downloads.sourceforge.net/project/swig/swig/swig-3.0.12/swig-3.0.12.tar.gz"
+    SOURCE_DIR "${CMAKE_BINARY_DIR}/swig-src"
+    BINARY_DIR "${CMAKE_BINARY_DIR}/swig-build"
+    DOWNLOAD_DIR "${CMAKE_BINARY_DIR}/swig-download"
+    CONFIGURE_COMMAND "${CMAKE_BINARY_DIR}/swig-src/configure"
+    BUILD_COMMAND make
+    INSTALL_COMMAND make install
+    TEST_COMMAND ""
+    LOG_DOWNLOAD 1
+    LOG_CONFIGURE 1
+    LOG_BUILD 1
+    LOG_INSTALL 1)
+endif()

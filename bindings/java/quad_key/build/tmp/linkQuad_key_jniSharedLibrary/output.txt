@@ -1,0 +1,4 @@
+See file:///Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/build/tmp/linkQuad_key_jniSharedLibrary/output.txt for all output for linkQuad_key_jniSharedLibrary.
+linking libquad_key_jni.dylib successful.
+
+Finished linkQuad_key_jniSharedLibrary, see full log file:///Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/build/tmp/linkQuad_key_jniSharedLibrary/output.txt.

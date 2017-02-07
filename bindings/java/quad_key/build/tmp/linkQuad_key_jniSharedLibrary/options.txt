@@ -1,0 +1,9 @@
+-shared
+-Wl,-install_name,libquad_key_jni.dylib
+-o
+/Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/build/libs/quad_key_jni/shared/libquad_key_jni.dylib
+/Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/build/objs/quad_key_jni/shared/quad_key_jniCpp/7ursyjmphvmwyad6aot9t9u3n/java_quad_key.o
+-L
+/Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/../../../build/lib
+-lquad_key
+-m64

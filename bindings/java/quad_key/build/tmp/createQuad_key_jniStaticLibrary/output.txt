@@ -1,0 +1,4 @@
+See file:///Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/build/tmp/createQuad_key_jniStaticLibrary/output.txt for all output for createQuad_key_jniStaticLibrary.
+archiving libquad_key_jni.a successful.
+
+Finished createQuad_key_jniStaticLibrary, see full log file:///Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/build/tmp/createQuad_key_jniStaticLibrary/output.txt.
