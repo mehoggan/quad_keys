@@ -4,3 +4,11 @@ build/*
 *.pyc
 *.so*
 **/.gradle/
+*.xmi
+*.class
+*.xml
+*.bin
+*.txt
+*.html
+*.dylib
+**/build/*

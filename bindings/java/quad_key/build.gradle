@@ -59,12 +59,14 @@ model {
             cppCompiler.args "--std=c++11",
               "-I", "${lib_base_path}",
               "-I", "${lib_base_path}${File.separator}include"
-            linker.args "-L", "${lib_linker_path}", "-lquad_key"
+            linker.args "-L", "${lib_linker_path}", "-lquad_key",
+              "-Wl,-rpath,${lib_linker_path}"
           } else if (toolChain in Clang) {
             cppCompiler.args "--std=c++11",
               "-I", "${lib_base_path}",
               "-I", "${lib_base_path}${File.separator}include"
-            linker.args "-L", "${lib_linker_path}", "-lquad_key"
+            linker.args "-L", "${lib_linker_path}", "-lquad_key",
+              "-Wl,-rpath,${lib_linker_path}"
           } else {
             throw GradleException("Tool chain " + toolChain +
               " is not supported.")

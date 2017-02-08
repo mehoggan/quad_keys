@@ -31,17 +31,17 @@ public class bing_system_test {
   }
 
   @Test
-  public void isValidTest() {
+  public void isValid_test() {
     // See quad_keyTest.systemSpecificCtorTest
   }
 
   @Test
-  public void isRootKeyTest() {
+  public void isRootKey_test() {
     // See quad_keyTest.isValidTest
   }
 
   @Test
-  public void get_parentTest() {
+  public void get_parent_test() {
     {
       quad_key key0 = new quad_key(type.bing, 0, 0, (short)1);
       quad_key key1 = new quad_key(type.bing, 1, 0, (short)1);
@@ -84,7 +84,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void is_my_ancestorTest() {
+  public void is_my_ancestor_test() {
     {
       quad_key key = new quad_key(type.bing, 5, 7, (short)3);
       assertFalse(key.is_my_ancestor(new quad_key()));
@@ -123,7 +123,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void get_ancestorTest() {
+  public void get_ancestor_test() {
     {
       quad_key key = new quad_key(type.bing, 0, 7, (short)3);
       quad_key ancestor = new quad_key(type.bing, 0, 1, (short)1);
@@ -150,7 +150,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void get_childTest() {
+  public void get_child_test() {
     assertTrue(new quad_key().equal_to(
       new quad_key().get_child(quad_key.quadrant.north_west)));
     short max_depthbing = quad_key.max_depth(type.bing);
@@ -184,7 +184,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void testGetChildern() {
+  public void test_get_childern() {
     quad_key_vector testKeys;
     short max_depthbing = quad_key.max_depth(type.bing);
     testKeys = new quad_key(type.bing, 0, 0, max_depthbing).get_children();
@@ -242,7 +242,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void get_descendantsTest() {
+  public void get_descendants_test() {
     short bingMaxDepth = quad_key.max_depth(type.bing);
     short requetedDepth = (short)(bingMaxDepth - 3);
     quad_key key = new quad_key(type.bing, 0, 0, requetedDepth);
@@ -447,7 +447,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void get_siblingsTest() {
+  public void get_siblings_test() {
     quad_key_vector testKeys;
 
     quad_key none = new quad_key();
@@ -470,7 +470,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void get_neighborsTest() {
+  public void get_neighbors_test() {
     quad_key_vector testKeys;
 
     quad_key none = new quad_key();
@@ -683,7 +683,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void from_internal_stringToStringTest() {
+  public void from_internal_string_to_string_test() {
     {
       quad_key root = quad_key.from_internal_string(type.bing, "");
       assertEquals(0, root.get_row());
@@ -801,7 +801,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void get_geo_coordinate_bounds2dTest() {
+  public void get_geo_coordinate_bounds2d_test() {
     quad_key key;
     geo_coordinate_bounding_box2d bbox = new geo_coordinate_bounding_box2d();
 
@@ -814,7 +814,7 @@ public class bing_system_test {
   }
 
   @Test
-  public void get_key_from_longitude_latitude_at_depthToBoundsTest() {
+  public void get_key_from_longitude_latitude_at_depthToBounds_test() {
     quad_key key;
     geo_coordinate_bounding_box2d bbox = new geo_coordinate_bounding_box2d();
     double diff;
@@ -831,8 +831,9 @@ public class bing_system_test {
       diff = Math.abs(bbox.lower_left().get_latitude().latitude_difference(
         new latitude(-85.0)));
       assertTrue(2.0 > diff);
-      diff = Math.abs(bbox.upper_right().get_longitude().longitude_difference(
-        new longitude(+180.0)));
+      diff = Math.abs(
+        bbox.upper_right().get_longitude().longitude_difference(
+          new longitude(+180.0)));
       assertTrue(2.0 > diff);
       diff = Math.abs(bbox.upper_right().get_latitude().latitude_difference(
         new latitude(+85.0)));
@@ -876,8 +877,9 @@ public class bing_system_test {
       diff = Math.abs(bbox.lower_left().get_latitude().latitude_difference(
         midTop));
       assertTrue(2.0 > diff);
-      diff = Math.abs(bbox.upper_right().get_longitude().longitude_difference(
-        midLeft));
+      diff =
+        Math.abs(bbox.upper_right().get_longitude().longitude_difference(
+          midLeft));
       assertTrue(2.0 > diff);
       diff = Math.abs(bbox.upper_right().get_latitude().latitude_difference(
         new latitude(+85.0)));
@@ -902,8 +904,9 @@ public class bing_system_test {
       diff = Math.abs(bbox.lower_left().get_latitude().latitude_difference(
         midTop));
       assertTrue(2.0 > diff);
-      diff = Math.abs(bbox.upper_right().get_longitude().longitude_difference(
-        right));
+      diff =
+        Math.abs(bbox.upper_right().get_longitude().longitude_difference(
+          right));
       assertTrue(2.0 > diff);
       diff = Math.abs(bbox.upper_right().get_latitude().latitude_difference(
         new latitude(+85.0)));
@@ -928,8 +931,9 @@ public class bing_system_test {
       diff = Math.abs(bbox.lower_left().get_latitude().latitude_difference(
         new latitude(-85.0)));
       assertTrue(2.0 > diff);
-      diff = Math.abs(bbox.upper_right().get_longitude().longitude_difference(
-        midLeft));
+      diff =
+        Math.abs(bbox.upper_right().get_longitude().longitude_difference(
+          midLeft));
       assertTrue(2.0 > diff);
       diff = Math.abs(bbox.upper_right().get_latitude().latitude_difference(
         midBottom));
@@ -954,8 +958,9 @@ public class bing_system_test {
       diff = Math.abs(bbox.lower_left().get_latitude().latitude_difference(
         new latitude(-85.0)));
       assertTrue(2.0 > diff);
-      diff = Math.abs(bbox.upper_right().get_longitude().longitude_difference(
-        right));
+      diff =
+        Math.abs(bbox.upper_right().get_longitude().longitude_difference(
+          right));
       assertTrue(2.0 > diff);
       diff = Math.abs(bbox.upper_right().get_latitude().latitude_difference(
         midBottom));
@@ -967,7 +972,8 @@ public class bing_system_test {
   public void get_keys_from_longitude_latitude_bounding_box() {
     {
       quad_key_vector outKeys;
-      outKeys =quad_key.get_keys_from_longitude_latitude_bounding_box(type.bing,
+      outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(
+        type.bing,
         new geo_coordinate_bounding_box2d(
           new geo_coordinate2d(
             new longitude(-180.0), new latitude(+90.0)),
@@ -980,7 +986,8 @@ public class bing_system_test {
 
     {
       quad_key_vector outKeys;
-      outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(type.bing,
+      outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(
+        type.bing,
         new geo_coordinate_bounding_box2d(
           new geo_coordinate2d(
             new longitude(-180.0), new latitude(+90.0)),
@@ -1000,7 +1007,8 @@ public class bing_system_test {
 
     {
       quad_key_vector outKeys;
-      outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(type.bing,
+      outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(
+        type.bing,
         new geo_coordinate_bounding_box2d(
           new geo_coordinate2d(
             new longitude(-180.0), new latitude(+0.35)),
@@ -1014,23 +1022,25 @@ public class bing_system_test {
     }
 
     {
-        quad_key_vector outKeys;
-        outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(type.bing,
-          new geo_coordinate_bounding_box2d(
-            new geo_coordinate2d(
-              new longitude(-0.36), new latitude(+0.36)),
-            new geo_coordinate2d(
-              new longitude(+0.36), new latitude(+90.0))), (short)1);
-        assertEquals(2, outKeys.size());
-        assertTrue(vectorContains(outKeys, new quad_key(type.bing, 1, 0,
-          (short)1)));
-        assertTrue(vectorContains(outKeys, new quad_key(type.bing, 1, 1,
-          (short)1)));
+      quad_key_vector outKeys;
+      outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(
+        type.bing,
+        new geo_coordinate_bounding_box2d(
+          new geo_coordinate2d(
+            new longitude(-0.36), new latitude(+0.36)),
+          new geo_coordinate2d(
+            new longitude(+0.36), new latitude(+90.0))), (short)1);
+      assertEquals(2, outKeys.size());
+      assertTrue(vectorContains(outKeys, new quad_key(type.bing, 1, 0,
+        (short)1)));
+      assertTrue(vectorContains(outKeys, new quad_key(type.bing, 1, 1,
+        (short)1)));
     }
 
     {
       quad_key_vector outKeys;
-      outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(type.bing,
+      outKeys = quad_key.get_keys_from_longitude_latitude_bounding_box(
+        type.bing,
         new geo_coordinate_bounding_box2d(
           new geo_coordinate2d(
             new longitude(-0.36), new latitude(+0.35)),
@@ -1049,118 +1059,118 @@ public class bing_system_test {
   }
 
   @Test
-  public void selectedCitiesTest() {
-      quad_key key;
-      type t = type.bing;
+  public void selected_cities_test() {
+    quad_key key;
+    type t = type.bing;
 
-      { // Chicago 41.822, -87.635
-        short depth = 16;
-        geo_coordinate2d coords = new geo_coordinate2d(
-                new longitude(-87.635), new latitude(41.822));
+    { // Chicago 41.822, -87.635
+      short depth = 16;
+      geo_coordinate2d coords = new geo_coordinate2d(
+        new longitude(-87.635), new latitude(41.822));
 
-        key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
-            depth);
-        String keyStr = key.to_internal_string();
-        assertEquals("0302222310321132", keyStr);
+      key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
+        depth);
+      String keyStr = key.to_internal_string();
+      assertEquals("0302222310321132", keyStr);
 
-        geo_coordinate_bounding_box2d bbox =
-          new geo_coordinate_bounding_box2d();
-        key.get_geo_coordinate_bounds2d(bbox);
+      geo_coordinate_bounding_box2d bbox =
+        new geo_coordinate_bounding_box2d();
+      key.get_geo_coordinate_bounds2d(bbox);
 
-        // Note that bing will return a bounding box of all sides inclusive
-        quad_key_vector keys;
-        keys =quad_key.get_keys_from_longitude_latitude_bounding_box(t, bbox,
-            depth);
-        assertEquals(4, keys.size());
-        assertTrue(vectorContains(keys, key));
-      }
+      // Note that bing will return a bounding box of all sides inclusive
+      quad_key_vector keys;
+      keys =quad_key.get_keys_from_longitude_latitude_bounding_box(t, bbox,
+        depth);
+      assertEquals(4, keys.size());
+      assertTrue(vectorContains(keys, key));
+    }
 
-      { // Rio -43.1964,-22.9083
-        short depth = 17;
-        geo_coordinate2d coords = new geo_coordinate2d(
-                new longitude(-43.1964), new latitude(-22.9083));
+    { // Rio -43.1964,-22.9083
+      short depth = 17;
+      geo_coordinate2d coords = new geo_coordinate2d(
+              new longitude(-43.1964), new latitude(-22.9083));
 
-        key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
-            depth);
-        String keyStr = key.to_internal_string();
-        assertEquals("21120001212232200", keyStr);
+      key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
+        depth);
+      String keyStr = key.to_internal_string();
+      assertEquals("21120001212232200", keyStr);
 
-        geo_coordinate_bounding_box2d bbox =
-          new geo_coordinate_bounding_box2d();
-        key.get_geo_coordinate_bounds2d(bbox);
+      geo_coordinate_bounding_box2d bbox =
+        new geo_coordinate_bounding_box2d();
+      key.get_geo_coordinate_bounds2d(bbox);
 
-        // Note that bing will return a bounding box of all sides inclusive
-        quad_key_vector keys;
-        keys = quad_key.get_keys_from_longitude_latitude_bounding_box(t, bbox,
-            depth);
-        assertEquals(4, keys.size());
-        assertTrue(vectorContains(keys, key));
-      }
+      // Note that bing will return a bounding box of all sides inclusive
+      quad_key_vector keys;
+      keys = quad_key.get_keys_from_longitude_latitude_bounding_box(t,
+        bbox, depth);
+      assertEquals(4, keys.size());
+      assertTrue(vectorContains(keys, key));
+    }
 
-      { // Helsinki 60.1708 N, 24.9375 E
-        short depth = 17;
-        geo_coordinate2d coords = new geo_coordinate2d(
-          new longitude(24.9375), new latitude(60.1708));
+    { // Helsinki 60.1708 N, 24.9375 E
+      short depth = 17;
+      geo_coordinate2d coords = new geo_coordinate2d(
+        new longitude(24.9375), new latitude(60.1708));
 
-        key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
-          depth);
-        String keyStr = key.to_internal_string();
-        assertEquals("12012021101330131", keyStr);
+      key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
+        depth);
+      String keyStr = key.to_internal_string();
+      assertEquals("12012021101330131", keyStr);
 
-        geo_coordinate_bounding_box2d bbox =
-          new geo_coordinate_bounding_box2d();
-        key.get_geo_coordinate_bounds2d(bbox);
+      geo_coordinate_bounding_box2d bbox =
+        new geo_coordinate_bounding_box2d();
+      key.get_geo_coordinate_bounds2d(bbox);
 
-        // Note that bing will return a bounding box of all sides inclusive
-        quad_key_vector keys;
-        keys = quad_key.get_keys_from_longitude_latitude_bounding_box(t, bbox,
-          depth);
-        assertEquals(4, keys.size());
-        assertTrue(vectorContains(keys, key));
-      }
+      // Note that bing will return a bounding box of all sides inclusive
+      quad_key_vector keys;
+      keys = quad_key.get_keys_from_longitude_latitude_bounding_box(t,
+        bbox, depth);
+      assertEquals(4, keys.size());
+      assertTrue(vectorContains(keys, key));
+    }
 
-      { // Cape Town South Africa 33.9253 S, 18.4239 E
-        short depth = 17;
-        geo_coordinate2d coords = new geo_coordinate2d(
-          new longitude(18.4239), new latitude(-33.9253));
+    { // Cape Town South Africa 33.9253 S, 18.4239 E
+      short depth = 17;
+      geo_coordinate2d coords = new geo_coordinate2d(
+        new longitude(18.4239), new latitude(-33.9253));
 
-        key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
-          depth);
-        String keyStr = key.to_internal_string();
-        assertEquals("30023103202132011", keyStr);
+      key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
+        depth);
+      String keyStr = key.to_internal_string();
+      assertEquals("30023103202132011", keyStr);
 
-        geo_coordinate_bounding_box2d bbox =
-          new geo_coordinate_bounding_box2d();
-        key.get_geo_coordinate_bounds2d(bbox);
+      geo_coordinate_bounding_box2d bbox =
+        new geo_coordinate_bounding_box2d();
+      key.get_geo_coordinate_bounds2d(bbox);
 
-        // Note that bing will return a bounding box of all sides inclusive
-        quad_key_vector keys;
-        keys = quad_key.get_keys_from_longitude_latitude_bounding_box(t, bbox,
-            depth);
-        assertEquals(4, keys.size());
-        assertTrue(vectorContains(keys, key));
-      }
+      // Note that bing will return a bounding box of all sides inclusive
+      quad_key_vector keys;
+      keys = quad_key.get_keys_from_longitude_latitude_bounding_box(t,
+        bbox, depth);
+      assertEquals(4, keys.size());
+      assertTrue(vectorContains(keys, key));
+    }
 
-      { // Quito 0.2500 S, 78.5833 W
-        short depth = 17;
-        geo_coordinate2d coords = new geo_coordinate2d(
-          new longitude(-78.5836), new latitude(-0.25));
+    { // Quito 0.2500 S, 78.5833 W
+      short depth = 17;
+      geo_coordinate2d coords = new geo_coordinate2d(
+        new longitude(-78.5836), new latitude(-0.25));
 
-        key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
-          depth);
-        String keyStr = key.to_internal_string();
-        assertEquals("21001000002133122", keyStr);
+      key = quad_key.get_key_from_longitude_latitude_at_depth(t, coords,
+        depth);
+      String keyStr = key.to_internal_string();
+      assertEquals("21001000002133122", keyStr);
 
-        geo_coordinate_bounding_box2d bbox =
-          new geo_coordinate_bounding_box2d();
-        key.get_geo_coordinate_bounds2d(bbox);
+      geo_coordinate_bounding_box2d bbox =
+        new geo_coordinate_bounding_box2d();
+      key.get_geo_coordinate_bounds2d(bbox);
 
-        // Note that bing will return a bounding box of all sides inclusive
-        quad_key_vector keys;
-        keys = quad_key.get_keys_from_longitude_latitude_bounding_box(t, bbox,
-          depth);
-        assertEquals(4, keys.size());
-        assertTrue(vectorContains(keys, key));
-      }
+      // Note that bing will return a bounding box of all sides inclusive
+      quad_key_vector keys;
+      keys = quad_key.get_keys_from_longitude_latitude_bounding_box(t,
+        bbox, depth);
+      assertEquals(4, keys.size());
+      assertTrue(vectorContains(keys, key));
+    }
   }
 }
