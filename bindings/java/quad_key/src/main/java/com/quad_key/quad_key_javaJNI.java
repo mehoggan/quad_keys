@@ -53,7 +53,7 @@ public class quad_key_javaJNI {
   public final static native long geo_coordinate2d_get_latitude(long jarg1, geo_coordinate2d jarg1_);
   public final static native boolean geo_coordinate2d_near__SWIG_0(long jarg1, geo_coordinate2d jarg1_, long jarg2, geo_coordinate2d jarg2_, double jarg3);
   public final static native boolean geo_coordinate2d_near__SWIG_1(long jarg1, geo_coordinate2d jarg1_, long jarg2, geo_coordinate2d jarg2_);
-  public final static native boolean geo_coordinate2d_equalTo(long jarg1, geo_coordinate2d jarg1_, long jarg2, geo_coordinate2d jarg2_);
+  public final static native boolean geo_coordinate2d_equal_to(long jarg1, geo_coordinate2d jarg1_, long jarg2, geo_coordinate2d jarg2_);
   public final static native boolean geo_coordinate2d_notEqualTo(long jarg1, geo_coordinate2d jarg1_, long jarg2, geo_coordinate2d jarg2_);
   public final static native void delete_geo_coordinate2d(long jarg1);
   public final static native long new_geo_coordinate_bounding_box2d__SWIG_0();

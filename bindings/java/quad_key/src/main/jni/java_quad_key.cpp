@@ -1090,7 +1090,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1key_quad_1key_1javaJNI_geo_1coordinat
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1key_quad_1key_1javaJNI_geo_1coordinate2d_1equalTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1key_quad_1key_1javaJNI_geo_1coordinate2d_1equal_1to(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::geo_coordinate2d *arg1 = (quad_keys::geo_coordinate2d *) 0 ;
   quad_keys::geo_coordinate2d *arg2 = 0 ;

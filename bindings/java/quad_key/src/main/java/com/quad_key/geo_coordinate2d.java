@@ -83,8 +83,8 @@ public class geo_coordinate2d {
     return quad_key_javaJNI.geo_coordinate2d_near__SWIG_1(swigCPtr, this, geo_coordinate2d.getCPtr(other), other);
   }
 
-  public boolean equalTo(geo_coordinate2d rhs) {
-    return quad_key_javaJNI.geo_coordinate2d_equalTo(swigCPtr, this, geo_coordinate2d.getCPtr(rhs), rhs);
+  public boolean equal_to(geo_coordinate2d rhs) {
+    return quad_key_javaJNI.geo_coordinate2d_equal_to(swigCPtr, this, geo_coordinate2d.getCPtr(rhs), rhs);
   }
 
   public boolean notEqualTo(geo_coordinate2d rhs) {

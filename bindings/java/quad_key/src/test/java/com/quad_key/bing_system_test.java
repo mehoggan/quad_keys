@@ -165,7 +165,7 @@ public class bing_system_test {
       assertTrue(new quad_key(type.bing, 1, 1, (short)4).equal_to(
         key.get_child(quad_key.quadrant.north_east)));
       assertTrue(new quad_key(type.bing, 0, 1, (short)4).equal_to(
-        key.get_child(quad_key.quadrant.south_west)));
+        key.get_child(quad_key.quadrant.south_east)));
       assertTrue(new quad_key(type.bing, 0, 0, (short)4).equal_to(
         key.get_child(quad_key.quadrant.south_west)));
     }
@@ -177,7 +177,7 @@ public class bing_system_test {
       assertTrue(new quad_key(type.bing, 5, 7, (short)4).equal_to(
         key.get_child(quad_key.quadrant.north_east)));
       assertTrue(new quad_key(type.bing, 4, 7, (short)4).equal_to(
-        key.get_child(quad_key.quadrant.south_west)));
+        key.get_child(quad_key.quadrant.south_east)));
       assertTrue(new quad_key(type.bing, 4, 6, (short)4).equal_to(
         key.get_child(quad_key.quadrant.south_west)));
     }

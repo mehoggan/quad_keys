@@ -21,7 +21,7 @@
   %rename(latitude_difference) quad_keys::latitude::operator-;
 
   %rename(assign_geo_coordinate2d) quad_keys::geo_coordinate2d::operator=;
-  %rename(equalTo) quad_keys::geo_coordinate2d::operator==;
+  %rename(equal_to) quad_keys::geo_coordinate2d::operator==;
   %rename(notEqualTo) quad_keys::geo_coordinate2d::operator!=;
 
   %rename(assignquad_key) quad_keys::quad_key::operator=;

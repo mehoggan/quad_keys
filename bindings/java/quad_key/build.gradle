@@ -27,6 +27,12 @@ task copyLibs(type: Copy) {
 
 compileJava.dependsOn copyLibs
 
+test {
+  testLogging {
+    showStandardStreams = true
+  }
+}
+
 tasks.withType(Test) {
   systemProperty "java.library.path", "${jvm_lib_path}"
 }

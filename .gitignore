@@ -12,3 +12,6 @@ build/*
 *.html
 *.dylib
 **/build/*
+*.DS_Store
+*.o
+*.a
