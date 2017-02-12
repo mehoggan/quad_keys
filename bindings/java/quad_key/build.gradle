@@ -4,6 +4,10 @@ import org.apache.tools.ant.taskdefs.condition.Os
 apply plugin: 'java'
 apply plugin: 'cpp'
 
+repositories {
+  jcenter()
+}
+
 def lib_base_path = "${projectDir}${File.separator}" +
   "..${File.separator}..${File.separator}..${File.separator}"
 def lib_linker_path = "${lib_base_path}build" + "${File.separator}lib"

@@ -1,4 +1,0 @@
-See file:///Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/build/tmp/compileQuad_key_jniSharedLibraryQuad_key_jniCpp/output.txt for all output for compileQuad_key_jniSharedLibraryQuad_key_jniCpp.
-compiling java_quad_key.cpp successful.
-
-Finished compileQuad_key_jniSharedLibraryQuad_key_jniCpp, see full log file:///Users/mhoggan/Development/github/quad_keys/bindings/java/quad_key/build/tmp/compileQuad_key_jniSharedLibraryQuad_key_jniCpp/output.txt.

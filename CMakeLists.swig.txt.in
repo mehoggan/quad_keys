@@ -24,7 +24,7 @@ else()
     SOURCE_DIR "${CMAKE_BINARY_DIR}/swig-src"
     BINARY_DIR "${CMAKE_BINARY_DIR}/swig-build"
     DOWNLOAD_DIR "${CMAKE_BINARY_DIR}/swig-download"
-    CONFIGURE_COMMAND "${CMAKE_BINARY_DIR}/swig-src/configure"
+    CONFIGURE_COMMAND "${CMAKE_BINARY_DIR}/swig-src/configure" --prefix=${CMAKE_BINARY_DIR}/swig-build/
     BUILD_COMMAND make
     INSTALL_COMMAND make install
     TEST_COMMAND ""

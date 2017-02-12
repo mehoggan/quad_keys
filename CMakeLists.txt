@@ -9,7 +9,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
   set(CMAKE_MACOSX_RPATH 1)
 endif()
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/CMake/c++11.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/c++11.cmake)
 
 add_subdirectory(lib)
 
