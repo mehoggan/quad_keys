@@ -12,10 +12,8 @@ from quad_key.quad_key import longitude
 from quad_key.quad_key import latitude
 
 
-class Testgeo_coordinate_bounding_box2d(unittest.TestCase):
-    """
-    Class for running unit tests.
-    """
+class TestGeoCoordinateBoundingBox2d(unittest.TestCase):
+    """Class for running unit tests."""
 
     def test_default_ctor(self):
         empty = geo_coordinate_bounding_box2d()

@@ -20,9 +20,7 @@ class TestBingSystem(unittest.TestCase):
     """Class for running unit tests."""
 
     def test_default_ctor(self):
-        """
-        Test default construction of quad_key using type_bing
-        """
+        """Test default construction of quad_key using type_bing."""
         qk = quad_key(type_bing)
         self.assertEqual(qk.get_row(), 0)
         self.assertEqual(qk.get_col(), 0)
@@ -30,19 +28,13 @@ class TestBingSystem(unittest.TestCase):
         self.assertEqual(qk.to_internal_string(), '')
 
     def test_is_valid(self):
-        """
-        See Testqk.test_is_valid
-        """
+        """See Testqk.test_is_valid."""
 
     def test_is_root_key(self):
-        """
-        See Testqk.test_is_root_key
-        """
+        """See Testqk.test_is_root_key."""
 
     def test_get_parent(self):
-        """
-        Test to get parent of a generically formatted qk.
-        """
+        """Test to get parent of a generically formatted qk."""
         key0 = quad_key(type_bing, 0, 0, 1)
         key1 = quad_key(type_bing, 1, 0, 1)
         key2 = quad_key(type_bing, 1, 1, 1)
@@ -80,9 +72,8 @@ class TestBingSystem(unittest.TestCase):
         self.assertEqual(key3.get_parent(), parent)
 
     def test_is_my_ancestor(self):
-        """
-        Checks to see if specified quadkey up in the hierarchy is an "ancestor"
-        of the given qk.
+        """Checks to see if specified quadkey up in the hierarchy is an
+        "ancestor" of the given qk.
         """
         none = quad_key()
         self.assertFalse(none.is_my_ancestor(quad_key()))
@@ -96,9 +87,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertTrue(qk.is_my_ancestor(quad_key(type_bing, 0, 0, 0)))
 
     def test_get_ancestor(self):
-        """
-        Gets the ancestor up the tree according to a delta provided.
-        """
+        """Gets the ancestor up the tree according to a delta provided."""
         qk = quad_key(type_bing, 0, 7, 3)
         ancestor = quad_key(type_bing, 0, 1, 1)
         self.assertTrue(qk.get_ancestor(2), ancestor)
@@ -113,9 +102,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertTrue(qk.get_ancestor(2), ancestor)
 
     def test_get_child(self):
-        """
-        Get a single child NE, SE, NW, SW
-        """
+        """Get a single child NE, SE, NW, SW."""
         self.assertEqual(quad_key(),
                          quad_key().get_child(quad_key.quadrant_north_west))
         maxdepthbing = quad_key.max_depth(type_bing)
@@ -144,9 +131,7 @@ class TestBingSystem(unittest.TestCase):
                          qk.get_child(qk.quadrant_south_west))
 
     def test_get_children(self):
-        """
-        Get all the childern of a qk.
-        """
+        """Get all the childern of a qk."""
         qk = quad_key()
         vec = qk.get_children()
         self.assertEqual(0, len(vec))
@@ -184,9 +169,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertTrue(quad_key(type_bing, 3, 3, 2) in vec)
 
     def test_get_descendants(self):
-        """
-        Get all the defendants at some delta in the tree.
-        """
+        """Get all the defendants at some delta in the tree."""
         bing_max_depth = quad_key.max_depth(type_bing)
         qk = quad_key(type_bing, 0, 0, bing_max_depth - 3)
 
@@ -296,9 +279,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertTrue(quad_key(type_bing, 7, 7, 3) in vec)
 
     def test_get_siblings(self):
-        """
-        Test to get siblings of a given quadkey
-        """
+        """Test to get siblings of a given quadkey."""
         qk = quad_key()
         vec = qk.get_siblings()
         self.assertEqual(0, len(vec))
@@ -311,9 +292,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertTrue(quad_key(type_bing, 1, 0, 1) in vec)
 
     def test_get_neighbors(self):
-        """
-        Test to get the neighbors of a given quadqk.
-        """
+        """Test to get the neighbors of a given quad_key."""
         vec = quad_key().get_neighbors()
         self.assertEqual(0, len(vec))
 
@@ -419,9 +398,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertTrue(quad_key(type_bing, 3, 7, 3) in vec)
 
     def test_to_string_from_string(self):
-        """
-        Test to convert an internally formatted string and back.
-        """
+        """Test to convert an internally formatted string and back."""
         root = quad_key.from_internal_string(type_bing, "")
         self.assertEqual(0, root.get_row())
         self.assertEqual(0, root.get_col())
@@ -530,8 +507,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertEqual("33", qk.to_internal_string())
 
     def test_get_geo_coordinate_bounds_2d(self):
-        """Test to get geographic bounds of quadqk.
-        """
+        """Test to get geographic bounds of quad_key."""
         bbox = geo_coordinate_bounding_box2d()
 
         qk = quad_key.from_internal_string(type_bing, "")
@@ -675,9 +651,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertTrue(2.0 > diff)
 
     def test_get_keys_from_longitude_latitude_bounding_box(self):
-        """
-        Test to get the bounding box of a quadqk.
-        """
+        """Test to get the bounding box of a quad_key."""
         out_keys = quad_key.get_keys_from_longitude_latitude_bounding_box(
             type_bing,
             geo_coordinate_bounding_box2d(
@@ -727,9 +701,7 @@ class TestBingSystem(unittest.TestCase):
         self.assertTrue(quad_key(type_bing, 1, 1, 1) in out_keys)
 
     def test_selected_cities(self):
-        """
-        Test a given set of known places make sure they work.
-        """
+        """Test a given set of known places make sure they work."""
         qk_type = type_bing
 
         # Chicago 41.822, -87.635
