@@ -11878,12 +11878,13 @@ SWIG_init(void) {
   SWIG_addvarlink(SWIG_globals(),(char *)"longitude_max_longitude",Swig_var_longitude_max_longitude_get, Swig_var_longitude_max_longitude_set);
   SWIG_addvarlink(SWIG_globals(),(char *)"latitude_min_latitude",Swig_var_latitude_min_latitude_get, Swig_var_latitude_min_latitude_set);
   SWIG_addvarlink(SWIG_globals(),(char *)"latitude_max_latitude",Swig_var_latitude_max_latitude_get, Swig_var_latitude_max_latitude_set);
-  SWIG_Python_SetConstant(d, "type_none",SWIG_From_int(static_cast< int >(quad_keys::type::none)));
   SWIG_Python_SetConstant(d, "type_bing",SWIG_From_int(static_cast< int >(quad_keys::type::bing)));
   SWIG_Python_SetConstant(d, "type_lat_long",SWIG_From_int(static_cast< int >(quad_keys::type::lat_long)));
-  SWIG_Python_SetConstant(d, "type_ulp_qnr",SWIG_From_int(static_cast< int >(quad_keys::type::ulp_qnr)));
-  SWIG_Python_SetConstant(d, "type_osgeo",SWIG_From_int(static_cast< int >(quad_keys::type::osgeo)));
   SWIG_Python_SetConstant(d, "type_morton",SWIG_From_int(static_cast< int >(quad_keys::type::morton)));
+  SWIG_Python_SetConstant(d, "type_none",SWIG_From_int(static_cast< int >(quad_keys::type::none)));
+  SWIG_Python_SetConstant(d, "type_osgeo",SWIG_From_int(static_cast< int >(quad_keys::type::osgeo)));
+  SWIG_Python_SetConstant(d, "type_ulp_qnr",SWIG_From_int(static_cast< int >(quad_keys::type::ulp_qnr)));
+  SWIG_Python_SetConstant(d, "type_s2_cell",SWIG_From_int(static_cast< int >(quad_keys::type::s2_cell)));
   SWIG_Python_SetConstant(d, "quad_key_quadrant_south_west",SWIG_From_int(static_cast< int >(quad_keys::quad_key::quadrant::south_west)));
   SWIG_Python_SetConstant(d, "quad_key_quadrant_south_east",SWIG_From_int(static_cast< int >(quad_keys::quad_key::quadrant::south_east)));
   SWIG_Python_SetConstant(d, "quad_key_quadrant_north_west",SWIG_From_int(static_cast< int >(quad_keys::quad_key::quadrant::north_west)));

@@ -28,7 +28,9 @@ add_executable(unit_test
   ./test_morton_system.cpp
   ./test_osgeo_system.cpp
   ./test_quad_key.cpp
-  ./test_ulp_qnr_system.cpp)
+  ./test_s2_cell_system.cpp
+  ./test_ulp_qnr_system.cpp
+)
 
 
 target_link_libraries(unit_test

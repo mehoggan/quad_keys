@@ -9,12 +9,13 @@ namespace quad_keys
 {
   enum class type
   {
-    none,
     bing,
     lat_long,
-    ulp_qnr,
-    osgeo,
     morton,
+    none,
+    osgeo,
+    ulp_qnr,
+    s2_cell
   };
 
   DLLSPEC_QUADKEY std::string type_to_string(type t);

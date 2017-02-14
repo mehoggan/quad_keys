@@ -271,12 +271,13 @@ class geo_coordinate_bounding_box2d(_object):
 geo_coordinate_bounding_box2d_swigregister = _quad_key.geo_coordinate_bounding_box2d_swigregister
 geo_coordinate_bounding_box2d_swigregister(geo_coordinate_bounding_box2d)
 
-type_none = _quad_key.type_none
 type_bing = _quad_key.type_bing
 type_lat_long = _quad_key.type_lat_long
-type_ulp_qnr = _quad_key.type_ulp_qnr
-type_osgeo = _quad_key.type_osgeo
 type_morton = _quad_key.type_morton
+type_none = _quad_key.type_none
+type_osgeo = _quad_key.type_osgeo
+type_ulp_qnr = _quad_key.type_ulp_qnr
+type_s2_cell = _quad_key.type_s2_cell
 
 def type_to_string(t):
     return _quad_key.type_to_string(t)

@@ -14,6 +14,7 @@ set(SRC
   "quad_key_types.cpp"
   "quad_key.cpp"
   "system.cpp"
+  "s2_cell_system.cpp"
   "ulp_qnr_system.cpp"
   "utils.cpp")
 

@@ -68,6 +68,14 @@ namespace quad_keys
       EXPECT_EQ(0u, key.get_depth());
       EXPECT_EQ(type::osgeo, key.get_type());
     }
+
+    {
+      quad_key key(type::s2_cell);
+      EXPECT_EQ(0u, key.get_row());
+      EXPECT_EQ(0u, key.get_col());
+      EXPECT_EQ(0u, key.get_depth());
+      EXPECT_EQ(type::s2_cell, key.get_type());
+    }
   }
 
   TEST(QUADKEY, copy_ctor)
@@ -111,7 +119,7 @@ namespace quad_keys
   TEST(QUADKEY, system_specific_ctor)
   {
     auto types = { type::bing, type::lat_long, type::ulp_qnr, type::morton,
-      type::none, type::osgeo };
+      type::none, type::osgeo, type::s2_cell};
     for (auto type : types) {
       for (uint8_t depth = 0; depth < 10; ++depth) {
         uint32_t max_rows = quad_key::max_rows(type, depth);

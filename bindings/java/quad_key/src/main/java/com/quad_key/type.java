@@ -9,12 +9,13 @@
 package com.quad_key;
 
 public final class type {
-  public final static type none = new type("none");
   public final static type bing = new type("bing");
   public final static type lat_long = new type("lat_long");
-  public final static type ulp_qnr = new type("ulp_qnr");
-  public final static type osgeo = new type("osgeo");
   public final static type morton = new type("morton");
+  public final static type none = new type("none");
+  public final static type osgeo = new type("osgeo");
+  public final static type ulp_qnr = new type("ulp_qnr");
+  public final static type s2_cell = new type("s2_cell");
 
   public final int swigValue() {
     return swigValue;
@@ -50,7 +51,7 @@ public final class type {
     swigNext = this.swigValue+1;
   }
 
-  private static type[] swigValues = { none, bing, lat_long, ulp_qnr, osgeo, morton };
+  private static type[] swigValues = { bing, lat_long, morton, none, osgeo, ulp_qnr, s2_cell };
   private static int swigNext = 0;
   private final int swigValue;
   private final String swigName;
