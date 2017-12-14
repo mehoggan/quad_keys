@@ -13,7 +13,7 @@
 %include <stdint.i>
 %include <std_string.i>
 
-%include "declspec.h"
+%include "quad_keys_declspec.h"
 
 %include "quad_key/geo_coordinate2d.h"
 %include "quad_key/geo_coordinate_bounding_box2d.h"
