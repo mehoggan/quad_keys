@@ -14,6 +14,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/c++11.cmake)
 add_subdirectory(lib)
 
 if(QUAD_KEY_TESTS)
+  message(STATUS "Going to build tests.")
   configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.googletest.txt.in
     ${CMAKE_BINARY_DIR}/googletest-download/CMakeLists.txt)
   include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/gtest.cmake)

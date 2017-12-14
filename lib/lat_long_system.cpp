@@ -47,10 +47,8 @@ namespace quad_keys
       std::uint32_t row = tile.y / step_y;
 
       // Deal with 180.0 lon and 90.0 lat respectively.
-      col = std::max(0u, std::min(col, quad_key::max_cols(type::lat_long,
-        depth) - 1));
-      row = std::max(0u, std::min(row, quad_key::max_rows(type::lat_long,
-        depth) - 1));
+      col = std::min(col, quad_key::max_cols(type::lat_long, depth) - 1);
+      row = std::min(row, quad_key::max_rows(type::lat_long, depth) - 1);
 
       return quad_key(type::lat_long, row, col, depth);
     }
