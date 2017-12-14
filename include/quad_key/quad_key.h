@@ -1,7 +1,7 @@
 #ifndef QUADKEY_H_INCLUDED
 #define QUADKEY_H_INCLUDED
 
-#include "declspec.h"
+#include "quad_keys_declspec.h"
 
 #include "quad_key/quad_key_types.h"
 #include "quad_key/geo_coordinate2d.h"

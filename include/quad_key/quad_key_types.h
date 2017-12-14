@@ -1,7 +1,7 @@
 #ifndef QUADKEYSYSTEMENUM_H_INCLUDED
 #define QUADKEYSYSTEMENUM_H_INCLUDED
 
-#include "declspec.h"
+#include "quad_keys_declspec.h"
 
 #include <string>
 

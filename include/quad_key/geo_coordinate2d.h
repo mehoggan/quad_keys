@@ -1,7 +1,7 @@
 #ifndef GEOCOORDINATE2D_H_INCLUDED
 #define GEOCOORDINATE2D_H_INCLUDED
 
-#include "declspec.h"
+#include "quad_keys_declspec.h"
 
 #include "quad_key/geo_coordinate2d.h"
 
