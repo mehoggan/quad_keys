@@ -8,9 +8,6 @@ namespace quad_keys
   {
     const std::uint32_t face_bits = 3u;
     const std::uint32_t num_faces = 6u;
-    const std::uint32_t pos_bits = (quad_key::max_depth(type::s2_cell) << 1)
-      + 1;
-    const std::uint32_t max_size = 1 << quad_key::max_depth(type::s2_cell);
   }
 
   void s2_cell_system::get_geo_coordinate_bounds2d(
