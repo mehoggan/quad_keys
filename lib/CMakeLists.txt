@@ -33,3 +33,8 @@ else()
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror -Wall \
     -fno-strict-aliasing")
 endif()
+
+install(TARGETS quad_key
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+)

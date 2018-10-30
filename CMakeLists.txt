@@ -27,3 +27,10 @@ if(QUAD_KEY_BINDINGS)
   include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/swig.cmake)
   add_subdirectory(bindings)
 endif()
+
+add_subdirectory(include)
+
+install(FILES
+  ./quad_keys_declspec.h
+  DESTINATION include/quad_key
+)
