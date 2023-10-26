@@ -1,43 +1,55 @@
-***BUILD libquad_key c++ OSX***
-$ mkdir ./build/
-$ pushd ./build/
-$ export CXX=$(which clang++); export CC=$(which clang) && cmake ../
-$ make -j 8
-$ popd
+# User Notes
 
-***BUILD libquad_key c++ Ubuntu***
-$ sudo apt-get install libpcre++-dev
-$ sudo apt-get install libpcre2-dev
-$ pushd ./build/
-$ cmake ../
-$ make -j 8
-$ popd
+# Developer Notes
 
-***TEST libquad_key c++***
-# First follow build steps.
-$ pushd ./build/tests
-$ ctest 'unit_test'
-$ popd
-$ popd
+## Build Dependencies
 
-***Build and test libquad_key for java***
-# Ubuntu only:
-$ sudo apt-get install openjdk-8-jdk # Then set java home here.
-# Follow steps in BUILD for c++ for your specific platform. Then run:
-$ pushd ./bindings/java/quad_key
-$ gradle build
-$ popd
+If you wish to clone all dependencies at once at the time of clone run:
 
-***Build and test libqaud_key for python***
-# Ubunut only:
-$ sudo apt-get install python-pip python-dev build-essential
-$ sudo pip install --upgrade pip
-$ sudo pip install -U pytest
-# Follow steps in BUILD for c++ for your specific platform. Then run:
-# Copy libquad_key from build directory to the systems linker path.
-$ pushd ./bindings/python
-$ python setup.py build_ext --inplace
-$ pytest
-$ popd
+```sh
+> git clone git@github.com:mehoggan/quad_keys.git
+```
 
+## OSX System Setup
 
+```sh
+> brew install autoconf automake libtool autoconf-archive googletest
+```
+
+## Fedora DNF System Setup
+
+```sh
+> sudo dfn install -y ...
+```
+
+## Debian Apt System Setup
+
+```sh
+> sudo apt install -y git-all autoconf automake libtool autoconf-archive \
+    libgtest-dev
+```
+
+## Build file generation and compiling library and executable Unix Systems
+
+```sh
+> autoreconf -i
+> rm -rf ./build && mkdir -p ./build
+> cd build/ && ../configure
+> cd ../
+> make -C build
+```
+
+## Running Tests
+
+```sh
+> make check
+
+// If a test fails you can find that specific test in the build logs and then
+// run:
+> ./test/gtest_libquad_keys --gtest_filter=<name of test>
+// example of gtest_filter is:
+//   "TestYAMLDagDeserializer.make_dag_vertices_not_list_of_obj"
+
+// If you cannot find the logs then you can simply just run:
+> ./test/gtest_libquad_keys
+```

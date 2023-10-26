@@ -1,24 +1,24 @@
-#include "quad_key/geo_coordinate_bounding_box2d.h"
+#include "quad_keys/geo_coordinate_bounding_box2d.h"
 
 namespace quad_keys
 {
-  geo_coordinate_bounding_box2d::geo_coordinate_bounding_box2d() :
-    m_lower_left(longitude(180.0), latitude(90.0)),
-    m_upper_right(longitude(-180.0), latitude(-90.0))
+  GeoCoordinateBoundingBox2d::GeoCoordinateBoundingBox2d() :
+    m_lower_left(Longitude(180.0), Latitude(90.0)),
+    m_upper_right(Longitude(-180.0), Latitude(-90.0))
   {}
 
-  geo_coordinate_bounding_box2d::geo_coordinate_bounding_box2d(
-    const geo_coordinate2d &coordinate0,
-    const geo_coordinate2d &coordinate1) :
-    m_lower_left(longitude(180.0), latitude(90.0)),
-    m_upper_right(longitude(-180.0), latitude(-90.0))
+  GeoCoordinateBoundingBox2d::GeoCoordinateBoundingBox2d(
+    const GeoCoordinate2d &coordinate0,
+    const GeoCoordinate2d &coordinate1) :
+    m_lower_left(Longitude(180.0), Latitude(90.0)),
+    m_upper_right(Longitude(-180.0), Latitude(-90.0))
   {
     grow_to_contain(coordinate0);
     grow_to_contain(coordinate1);
   }
 
-  bool geo_coordinate_bounding_box2d::contains(
-    const geo_coordinate2d &coordinate) const
+  bool GeoCoordinateBoundingBox2d::contains(
+    const GeoCoordinate2d &coordinate) const
   {
     bool is_in = true;
 
@@ -31,13 +31,13 @@ namespace quad_keys
     return is_in;
   }
 
-  void geo_coordinate_bounding_box2d::grow_to_contain(
-    const geo_coordinate2d &coordinate)
+  void GeoCoordinateBoundingBox2d::grow_to_contain(
+    const GeoCoordinate2d &coordinate)
   {
-    geo_coordinate2d lower_left(
+    GeoCoordinate2d lower_left(
       std::min(m_lower_left.get_longitude(), coordinate.get_longitude()),
       std::min(m_lower_left.get_latitude(), coordinate.get_latitude()));
-    geo_coordinate2d upper_right(
+    GeoCoordinate2d upper_right(
       std::max(m_upper_right.get_longitude(), coordinate.get_longitude()),
       std::max(m_upper_right.get_latitude(), coordinate.get_latitude()));
 
@@ -45,7 +45,7 @@ namespace quad_keys
     m_upper_right = upper_right;
   }
 
-  bool geo_coordinate_bounding_box2d::is_valid() const
+  bool GeoCoordinateBoundingBox2d::is_valid() const
   {
     bool valid = true;
 

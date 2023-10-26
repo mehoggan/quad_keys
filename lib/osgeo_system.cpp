@@ -1,6 +1,5 @@
-#include "quad_key/osgeo_system.h"
+#include "quad_keys/osgeo_system.h"
 
-#include "quad_key/macros.h"
 
 #define to_double(d) static_cast<double>((d))
 #define to_uint32(u) static_cast<std::uint32_t>((u))
@@ -12,38 +11,38 @@ namespace quad_keys
   {
     // Converts WGS84 Datum to XY in Spherical Mercator. Note are length is
     // defined as S = (theta) * r. Where theta is exrpessed in radians.
-    meters_xy lat_lon_to_meters(const geo_coordinate2d & coords)
+    MetersXY lat_lon_to_meters(const GeoCoordinate2d & coords)
     {
       const double r = earth_radius;
 
-      geo_coordinate2d loc = coords;
+      GeoCoordinate2d loc = coords;
       loc.set_latitude(mercator_latitude_clamp(coords.get_latitude()));
       double mx = degrees_to_radians(loc.get_longitude().val()) * r;
       double my = mercator_tangent_half_angle_formula(loc.get_latitude()) * r;
-      return meters_xy(mx, my);
+      return MetersXY(mx, my);
     }
 
-    geo_coordinate2d meters_to_lat_lon(const meters_xy &mxy)
+    GeoCoordinate2d meters_to_lat_lon(const MetersXY &mxy)
     {
         const double r = earth_radius;
 
         auto lon = radians_to_degrees(mxy.x / r);
         auto lat =
           inverse_mercator_tangent_half_angle_formula(mxy.y / r).val();
-        return geo_coordinate2d(longitude(lon), latitude(lat));
+        return GeoCoordinate2d(Longitude(lon), Latitude(lat));
     }
 
-    f_pixel meters_to_pixels(const meters_xy &mxy, std::uint8_t depth)
+    FPixel meters_to_pixels(const MetersXY &mxy, std::uint8_t depth)
     {
       // 2 * pi * r / pixels. Initial resoultion 256, but because we start
       // with 2^0 we only need to shift by an initial 7 not 8.
       double res = (pi * earth_radius) / to_double(1 << (7 + depth));
       double px = to_double((mxy.x + pi * earth_radius) / res);
       double py = to_double((mxy.y + pi * earth_radius) / res);
-      return f_pixel(px, py);
+      return FPixel(px, py);
     }
 
-    meters_xy pixels_to_meters(const f_pixel &pixel, std::uint8_t depth)
+    MetersXY pixels_to_meters(const FPixel &pixel, std::uint8_t depth)
     {
       // 2 * pi * r / pixels. Initial resoultion 256, but because we start
       // with 2^0 we only need to shift by an initial 7 not 8.
@@ -51,10 +50,10 @@ namespace quad_keys
       double mx = (pixel.x * res) - pi * earth_radius;
       double my = (pixel.y * res) - pi * earth_radius;
 
-      return meters_xy(mx, my);
+      return MetersXY(mx, my);
     }
 
-    tile pixels_to_tile(const f_pixel &pixel)
+    Tile pixels_to_tile(const FPixel &pixel)
     {
       std::int32_t tx = to_uint32(ceil(pixel.x / 256.0) - 1);
       std::int32_t ty = to_uint32(ceil(pixel.y / 256.0) - 1);
@@ -63,34 +62,34 @@ namespace quad_keys
       tx = std::max(tx, 0);
       ty = std::max(ty, 0);
 
-      return tile(tx, ty);
+      return Tile(tx, ty);
     }
 
-    meters_xy tile_to_meters(const tile &tile, std::uint8_t depth)
+    MetersXY tile_to_meters(const Tile &tile, std::uint8_t depth)
     {
-      f_pixel pixel(tile.x * 256.0, tile.y * 256.0);
-      meters_xy mxy = pixels_to_meters(pixel, depth);
+      FPixel pixel(tile.x * 256.0, tile.y * 256.0);
+      MetersXY mxy = pixels_to_meters(pixel, depth);
       return mxy;
     }
   }
 
-  void osgeo_system::get_geo_coordinate_bounds2d(
-    geo_coordinate_bounding_box2d &out_bounds, const quad_key &self) const
+  void OsGeoSystem::get_geo_coordinate_bounds2d(
+    GeoCoordinateBoundingBox2d &out_bounds, const QuadKey &self) const
   {
     std::uint8_t depth = self.get_depth();
 
-    tile tilell(to_int32(self.get_col()), to_int32(self.get_row()));
-    meters_xy llm = detail::tile_to_meters(tilell, depth);
-    geo_coordinate2d ll = detail::meters_to_lat_lon(llm);
+    Tile tilell(to_int32(self.get_col()), to_int32(self.get_row()));
+    MetersXY llm = detail::tile_to_meters(tilell, depth);
+    GeoCoordinate2d ll = detail::meters_to_lat_lon(llm);
 
-    tile tileur(to_int32(self.get_col() + 1), to_int32(self.get_row() + 1));
-    meters_xy urm = detail::tile_to_meters(tileur, depth);
-    geo_coordinate2d ur = detail::meters_to_lat_lon(urm);
+    Tile tileur(to_int32(self.get_col() + 1), to_int32(self.get_row() + 1));
+    MetersXY urm = detail::tile_to_meters(tileur, depth);
+    GeoCoordinate2d ur = detail::meters_to_lat_lon(urm);
 
-    out_bounds = geo_coordinate_bounding_box2d(ll, ur);
+    out_bounds = GeoCoordinateBoundingBox2d(ll, ur);
   }
 
-  std::string osgeo_system::to_internal_string(const quad_key &self) const
+  std::string OsGeoSystem::to_internal_string(const QuadKey &self) const
   {
     std::uint8_t depth = self.get_depth();
     std::uint32_t row = self.get_row();
@@ -102,7 +101,7 @@ namespace quad_keys
     return std::string(buf);
   }
 
-  quad_key osgeo_system::from_internal_string(
+  QuadKey OsGeoSystem::from_internal_string(
     const std::string &in_string) const
   {
     std::int32_t row = std::numeric_limits<std::int32_t>::min();
@@ -118,7 +117,7 @@ namespace quad_keys
         char* endptr;
         row = std::strtol(token, &endptr, 0);
         if (*endptr != '\0') {
-          return quad_key();
+          return QuadKey();
         }
       }
         break;
@@ -126,7 +125,7 @@ namespace quad_keys
         char* endptr;
         col = std::strtol(token, &endptr, 0);
         if (*endptr != '\0') {
-          return quad_key();
+          return QuadKey();
         }
       }
         break;
@@ -134,12 +133,12 @@ namespace quad_keys
         char* endptr;
         depth = static_cast<std::uint8_t>(std::strtol(token, &endptr, 0));
         if (*endptr != '\0') {
-          return quad_key();
+          return QuadKey();
         }
       }
         break;
       default: {
-        return quad_key();
+        return QuadKey();
       }
       }
       token = strtok(nullptr, "/");
@@ -147,19 +146,19 @@ namespace quad_keys
     }
     free(dup);
 
-    std::int32_t max_rows = to_int32(quad_key::max_rows(type::osgeo,
-        quad_key::max_depth(type::osgeo)));
-    std::int32_t max_cols = to_int32(quad_key::max_cols(type::osgeo,
-        quad_key::max_depth(type::osgeo)));
+    std::int32_t max_rows = to_int32(QuadKey::max_rows(Type::OsGeo,
+      QuadKey::max_depth(Type::OsGeo)));
+    std::int32_t max_cols = to_int32(QuadKey::max_cols(Type::OsGeo,
+      QuadKey::max_depth(Type::OsGeo)));
 
     if (row >= max_rows || row < -1) {
-      return quad_key();
+      return QuadKey();
     }
     if (col >= max_cols || col < -1) {
-      return quad_key();
+      return QuadKey();
     }
-    if (depth > quad_key::max_depth(type::osgeo)) {
-      return quad_key();
+    if (depth > QuadKey::max_depth(Type::OsGeo)) {
+      return QuadKey();
     }
 
     if (row == -1) {
@@ -169,54 +168,52 @@ namespace quad_keys
       col = 0;
     }
 
-    return quad_key(type::osgeo, to_uint32(row), to_uint32(col), depth);
+    return QuadKey(Type::OsGeo, to_uint32(row), to_uint32(col), depth);
   }
 
-  quad_key osgeo_system::get_key_from_longitude_latitude_at_depth(
-    const geo_coordinate2d &coords, std::uint8_t depth) const
+  QuadKey OsGeoSystem::get_key_from_longitude_latitude_at_depth(
+    const GeoCoordinate2d &coords, std::uint8_t depth) const
   {
-    type t = type::osgeo;
-    meters_xy xy = detail::lat_lon_to_meters(coords);
-    f_pixel pxy = detail::meters_to_pixels(xy, depth);
-    tile txy = detail::pixels_to_tile(pxy);
-    std::int32_t max_rows_index = to_int32(
-      quad_key::max_rows(t, depth) - 1);
+    Type t = Type::OsGeo;
+    MetersXY xy = detail::lat_lon_to_meters(coords);
+    FPixel pxy = detail::meters_to_pixels(xy, depth);
+    Tile txy = detail::pixels_to_tile(pxy);
+    std::int32_t max_rows_index = to_int32(QuadKey::max_rows(t, depth) - 1);
     txy.y = std::min(txy.y, max_rows_index);
-    std::int32_t max_cols_index =
-      to_int32(quad_key::max_cols(t, depth) - 1);
+    std::int32_t max_cols_index = to_int32(QuadKey::max_cols(t, depth) - 1);
     txy.x = std::min(txy.x, max_cols_index);
-    return quad_key(type::osgeo, to_uint32(txy.y), to_uint32(txy.x), depth);
+    return QuadKey(Type::OsGeo, to_uint32(txy.y), to_uint32(txy.x), depth);
   }
 
-  std::vector<quad_key>
-  osgeo_system::get_keys_from_longitude_latitude_bounding_box(
-    const geo_coordinate_bounding_box2d &bounds, std::uint8_t depth) const
+  std::vector<QuadKey>
+  OsGeoSystem::get_keys_from_longitude_latitude_bounding_box(
+    const GeoCoordinateBoundingBox2d &bounds, std::uint8_t depth) const
   {
-    std::vector<quad_key> quad_keys;
-    meters_xy xyll = detail::lat_lon_to_meters(bounds.lower_left());
-    f_pixel pxyll = detail::meters_to_pixels(xyll, depth);
-    tile txyll = detail::pixels_to_tile(pxyll);
+    std::vector<QuadKey> quad_keys;
+    MetersXY xyll = detail::lat_lon_to_meters(bounds.lower_left());
+    FPixel pxyll = detail::meters_to_pixels(xyll, depth);
+    Tile txyll = detail::pixels_to_tile(pxyll);
 
-    meters_xy xyur = detail::lat_lon_to_meters(bounds.upper_right());
-    f_pixel pxyur = detail::meters_to_pixels(xyur, depth);
-    tile txyur = detail::pixels_to_tile(pxyur);
+    MetersXY xyur = detail::lat_lon_to_meters(bounds.upper_right());
+    FPixel pxyur = detail::meters_to_pixels(xyur, depth);
+    Tile txyur = detail::pixels_to_tile(pxyur);
 
     for (std::int32_t row = txyll.y; row <= txyur.y; ++row) {
       for (std::int32_t col = txyll.x; col <= txyur.x; ++col) {
-        detail::insert_vector_if_valid_and_unique(quad_keys, quad_key(
-          type::osgeo, to_uint32(row), to_uint32(col), depth));
+        detail::insert_vector_if_valid_and_unique(quad_keys, QuadKey(
+          Type::OsGeo, to_uint32(row), to_uint32(col), depth));
       }
     }
 
     return quad_keys;
   }
 
-  std::uint8_t osgeo_system::max_depth() const
+  std::uint8_t OsGeoSystem::max_depth() const
   {
     return 22u;
   }
 
-  uint32_t osgeo_system::max_rows(std::uint8_t depth) const
+  uint32_t OsGeoSystem::max_rows(std::uint8_t depth) const
   {
     if (depth > max_depth()) {
       return 0;
@@ -224,7 +221,7 @@ namespace quad_keys
     return 1 << depth;
   }
 
-  std::uint32_t osgeo_system::max_cols(std::uint8_t depth) const
+  std::uint32_t OsGeoSystem::max_cols(std::uint8_t depth) const
   {
     if (depth > max_depth()) {
       return 0;

@@ -1,12 +1,10 @@
-#include "quad_key/ulp_qnr_system.h"
-
-#include "quad_key/macros.h"
+#include "quad_keys/ulp_qnr_system.h"
 
 namespace quad_keys
 {
   namespace detail
   {
-    u_position geopt32_from_lat_lon(const geo_coordinate2d &coords)
+    UPosition geopt32_from_lat_lon(const GeoCoordinate2d &coords)
     {
       double lon = coords.get_longitude().val();
       lon += 180.0;
@@ -28,12 +26,12 @@ namespace quad_keys
       }
       lat /= 360.0;
 
-      return u_position(
+      return UPosition(
         static_cast<std::uint32_t>(lon * 0xffffffff),
         static_cast<std::uint32_t>(lat * 0xffffffff));
     }
 
-    geo_coordinate2d lat_lon_from_geopt32(const u_position &geopt)
+    GeoCoordinate2d lat_lon_from_geopt32(const UPosition &geopt)
     {
       double lon = static_cast<double>(geopt.x) / 0xffffffff * 360.0;
       double lat = static_cast<double>(geopt.y) / 0xffffffff * 360.0;
@@ -41,10 +39,10 @@ namespace quad_keys
       lon -= 180.0;
       lat -= 90.0;
 
-      return geo_coordinate2d(longitude(lon), latitude(lat));
+      return GeoCoordinate2d(Longitude(lon), Latitude(lat));
     }
 
-    std::uint64_t qnr_from_geopt32(const u_position &geopt,
+    std::uint64_t qnr_from_geopt32(const UPosition &geopt,
       std::uint8_t depth)
     {
       const std::uint64_t mask = (1 << depth) - 1;
@@ -95,13 +93,13 @@ namespace quad_keys
       return depth;
     }
 
-    u_position geopt32_from_qnr(std::uint64_t qnr)
+    UPosition geopt32_from_qnr(std::uint64_t qnr)
     {
       const std::uint8_t depth = compute_depth_ulp_qnr(qnr);
       const std::uint64_t mask = (1 << depth) - 1;
       const std::uint32_t shift = 32u - depth;
 
-      u_position result;
+      UPosition result;
 
       result.x = static_cast<std::uint32_t>((qnr & mask) << shift);
       result.y = static_cast<std::uint32_t>(((qnr >> depth) & mask)
@@ -110,24 +108,24 @@ namespace quad_keys
       return result;
     }
 
-    quad_key mos_qnr_to_quad_key(std::uint64_t qnr, std::uint8_t depth)
+    QuadKey mos_qnr_to_quad_key(std::uint64_t qnr, std::uint8_t depth)
     {
-      u_position pos = geopt32_from_qnr(qnr);
+      UPosition pos = geopt32_from_qnr(qnr);
       std::uint32_t col_step = 0xffffffff >> depth;
       std::uint32_t row_step = (depth > 1) ? (0x7fffffff >> (depth - 1)) :
         (0x7fffffff);
       std::uint32_t col = pos.x / (col_step);
       std::uint32_t row = pos.y / (row_step);
-      return quad_key(type::ulp_qnr, row, col, depth);
+      return QuadKey(Type::UlpQnr, row, col, depth);
     }
 
-    std::uint64_t quad_key_to_ulp_qnr(const quad_key &key)
+    std::uint64_t quad_key_to_ulp_qnr(const QuadKey &key)
     {
       std::uint8_t depth = key.get_depth();
       std::uint32_t col_step = 0xffffffff >> depth;
       std::uint32_t row_step = (depth > 1) ? (0x7fffffff >> (depth - 1)) :
         (0x7fffffff);
-      u_position pos(key.get_col() * (col_step + 1),
+      UPosition pos(key.get_col() * (col_step + 1),
         key.get_row() * (row_step + 1));
       std::uint64_t qnr = qnr_from_geopt32(pos, depth);
       return qnr;
@@ -161,63 +159,63 @@ namespace quad_keys
     }
   }
 
-  void ulp_qnr_system::get_geo_coordinate_bounds2d(
-    geo_coordinate_bounding_box2d &out_bounds, const quad_key &self) const
+  void UlpQnrSystem::get_geo_coordinate_bounds2d(
+    GeoCoordinateBoundingBox2d &out_bounds, const QuadKey &self) const
   {
-    geo_coordinate_bounding_box2d ret;
+    GeoCoordinateBoundingBox2d ret;
     std::uint8_t depth = self.get_depth();
     double lon_step = 360.0 / static_cast<double>(1 << depth);
     double lat_step = 360.0 / static_cast<double>(1 << depth);
     std::uint64_t qnr = detail::quad_key_to_ulp_qnr(self);
-    u_position sw = detail::geopt32_from_qnr(qnr);
-    geo_coordinate2d sw_coord = detail::lat_lon_from_geopt32(sw);
-    geo_coordinate2d ne_coord(
-      longitude(sw_coord.get_longitude().val() + lon_step),
-      latitude(sw_coord.get_latitude().val() + lat_step));
+    UPosition sw = detail::geopt32_from_qnr(qnr);
+    GeoCoordinate2d sw_coord = detail::lat_lon_from_geopt32(sw);
+    GeoCoordinate2d ne_coord(
+      Longitude(sw_coord.get_longitude().val() + lon_step),
+      Latitude(sw_coord.get_latitude().val() + lat_step));
 
-    ret = geo_coordinate_bounding_box2d(sw_coord, ne_coord);
+    ret = GeoCoordinateBoundingBox2d(sw_coord, ne_coord);
 
     out_bounds = ret;
   }
 
-  std::string ulp_qnr_system::to_internal_string(const quad_key &self) const
+  std::string UlpQnrSystem::to_internal_string(const QuadKey &self) const
   {
     std::uint64_t qnr = detail::quad_key_to_ulp_qnr(self);
     std::string ret = detail::qnr_to_string(qnr);
     return ret;
   }
 
-  quad_key ulp_qnr_system::from_internal_string(
+  QuadKey UlpQnrSystem::from_internal_string(
     const std::string &in_string) const
   {
     bool success = false;
     std::uint64_t qnr = detail::string_to_qnr(in_string, &success);
     if (!success) {
-      return quad_key();
+      return QuadKey();
     }
     std::uint8_t  depth = detail::compute_depth_ulp_qnr(qnr);
-    quad_key ret = detail::mos_qnr_to_quad_key(qnr, depth);
+    QuadKey ret = detail::mos_qnr_to_quad_key(qnr, depth);
     return ret;
   }
 
-  quad_key ulp_qnr_system::get_key_from_longitude_latitude_at_depth(
-    const geo_coordinate2d &coords, std::uint8_t depth) const
+  QuadKey UlpQnrSystem::get_key_from_longitude_latitude_at_depth(
+    const GeoCoordinate2d &coords, std::uint8_t depth) const
   {
-    u_position pos = detail::geopt32_from_lat_lon(coords);
+    UPosition pos = detail::geopt32_from_lat_lon(coords);
     std::uint64_t qnr = detail::qnr_from_geopt32(pos, depth);
-    quad_key ret = detail::mos_qnr_to_quad_key(qnr, depth);
+    QuadKey ret = detail::mos_qnr_to_quad_key(qnr, depth);
     return ret;
   }
 
-  std::vector<quad_key>
-  ulp_qnr_system::get_keys_from_longitude_latitude_bounding_box(
-    const geo_coordinate_bounding_box2d &bounds,
+  std::vector<QuadKey>
+  UlpQnrSystem::get_keys_from_longitude_latitude_bounding_box(
+    const GeoCoordinateBoundingBox2d &bounds,
     std::uint8_t depth) const
   {
-    std::vector<quad_key> ret;
+    std::vector<QuadKey> ret;
 
-    u_position sw = detail::geopt32_from_lat_lon(bounds.lower_left());
-    u_position ne = detail::geopt32_from_lat_lon(bounds.upper_right());
+    UPosition sw = detail::geopt32_from_lat_lon(bounds.lower_left());
+    UPosition ne = detail::geopt32_from_lat_lon(bounds.upper_right());
 
     std::uint32_t col_step = (0xffffffff >> depth);
     std::uint32_t row_step = (depth > 0) ? (0x7fffffff >> (depth - 1)) :
@@ -242,9 +240,9 @@ namespace quad_keys
       std::uint32_t currentX = sw.x + (xStep * (col_step + 1));
       for (std::uint32_t yStep = 0; yStep < rows; ++yStep) {
         std::uint32_t currentY = sw.y + (yStep * (row_step + 1));
-        u_position pos(currentX, currentY);
+        UPosition pos(currentX, currentY);
         std::uint64_t qnr = detail::qnr_from_geopt32(pos, depth);
-        quad_key key = detail::mos_qnr_to_quad_key(qnr, depth);
+        QuadKey key = detail::mos_qnr_to_quad_key(qnr, depth);
         detail::insert_vector_if_valid_and_unique(ret, key);
       }
     }
@@ -252,12 +250,12 @@ namespace quad_keys
     return ret;
   }
 
-  std::uint8_t ulp_qnr_system::max_depth() const
+  std::uint8_t UlpQnrSystem::max_depth() const
   {
     return 23u;
   }
 
-  std::uint32_t ulp_qnr_system::max_rows(std::uint8_t depth) const
+  std::uint32_t UlpQnrSystem::max_rows(std::uint8_t depth) const
   {
     if (depth > max_depth()) {
       return 0;
@@ -268,7 +266,7 @@ namespace quad_keys
     return 1 << (depth - 1);
   }
 
-  std::uint32_t ulp_qnr_system::max_cols(std::uint8_t depth) const
+  std::uint32_t UlpQnrSystem::max_cols(std::uint8_t depth) const
   {
     if (depth > max_depth()) {
       return 0;

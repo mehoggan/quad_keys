@@ -1,89 +1,88 @@
-#include "quad_key/geo_coordinate2d.h"
+#include "quad_keys/geo_coordinate2d.h"
 
 namespace quad_keys
 {
-  const double longitude::min_longitude = -180.0;
-  const double longitude::max_longitude = 180.0;
-  const double latitude::min_latitude = -90.0;
-  const double latitude::max_latitude = 90.0;
+  const double Longitude::min_longitude = -180.0;
+  const double Longitude::max_longitude = 180.0;
+  const double Latitude::min_latitude = -90.0;
+  const double Latitude::max_latitude = 90.0;
 
-  longitude::longitude(double val) :
+  Longitude::Longitude(double val) :
     m_val(std::max(std::min(max_longitude, val), min_longitude))
   {}
 
-  longitude::longitude(const longitude &other) :
+  Longitude::Longitude(const Longitude &other) :
     m_val(other.m_val)
   {}
 
-  longitude &longitude::operator=(const longitude &rhs)
+  Longitude &Longitude::operator=(const Longitude &rhs)
   {
     m_val = rhs.m_val;
     return (*this);
   }
 
-  bool longitude::near(const longitude &other,
-    const double eps) const
+  bool Longitude::near(const Longitude &other, const double eps) const
   {
     const double diff = std::fabs(m_val - other.m_val);
     return (diff <= eps);
   }
 
-  latitude::latitude(double val) :
+  Latitude::Latitude(double val) :
     m_val(std::max(std::min(max_latitude, val), min_latitude))
   {}
 
-  latitude::latitude(const latitude &other) :
+  Latitude::Latitude(const Latitude &other) :
       m_val(other.m_val)
   {}
 
-  latitude &latitude::operator=(const latitude &rhs)
+  Latitude &Latitude::operator=(const Latitude &rhs)
   {
     m_val = rhs.m_val;
     return (*this);
   }
 
-  bool latitude::near(const latitude &other, const double eps) const
+  bool Latitude::near(const Latitude &other, const double eps) const
   {
     const double diff = std::fabs(m_val - other.m_val);
     return (diff <= eps);
   }
 
-  geo_coordinate2d::geo_coordinate2d() :
+  GeoCoordinate2d::GeoCoordinate2d() :
     m_longitude(0.0),
     m_latitude(0.0)
   {}
 
-  geo_coordinate2d::geo_coordinate2d(const geo_coordinate2d &other) :
+  GeoCoordinate2d::GeoCoordinate2d(const GeoCoordinate2d &other) :
     m_longitude(other.m_longitude),
     m_latitude(other.m_latitude)
   {}
 
-  geo_coordinate2d &geo_coordinate2d::operator=(const geo_coordinate2d &rhs)
+  GeoCoordinate2d &GeoCoordinate2d::operator=(const GeoCoordinate2d &rhs)
   {
     m_longitude = rhs.m_longitude;
     m_latitude = rhs.m_latitude;
     return (*this);
   }
 
-  geo_coordinate2d::geo_coordinate2d(const struct longitude &longit,
-    const struct latitude &latit) :
+  GeoCoordinate2d::GeoCoordinate2d(const struct Longitude &longit,
+    const struct Latitude &latit) :
     m_longitude(longit),
     m_latitude(latit)
   {}
 
-  void geo_coordinate2d::set_longitude(double longit)
+  void GeoCoordinate2d::set_longitude(double longit)
   {
-    struct longitude l(longit);
+    struct Longitude l(longit);
     m_longitude = l;
   }
 
-  void geo_coordinate2d::set_latitude(double latit)
+  void GeoCoordinate2d::set_latitude(double latit)
   {
-    struct latitude l(latit);
+    struct Latitude l(latit);
     m_latitude = l;
   }
 
-  bool geo_coordinate2d::near(const geo_coordinate2d &other,
+  bool GeoCoordinate2d::near(const GeoCoordinate2d &other,
     const double eps) const
   {
     return m_latitude.near(other.m_latitude, eps) &&

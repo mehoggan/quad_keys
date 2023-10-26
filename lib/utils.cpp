@@ -1,36 +1,36 @@
-#include "quad_key/utils.h"
+#include "quad_keys/utils.h"
 
 #include <math.h>
 
 namespace quad_keys
 {
-  uint32_xy_pair_t::uint32_xy_pair_t() :
+  UInt32XYPair_t::UInt32XYPair_t() :
     x(0),
     y(0)
   {}
 
-  uint32_xy_pair_t::uint32_xy_pair_t(std::uint32_t xparam,
+  UInt32XYPair_t::UInt32XYPair_t(std::uint32_t xparam,
     std::uint32_t yparam) :
     x(xparam),
     y(yparam)
   {}
 
-  int32_xy_pair_t::int32_xy_pair_t() :
+  Int32XYPair_t::Int32XYPair_t() :
     x(0),
     y(0)
   {}
 
-  int32_xy_pair_t::int32_xy_pair_t(std::int32_t xparam, std::int32_t yparam) :
+  Int32XYPair_t::Int32XYPair_t(std::int32_t xparam, std::int32_t yparam) :
     x(xparam),
     y(yparam)
   {}
 
-  double_xy_pair_t::double_xy_pair_t() :
+  DoubleXYPair_t::DoubleXYPair_t() :
     x(0.0),
     y(0.0)
   {}
 
-  double_xy_pair_t::double_xy_pair_t(double xparam, double yparam) :
+  DoubleXYPair_t::DoubleXYPair_t(double xparam, double yparam) :
     x(xparam),
     y(yparam)
   {}
@@ -44,31 +44,31 @@ namespace quad_keys
     const double pi = 4.0 * std::atan(1.0);
 
     void insert_vector_if_valid_and_unique(
-      std::vector<quad_key> &outkeys, const quad_key &key)
+      std::vector<QuadKey> &outkeys, const QuadKey &key)
     {
       if (std::find(outkeys.begin(), outkeys.end(), key) ==
-        outkeys.end() && key.get_type() != type::none) {
+        outkeys.end() && key.get_type() != Type::None) {
         outkeys.push_back(key);
       }
     }
 
-    latitude mercator_latitude_clamp(const latitude &lat)
+    Latitude mercator_latitude_clamp(const Latitude &lat)
     {
       double latit = lat.val();
       latit = std::max(mercator_min_latitude, latit);
       latit = std::min(mercator_max_latitude, latit);
-      return latitude(latit);
+      return Latitude(latit);
     }
 
-    double mercator_tangent_half_angle_formula(const latitude &latitude)
+    double mercator_tangent_half_angle_formula(const Latitude &latitude)
     {
       double radians = degrees_to_radians(latitude.val());
       return std::log(std::tan((pi / 4.0) + (radians / 2.0)));
     }
 
-    latitude inverse_mercator_tangent_half_angle_formula(double radians)
+    Latitude inverse_mercator_tangent_half_angle_formula(double radians)
     {
-      return latitude(radians_to_degrees(std::atan(std::sinh(radians))));
+      return Latitude(radians_to_degrees(std::atan(std::sinh(radians))));
     }
 
     double degrees_to_radians(double degrees)

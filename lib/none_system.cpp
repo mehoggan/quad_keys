@@ -1,107 +1,107 @@
-#include "quad_key/none_system.h"
+#include "quad_keys/none_system.h"
 
 namespace quad_keys
 {
-  bool none_system::is_valid(const quad_key &/*key*/) const
+  bool NoneSystem::is_valid(const QuadKey &/*key*/) const
   {
     return false;
   }
 
-  bool none_system::is_root_key(const quad_key &/*self*/) const
+  bool NoneSystem::is_root_key(const QuadKey &/*self*/) const
   {
     return true;
   }
 
-  quad_key none_system::get_parent(const quad_key &/*self*/) const
+  QuadKey NoneSystem::get_parent(const QuadKey &/*self*/) const
   {
-    return quad_key();
+    return QuadKey();
   }
 
-  bool none_system::is_my_ancestor(const quad_key &/*quadKey*/,
-    const quad_key &/*self*/) const
+  bool NoneSystem::is_my_ancestor(const QuadKey &/*quadKey*/,
+    const QuadKey &/*self*/) const
   {
     return false;
   }
 
-  quad_key none_system::get_ancestor(std::uint8_t /*depthDelta*/,
-    const quad_key &/*self*/) const
+  QuadKey NoneSystem::get_ancestor(std::uint8_t /*depthDelta*/,
+    const QuadKey &/*self*/) const
   {
-    return quad_key();
+    return QuadKey();
   }
 
-  quad_key none_system::get_child(quad_key::quadrant /*quadrant*/,
-    const quad_key &/*self*/) const
+  QuadKey NoneSystem::get_child(QuadKey::quadrant /*quadrant*/,
+    const QuadKey &/*self*/) const
   {
-    return quad_key();
+    return QuadKey();
   }
 
-  std::vector<quad_key> none_system::get_children(
-    const quad_key &/*self*/) const
+  std::vector<QuadKey> NoneSystem::get_children(
+    const QuadKey &/*self*/) const
   {
-    return std::vector<quad_key>();
+    return std::vector<QuadKey>();
   }
 
-  std::vector<quad_key> none_system::get_descendants(
-    std::uint8_t /*depth_delta*/, const quad_key &/*self*/) const
+  std::vector<QuadKey> NoneSystem::get_descendants(
+    std::uint8_t /*depth_delta*/, const QuadKey &/*self*/) const
   {
-    return std::vector<quad_key>();
+    return std::vector<QuadKey>();
   }
 
-  std::vector<quad_key> none_system::get_siblings(
-    const quad_key &/*self*/) const
+  std::vector<QuadKey> NoneSystem::get_siblings(
+    const QuadKey &/*self*/) const
   {
-    return std::vector<quad_key>();
+    return std::vector<QuadKey>();
   }
 
-  std::vector<quad_key> none_system::get_neighbors(
-    const quad_key &/*self*/) const
+  std::vector<QuadKey> NoneSystem::get_neighbors(
+    const QuadKey &/*self*/) const
   {
-    return std::vector<quad_key>();
+    return std::vector<QuadKey>();
   }
 
-  void none_system::get_geo_coordinate_bounds2d(
-    geo_coordinate_bounding_box2d &out_bounds,
-    const quad_key &/*self*/) const
+  void NoneSystem::get_geo_coordinate_bounds2d(
+    GeoCoordinateBoundingBox2d &out_bounds,
+    const QuadKey &/*self*/) const
   {
-    out_bounds = geo_coordinate_bounding_box2d();
+    out_bounds = GeoCoordinateBoundingBox2d();
   }
 
-  std::string none_system::to_internal_string(const quad_key &/*self*/) const
+  std::string NoneSystem::to_internal_string(const QuadKey &/*self*/) const
   {
     return "";
   }
 
-  quad_key none_system::from_internal_string(
+  QuadKey NoneSystem::from_internal_string(
     const std::string &/*inString*/) const
   {
-    return quad_key();
+    return QuadKey();
   }
 
-  quad_key none_system::get_key_from_longitude_latitude_at_depth(
-    const geo_coordinate2d &/*coords*/, std::uint8_t /*depth*/) const
+  QuadKey NoneSystem::get_key_from_longitude_latitude_at_depth(
+    const GeoCoordinate2d &/*coords*/, std::uint8_t /*depth*/) const
   {
-    return quad_key();
+    return QuadKey();
   }
 
-  std::vector<quad_key>
-  none_system::get_keys_from_longitude_latitude_bounding_box(
-    const geo_coordinate_bounding_box2d &/*bounds*/,
+  std::vector<QuadKey>
+  NoneSystem::get_keys_from_longitude_latitude_bounding_box(
+    const GeoCoordinateBoundingBox2d &/*bounds*/,
     std::uint8_t /*depth*/) const
   {
-    return std::vector<quad_key>();
+    return std::vector<QuadKey>();
   }
 
-  std::uint8_t none_system::max_depth() const
+  std::uint8_t NoneSystem::max_depth() const
   {
     return 0;
   }
 
-  std::uint32_t none_system::max_rows(std::uint8_t /*depth*/) const
+  std::uint32_t NoneSystem::max_rows(std::uint8_t /*depth*/) const
   {
     return 0;
   }
 
-  std::uint32_t none_system::max_cols(std::uint8_t /*depth*/) const
+  std::uint32_t NoneSystem::max_cols(std::uint8_t /*depth*/) const
   {
     return 0;
   }
