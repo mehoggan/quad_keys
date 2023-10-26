@@ -43,6 +43,7 @@ AC_CONFIG_FILES([
   Makefile
   lib/Makefile
   test/Makefile
+  bindings/Makefile
 ])
 
 AC_OUTPUT

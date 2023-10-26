@@ -12,7 +12,7 @@ def lib_base_path = "${projectDir}${File.separator}" +
   "..${File.separator}..${File.separator}..${File.separator}"
 def lib_linker_path = "${lib_base_path}build" + "${File.separator}lib"
 def jvm_lib_path = "${projectDir}${File.separator}" +
-  "build${File.separator}libs${File.separator}quad_key_jni" +
+  "build${File.separator}libs${File.separator}quad_keys_jni" +
   "${File.separator}shared"
 
 task copyLibs(type: Copy) {
@@ -53,7 +53,7 @@ model {
     }
   }
   components {
-    quad_key_jni(NativeLibrarySpec) {
+    quad_keys_jni(NativeLibrarySpec) {
       sources {
         cpp {
           source {
@@ -69,13 +69,13 @@ model {
             cppCompiler.args "--std=c++11",
               "-I", "${lib_base_path}",
               "-I", "${lib_base_path}${File.separator}include"
-            linker.args "-L", "${lib_linker_path}", "-lquad_key",
+            linker.args "-L", "${lib_linker_path}", "-lquad_keys",
               "-Wl,-rpath,${lib_linker_path}"
           } else if (toolChain in Clang) {
             cppCompiler.args "--std=c++11",
               "-I", "${lib_base_path}",
               "-I", "${lib_base_path}${File.separator}include"
-            linker.args "-L", "${lib_linker_path}", "-lquad_key",
+            linker.args "-L", "${lib_linker_path}", "-lquad_keys",
               "-Wl,-rpath,${lib_linker_path}"
           } else {
             throw GradleException("Tool chain " + toolChain +

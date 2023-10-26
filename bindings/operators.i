@@ -2,55 +2,55 @@
 #pragma SWIG nowarn=503,362
 
 #if defined(SWIGJAVA)
-  %rename(assign_longitude) quad_keys::longitude::operator=;
-  %rename(less_than) quad_keys::longitude::operator<;
-  %rename(less_than_or_equal) quad_keys::longitude::operator<=;
-  %rename(greater_than) quad_keys::longitude::operator>;
-  %rename(greater_than_or_equal) quad_keys::longitude::operator>=;
-  %rename(equal_to) quad_keys::longitude::operator==;
-  %rename(not_equal_to) quad_keys::longitude::operator!=;
-  %rename(longitude_difference) quad_keys::longitude::operator-;
+  %rename(assignLongitude) quad_keys::Longitude::operator=;
+  %rename(lessThan) quad_keys::Longitude::operator<;
+  %rename(lessThanOrEqual) quad_keys::Longitude::operator<=;
+  %rename(greaterThan) quad_keys::Longitude::operator>;
+  %rename(greaterThanOrEqual) quad_keys::Longitude::operator>=;
+  %rename(equalTo) quad_keys::Longitude::operator==;
+  %rename(notEqualTo) quad_keys::Longitude::operator!=;
+  %rename(longitudeDifference) quad_keys::Longitude::operator-;
 
-  %rename(assign_latitude) quad_keys::latitude::operator=;
-  %rename(less_than) quad_keys::latitude::operator<;
-  %rename(less_than_or_equal) quad_keys::latitude::operator<=;
-  %rename(greater_than) quad_keys::latitude::operator>;
-  %rename(greater_than_or_equal) quad_keys::latitude::operator>=;
-  %rename(equal_to) quad_keys::latitude::operator==;
-  %rename(not_equal_to) quad_keys::latitude::operator!=;
-  %rename(latitude_difference) quad_keys::latitude::operator-;
+  %rename(assignLatitude) quad_keys::Latitude::operator=;
+  %rename(lessThan) quad_keys::Latitude::operator<;
+  %rename(lessThanOrEqual) quad_keys::Latitude::operator<=;
+  %rename(greaterThan) quad_keys::Latitude::operator>;
+  %rename(greaterThanOrEqual) quad_keys::Latitude::operator>=;
+  %rename(equalTo) quad_keys::Latitude::operator==;
+  %rename(notEqualTo) quad_keys::Latitude::operator!=;
+  %rename(latitudeDifference) quad_keys::Latitude::operator-;
 
-  %rename(assign_geo_coordinate2d) quad_keys::geo_coordinate2d::operator=;
-  %rename(equal_to) quad_keys::geo_coordinate2d::operator==;
+  %rename(assignGeoCoordinate2d) quad_keys::geo_coordinate2d::operator=;
+  %rename(equalTo) quad_keys::geo_coordinate2d::operator==;
   %rename(notEqualTo) quad_keys::geo_coordinate2d::operator!=;
 
-  %rename(assignquad_key) quad_keys::quad_key::operator=;
-  %rename(less_than) quad_keys::quad_key::operator<;
-  %rename(equal_to) quad_keys::quad_key::operator==;
-  %rename(not_equal_to) quad_keys::quad_key::operator!=;
+  %rename(assignQuadKey) quad_keys::QuadKey::operator=;
+  %rename(lessThan) quad_keys::QuadKey::operator<;
+  %rename(equalTo) quad_keys::QuadKey::operator==;
+  %rename(notEqualTo) quad_keys::QuadKey::operator!=;
 #endif
 
 #if defined(SWIGPYTHON)
-  %rename(__lt__) quad_keys::longitude::operator<;
-  %rename(__le__) quad_keys::longitude::operator<=;
-  %rename(__gt__) quad_keys::longitude::operator>;
-  %rename(__ge__) quad_keys::longitude::operator>=;
-  %rename(__eq__) quad_keys::longitude::operator==;
-  %rename(__ne__) quad_keys::longitude::operator!=;
-  %rename(__sub__) quad_keys::longitude::operator-;
+  %rename(__lt__) quad_keys::Longitude::operator<;
+  %rename(__le__) quad_keys::Longitude::operator<=;
+  %rename(__gt__) quad_keys::Longitude::operator>;
+  %rename(__ge__) quad_keys::Longitude::operator>=;
+  %rename(__eq__) quad_keys::Longitude::operator==;
+  %rename(__ne__) quad_keys::Longitude::operator!=;
+  %rename(__sub__) quad_keys::Longitude::operator-;
 
-  %rename(__lt__) quad_keys::latitude::operator<;
-  %rename(__le__) quad_keys::latitude::operator<=;
-  %rename(__gt__) quad_keys::latitude::operator>;
-  %rename(__ge__) quad_keys::latitude::operator>=;
-  %rename(__eq__) quad_keys::latitude::operator==;
-  %rename(__ne__) quad_keys::latitude::operator!=;
-  %rename(__sub__) quad_keys::latitude::operator-;
+  %rename(__lt__) quad_keys::Latitude::operator<;
+  %rename(__le__) quad_keys::Latitude::operator<=;
+  %rename(__gt__) quad_keys::Latitude::operator>;
+  %rename(__ge__) quad_keys::Latitude::operator>=;
+  %rename(__eq__) quad_keys::Latitude::operator==;
+  %rename(__ne__) quad_keys::Latitude::operator!=;
+  %rename(__sub__) quad_keys::Latitude::operator-;
 
   %rename(__eq__) quad_keys::GeoCoordinate2d::operator==;
   %rename(__ne__) quad_keys::GeoCoordinate2d::operator!=;
 
-  %rename(__lt__) quad_keys::quad_key::operator<;
-  %rename(__eq__) quad_keys::quad_key::operator==;
-  %rename(__ne__) quad_keys::quad_key::operator!=;
+  %rename(__lt__) quad_keys::QuadKey::operator<;
+  %rename(__eq__) quad_keys::QuadKey::operator==;
+  %rename(__ne__) quad_keys::QuadKey::operator!=;
 #endif
