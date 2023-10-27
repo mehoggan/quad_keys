@@ -3,6 +3,10 @@ lib_LTLIBRARIES += libquad_keys_python.la
 
 BINDINGS_DIR = $(abs_top_srcdir)/bindings
 
+.PHONY: clean_bindings
+clean_bindings: ./java/quad_keys/src/main/jni/quad_keys_java.cpp ./python/native/quad_keys_python.cpp
+	rm -rf ./python/native/quad_keys_python.cpp ./java/quad_keys/src/main/jni/quad_keys_java.cpp
+
 ./java/quad_keys/src/main/jni/quad_keys_java.cpp: Makefile $(BINDINGS_DIR)/quad_keys.swig
 	swig \
   	-c++ \
@@ -44,5 +48,4 @@ libquad_keys_python_la_SOURCES = \
 libquad_keys_python_la_LIBADD = \
 		$(abs_top_builddir)/lib/libquad_keys.la
 
-CLEANFILES = ./java/quad_keys/src/main/jni/quad_keys_java.cpp \
-	./python/native/quad_keys_python.cpp
+CLEANFILES = *.cpp

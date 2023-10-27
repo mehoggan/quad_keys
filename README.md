@@ -39,6 +39,31 @@ If you wish to clone all dependencies at once at the time of clone run:
 > make -C build
 ```
 
+## To build and run the java tests
+
+```sh
+> pushd ./bindings/java/quad_keys
+> gradle build
+> popd
+```
+
+## To build and run the python tests
+
+```sh
+> pushd ./bindings/python
+> python setup.py build_ext --inplace
+> DYLD_LIBRARY_PATH=/Users/matthew.hoggan/Devel/github/mehoggan/quad_keys/build/lib/.libs/ pytest
+> popd
+```
+
+## To rebuild the swig bindings for Python3 and Java (for now)
+
+```sh
+# From the root of this project.
+> find ./bindings/ -name "*.cpp" -exec rm {} \;
+```
+We do this because I could not get automake's `CLEANFILES` work correctly.
+
 ## Running Tests
 
 ```sh
