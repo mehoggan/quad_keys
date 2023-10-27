@@ -34,7 +34,9 @@ libquad_keys_java_la_LIBADD = \
   	$(BINDINGS_DIR)/quad_key.swig
 
 libquad_keys_python_la_CPPFLAGS = -Werror -Wall -pedantic \
-    -I$(abs_top_srcdir)/include
+		-Wno-deprecated-declarations \
+    -I$(abs_top_srcdir)/include \
+		-I$(python_includes)
 
 libquad_keys_python_la_SOURCES = \
     ./python/native/quad_keys_python.cpp

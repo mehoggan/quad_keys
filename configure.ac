@@ -51,5 +51,7 @@ FIND_JNI([$java_home], [jni_home])
 AC_SUBST([jni_home])
 FIND_JNI_MD([$java_home], [jni_md_home])
 AC_SUBST([jni_md_home])
+FIND_PYTHON_H([python_includes])
+AC_SUBST([python_includes])
 
 AC_OUTPUT

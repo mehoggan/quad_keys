@@ -663,6 +663,7 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
+python_includes
 jni_md_home
 jni_home
 java_home
@@ -18385,6 +18386,8 @@ java_home=$JAVA_HOME
 jni_home=$(dirname $(find $java_home -name "jni.h"))
 
 jni_md_home=$(dirname $(find $java_home -name "jni_md.h"))
+
+python_includes=$(dirname $(find $(dirname $(dirname $(which python3))) -name Python.h))
 
 
 cat >confcache <<\_ACEOF
