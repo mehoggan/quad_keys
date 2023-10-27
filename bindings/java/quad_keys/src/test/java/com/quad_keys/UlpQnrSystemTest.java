@@ -25,7 +25,7 @@ public class UlpQnrSystemTest {
 
   @BeforeClass
   public static void setUpBeforeClass() throws Exception {
-    System.loadLibrary("QuadKeys_java");
+    System.loadLibrary("quad_keys_java");
   }
 
   @Test

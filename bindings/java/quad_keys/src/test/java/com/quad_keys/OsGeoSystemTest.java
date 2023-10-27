@@ -23,8 +23,6 @@ public class OsGeoSystemTest {
 
   @BeforeClass
   public static void setUpBeforeClass() throws Exception {
-    Map<String, String> envVars = System.getenv();
-    String shit = envVars.get("DYLD_LIBRARY_PATH");
     System.loadLibrary("quad_keys_java");
   }
 

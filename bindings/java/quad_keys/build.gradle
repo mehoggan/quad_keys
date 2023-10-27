@@ -1,15 +1,48 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
 apply plugin: 'java'
 
 repositories {
-  jcenter()
+  mavenCentral()
 }
 
-def lib_base_path = "${projectDir}${File.separator}" +
-  "..${File.separator}..${File.separator}..${File.separator}"
-def lib_linker_path = "${lib_base_path}build" + "${File.separator}lib"
-def jvm_lib_path = "${projectDir}${File.separator}" +
-  "build${File.separator}libs${File.separator}quad_keys_jni" +
-  "${File.separator}shared"
+def native_base_dir = "${projectDir}${File.separator}..${File.separator}..${File.separator}..${File.separator}"
+def native_lib_dir = "${native_base_dir}build${File.separator}lib${File.separator}.libs/"
+project.logger.info("native_lib_dir = ${native_lib_dir}")
+def native_bindings_dir = "${native_base_dir}build${File.separator}bindings${File.separator}.libs/"
+project.logger.info("native_bindings_dir = ${native_bindings_dir}")
+
+project.logger.info("project.buildDir = ${project.buildDir}")
+
+def library_path = "${project.buildDir}${File.separator}libs"
+project.logger.info("library_path = ${library_path}")
+
+String shared_lib_ext_wildcard = ""
+if (Os.isFamily(Os.FAMILY_MAC)) {
+  project.logger.info("Os is OsX")
+  shared_lib_ext_wildcard = "**/*.dylib*"
+} else if (Os.isFamily(Os.FAMILY_UNIX)) {
+  project.logger.info("Os is Unix")
+  shared_lib_ext_wildcard = "**/*.so*"
+}
+
+tasks.register('copySharedLib', Copy) {
+  from layout.buildDirectory.dir("${native_lib_dir}")
+  include(shared_lib_ext_wildcard)
+  into layout.buildDirectory.dir("${project.buildDir}${File.separator}libs")
+}
+
+tasks.register('copySharedBindingsLib', Copy) {
+  from layout.buildDirectory.dir("${native_bindings_dir}")
+  include(shared_lib_ext_wildcard)
+  into layout.buildDirectory.dir("${project.buildDir}${File.separator}libs")
+}
+
+compileJava.dependsOn(tasks.named('copySharedLib'))
+compileJava.dependsOn(tasks.named('copySharedBindingsLib'))
+
+compileTestJava.dependsOn(tasks.named('copySharedLib'))
+compileTestJava.dependsOn(tasks.named('copySharedBindingsLib'))
 
 test {
   testLogging {
@@ -18,7 +51,8 @@ test {
 }
 
 tasks.withType(Test).configureEach {
-  systemProperty "java.library.path", "${jvm_lib_path}"
+  systemProperty "java.library.path", "${project.buildDir}${File.separator}libs"
+  environment("DYLD_LIBRARY_PATH", "${library_path}")
 }
 
 dependencies {

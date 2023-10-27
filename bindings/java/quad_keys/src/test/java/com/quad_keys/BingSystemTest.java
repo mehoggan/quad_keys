@@ -2,6 +2,8 @@ package com.quad_keys;
 
 import static org.junit.Assert.*;
 
+import java.util.Map;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
