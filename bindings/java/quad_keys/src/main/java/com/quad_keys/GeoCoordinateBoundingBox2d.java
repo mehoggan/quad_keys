@@ -42,46 +42,46 @@ public class GeoCoordinateBoundingBox2d {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        quad_key_javaJNI.delete_GeoCoordinateBoundingBox2d(swigCPtr);
+        quad_keys_javaJNI.delete_GeoCoordinateBoundingBox2d(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public GeoCoordinateBoundingBox2d() {
-    this(quad_key_javaJNI.new_GeoCoordinateBoundingBox2d__SWIG_0(), true);
+    this(quad_keys_javaJNI.new_GeoCoordinateBoundingBox2d__SWIG_0(), true);
   }
 
   public GeoCoordinateBoundingBox2d(GeoCoordinate2d coordinate0, GeoCoordinate2d coordinate1) {
-    this(quad_key_javaJNI.new_GeoCoordinateBoundingBox2d__SWIG_1(GeoCoordinate2d.getCPtr(coordinate0), coordinate0, GeoCoordinate2d.getCPtr(coordinate1), coordinate1), true);
+    this(quad_keys_javaJNI.new_GeoCoordinateBoundingBox2d__SWIG_1(GeoCoordinate2d.getCPtr(coordinate0), coordinate0, GeoCoordinate2d.getCPtr(coordinate1), coordinate1), true);
   }
 
   public boolean contains(GeoCoordinate2d coordinate) {
-    return quad_key_javaJNI.GeoCoordinateBoundingBox2d_contains(swigCPtr, this, GeoCoordinate2d.getCPtr(coordinate), coordinate);
+    return quad_keys_javaJNI.GeoCoordinateBoundingBox2d_contains(swigCPtr, this, GeoCoordinate2d.getCPtr(coordinate), coordinate);
   }
 
   public void grow_to_contain(GeoCoordinate2d coordinate) {
-    quad_key_javaJNI.GeoCoordinateBoundingBox2d_grow_to_contain(swigCPtr, this, GeoCoordinate2d.getCPtr(coordinate), coordinate);
+    quad_keys_javaJNI.GeoCoordinateBoundingBox2d_grow_to_contain(swigCPtr, this, GeoCoordinate2d.getCPtr(coordinate), coordinate);
   }
 
   public GeoCoordinate2d lower_left() {
-    return new GeoCoordinate2d(quad_key_javaJNI.GeoCoordinateBoundingBox2d_lower_left(swigCPtr, this), false);
+    return new GeoCoordinate2d(quad_keys_javaJNI.GeoCoordinateBoundingBox2d_lower_left(swigCPtr, this), false);
   }
 
   public GeoCoordinate2d upper_right() {
-    return new GeoCoordinate2d(quad_key_javaJNI.GeoCoordinateBoundingBox2d_upper_right(swigCPtr, this), false);
+    return new GeoCoordinate2d(quad_keys_javaJNI.GeoCoordinateBoundingBox2d_upper_right(swigCPtr, this), false);
   }
 
   public GeoCoordinate2d upper_left() {
-    return new GeoCoordinate2d(quad_key_javaJNI.GeoCoordinateBoundingBox2d_upper_left(swigCPtr, this), true);
+    return new GeoCoordinate2d(quad_keys_javaJNI.GeoCoordinateBoundingBox2d_upper_left(swigCPtr, this), true);
   }
 
   public GeoCoordinate2d lower_right() {
-    return new GeoCoordinate2d(quad_key_javaJNI.GeoCoordinateBoundingBox2d_lower_right(swigCPtr, this), true);
+    return new GeoCoordinate2d(quad_keys_javaJNI.GeoCoordinateBoundingBox2d_lower_right(swigCPtr, this), true);
   }
 
   public boolean is_valid() {
-    return quad_key_javaJNI.GeoCoordinateBoundingBox2d_is_valid(swigCPtr, this);
+    return quad_keys_javaJNI.GeoCoordinateBoundingBox2d_is_valid(swigCPtr, this);
   }
 
 }

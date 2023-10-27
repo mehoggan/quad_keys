@@ -42,141 +42,141 @@ public class QuadKey {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        quad_key_javaJNI.delete_QuadKey(swigCPtr);
+        quad_keys_javaJNI.delete_QuadKey(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public QuadKey() {
-    this(quad_key_javaJNI.new_QuadKey__SWIG_0(), true);
+    this(quad_keys_javaJNI.new_QuadKey__SWIG_0(), true);
   }
 
   public QuadKey(Type t) {
-    this(quad_key_javaJNI.new_QuadKey__SWIG_1(t.swigValue()), true);
+    this(quad_keys_javaJNI.new_QuadKey__SWIG_1(t.swigValue()), true);
   }
 
   public QuadKey(Type t, long row, long col, short depth) {
-    this(quad_key_javaJNI.new_QuadKey__SWIG_2(t.swigValue(), row, col, depth), true);
+    this(quad_keys_javaJNI.new_QuadKey__SWIG_2(t.swigValue(), row, col, depth), true);
   }
 
   public QuadKey(QuadKey other) {
-    this(quad_key_javaJNI.new_QuadKey__SWIG_3(QuadKey.getCPtr(other), other), true);
+    this(quad_keys_javaJNI.new_QuadKey__SWIG_3(QuadKey.getCPtr(other), other), true);
   }
 
   public QuadKey assignQuadKey(QuadKey other) {
-    return new QuadKey(quad_key_javaJNI.QuadKey_assignQuadKey(swigCPtr, this, QuadKey.getCPtr(other), other), false);
+    return new QuadKey(quad_keys_javaJNI.QuadKey_assignQuadKey(swigCPtr, this, QuadKey.getCPtr(other), other), false);
   }
 
   public Type get_type() {
-    return Type.swigToEnum(quad_key_javaJNI.QuadKey_get_type(swigCPtr, this));
+    return Type.swigToEnum(quad_keys_javaJNI.QuadKey_get_type(swigCPtr, this));
   }
 
   public String type_as_string() {
-    return quad_key_javaJNI.QuadKey_type_as_string(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKey_type_as_string(swigCPtr, this);
   }
 
   public long get_row() {
-    return quad_key_javaJNI.QuadKey_get_row(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKey_get_row(swigCPtr, this);
   }
 
   public long get_col() {
-    return quad_key_javaJNI.QuadKey_get_col(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKey_get_col(swigCPtr, this);
   }
 
   public short get_depth() {
-    return quad_key_javaJNI.QuadKey_get_depth(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKey_get_depth(swigCPtr, this);
   }
 
   public boolean is_root_key() {
-    return quad_key_javaJNI.QuadKey_is_root_key(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKey_is_root_key(swigCPtr, this);
   }
 
   public QuadKey get_parent() {
-    return new QuadKey(quad_key_javaJNI.QuadKey_get_parent(swigCPtr, this), true);
+    return new QuadKey(quad_keys_javaJNI.QuadKey_get_parent(swigCPtr, this), true);
   }
 
   public boolean is_my_ancestor(QuadKey quad_key) {
-    return quad_key_javaJNI.QuadKey_is_my_ancestor(swigCPtr, this, QuadKey.getCPtr(quad_key), quad_key);
+    return quad_keys_javaJNI.QuadKey_is_my_ancestor(swigCPtr, this, QuadKey.getCPtr(quad_key), quad_key);
   }
 
   public QuadKey get_ancestor(short depth_delta) {
-    return new QuadKey(quad_key_javaJNI.QuadKey_get_ancestor(swigCPtr, this, depth_delta), true);
+    return new QuadKey(quad_keys_javaJNI.QuadKey_get_ancestor(swigCPtr, this, depth_delta), true);
   }
 
   public QuadKey get_child(QuadKey.quadrant quad_id) {
-    return new QuadKey(quad_key_javaJNI.QuadKey_get_child(swigCPtr, this, quad_id.swigValue()), true);
+    return new QuadKey(quad_keys_javaJNI.QuadKey_get_child(swigCPtr, this, quad_id.swigValue()), true);
   }
 
   public QuadKeysVector get_children() {
-    return new QuadKeysVector(quad_key_javaJNI.QuadKey_get_children(swigCPtr, this), true);
+    return new QuadKeysVector(quad_keys_javaJNI.QuadKey_get_children(swigCPtr, this), true);
   }
 
   public QuadKeysVector get_descendants(short depth_delta) {
-    return new QuadKeysVector(quad_key_javaJNI.QuadKey_get_descendants(swigCPtr, this, depth_delta), true);
+    return new QuadKeysVector(quad_keys_javaJNI.QuadKey_get_descendants(swigCPtr, this, depth_delta), true);
   }
 
   public QuadKeysVector get_siblings() {
-    return new QuadKeysVector(quad_key_javaJNI.QuadKey_get_siblings(swigCPtr, this), true);
+    return new QuadKeysVector(quad_keys_javaJNI.QuadKey_get_siblings(swigCPtr, this), true);
   }
 
   public QuadKeysVector get_neighbors() {
-    return new QuadKeysVector(quad_key_javaJNI.QuadKey_get_neighbors(swigCPtr, this), true);
+    return new QuadKeysVector(quad_keys_javaJNI.QuadKey_get_neighbors(swigCPtr, this), true);
   }
 
   public void get_geo_coordinate_bounds2d(GeoCoordinateBoundingBox2d out_bounds) {
-    quad_key_javaJNI.QuadKey_get_geo_coordinate_bounds2d(swigCPtr, this, GeoCoordinateBoundingBox2d.getCPtr(out_bounds), out_bounds);
+    quad_keys_javaJNI.QuadKey_get_geo_coordinate_bounds2d(swigCPtr, this, GeoCoordinateBoundingBox2d.getCPtr(out_bounds), out_bounds);
   }
 
   public String to_internal_string() {
-    return quad_key_javaJNI.QuadKey_to_internal_string(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKey_to_internal_string(swigCPtr, this);
   }
 
   public static QuadKey from_internal_string(Type t, String in_string) {
-    return new QuadKey(quad_key_javaJNI.QuadKey_from_internal_string(t.swigValue(), in_string), true);
+    return new QuadKey(quad_keys_javaJNI.QuadKey_from_internal_string(t.swigValue(), in_string), true);
   }
 
   public static QuadKey get_key_from_longitude_latitude_at_depth(Type t, GeoCoordinate2d coords, short depth) {
-    return new QuadKey(quad_key_javaJNI.QuadKey_get_key_from_longitude_latitude_at_depth(t.swigValue(), GeoCoordinate2d.getCPtr(coords), coords, depth), true);
+    return new QuadKey(quad_keys_javaJNI.QuadKey_get_key_from_longitude_latitude_at_depth(t.swigValue(), GeoCoordinate2d.getCPtr(coords), coords, depth), true);
   }
 
   public static QuadKeysVector get_keys_from_longitude_latitude_bounding_box(Type t, GeoCoordinateBoundingBox2d bounds, short depth) {
-    return new QuadKeysVector(quad_key_javaJNI.QuadKey_get_keys_from_longitude_latitude_bounding_box(t.swigValue(), GeoCoordinateBoundingBox2d.getCPtr(bounds), bounds, depth), true);
+    return new QuadKeysVector(quad_keys_javaJNI.QuadKey_get_keys_from_longitude_latitude_bounding_box(t.swigValue(), GeoCoordinateBoundingBox2d.getCPtr(bounds), bounds, depth), true);
   }
 
   public static short max_depth(Type t) {
-    return quad_key_javaJNI.QuadKey_max_depth(t.swigValue());
+    return quad_keys_javaJNI.QuadKey_max_depth(t.swigValue());
   }
 
   public static long max_rows(Type t, short depth) {
-    return quad_key_javaJNI.QuadKey_max_rows(t.swigValue(), depth);
+    return quad_keys_javaJNI.QuadKey_max_rows(t.swigValue(), depth);
   }
 
   public static long max_cols(Type t, short depth) {
-    return quad_key_javaJNI.QuadKey_max_cols(t.swigValue(), depth);
+    return quad_keys_javaJNI.QuadKey_max_cols(t.swigValue(), depth);
   }
 
   public static java.math.BigInteger max_tiles(Type t, short depth) {
-    return quad_key_javaJNI.QuadKey_max_tiles(t.swigValue(), depth);
+    return quad_keys_javaJNI.QuadKey_max_tiles(t.swigValue(), depth);
   }
 
   public boolean lessThan(QuadKey rhs) {
-    return quad_key_javaJNI.QuadKey_lessThan(swigCPtr, this, QuadKey.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.QuadKey_lessThan(swigCPtr, this, QuadKey.getCPtr(rhs), rhs);
   }
 
   public boolean equalTo(QuadKey rhs) {
-    return quad_key_javaJNI.QuadKey_equalTo(swigCPtr, this, QuadKey.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.QuadKey_equalTo(swigCPtr, this, QuadKey.getCPtr(rhs), rhs);
   }
 
   public boolean notEqualTo(QuadKey rhs) {
-    return quad_key_javaJNI.QuadKey_notEqualTo(swigCPtr, this, QuadKey.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.QuadKey_notEqualTo(swigCPtr, this, QuadKey.getCPtr(rhs), rhs);
   }
 
   public final static class quadrant {
-    public final static QuadKey.quadrant south_west = new QuadKey.quadrant("south_west", quad_key_javaJNI.QuadKey_quadrant_south_west_get());
-    public final static QuadKey.quadrant south_east = new QuadKey.quadrant("south_east", quad_key_javaJNI.QuadKey_quadrant_south_east_get());
-    public final static QuadKey.quadrant north_west = new QuadKey.quadrant("north_west", quad_key_javaJNI.QuadKey_quadrant_north_west_get());
-    public final static QuadKey.quadrant north_east = new QuadKey.quadrant("north_east", quad_key_javaJNI.QuadKey_quadrant_north_east_get());
+    public final static QuadKey.quadrant south_west = new QuadKey.quadrant("south_west", quad_keys_javaJNI.QuadKey_quadrant_south_west_get());
+    public final static QuadKey.quadrant south_east = new QuadKey.quadrant("south_east", quad_keys_javaJNI.QuadKey_quadrant_south_east_get());
+    public final static QuadKey.quadrant north_west = new QuadKey.quadrant("north_west", quad_keys_javaJNI.QuadKey_quadrant_north_west_get());
+    public final static QuadKey.quadrant north_east = new QuadKey.quadrant("north_east", quad_keys_javaJNI.QuadKey_quadrant_north_east_get());
 
     public final int swigValue() {
       return swigValue;

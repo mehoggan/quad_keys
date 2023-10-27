@@ -3017,16 +3017,16 @@ static swig_module_info swig_module = {swig_types, 23, 0, 0, 0, 0};
 #define SWIG_TypeQuery SWIG_Python_TypeQuery
 
 /*-----------------------------------------------
-              @(target):= _quad_key.so
+              @(target):= _quad_keys.so
   ------------------------------------------------*/
 #if PY_VERSION_HEX >= 0x03000000
-#  define SWIG_init    PyInit__quad_key
+#  define SWIG_init    PyInit__quad_keys
 
 #else
-#  define SWIG_init    init_quad_key
+#  define SWIG_init    init_quad_keys
 
 #endif
-#define SWIG_name    "_quad_key"
+#define SWIG_name    "_quad_keys"
 
 #ifdef __cplusplus
 #include <utility>

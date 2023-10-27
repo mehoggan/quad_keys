@@ -1,8 +1,4 @@
-import java.util.regex.Pattern
-import org.apache.tools.ant.taskdefs.condition.Os
-
 apply plugin: 'java'
-apply plugin: 'cpp'
 
 repositories {
   jcenter()
@@ -15,78 +11,16 @@ def jvm_lib_path = "${projectDir}${File.separator}" +
   "build${File.separator}libs${File.separator}quad_keys_jni" +
   "${File.separator}shared"
 
-task copyLibs(type: Copy) {
-  description = "Copies output of cmake build into same directory as " +
-      " the jni built library."
-  from "${lib_linker_path}"
-  into "${jvm_lib_path}"
-  if (Os.isFamily(Os.FAMILY_MAC)) {
-    println "Os is OsX"
-    include("**/*.dylib*")
-  } else if (Os.isFamily(Os.FAMILY_UNIX)) {
-    println "Os is Unix"
-    include("**/*.so*")
-  }
-}
-
-compileJava.dependsOn copyLibs
-
 test {
   testLogging {
     showStandardStreams = true
   }
 }
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
   systemProperty "java.library.path", "${jvm_lib_path}"
 }
 
-model {
-  repositories {
-    libs(PrebuiltLibraries) {
-      jdk {
-        headers.srcDirs "${System.properties['java.home']}/../include",
-          "${System.properties['java.home']}/../include/win32",
-          "${System.properties['java.home']}/../include/darwin",
-          "${System.properties['java.home']}/../include/linux"
-      }
-    }
-  }
-  components {
-    quad_keys_jni(NativeLibrarySpec) {
-      sources {
-        cpp {
-          source {
-            lib library: 'jdk', linkage: 'api'
-            srcDir "src/main/jni"
-            include "**/*.cpp"
-          }
-        }
-      }
-      binaries {
-        all {
-          if (toolChain in Gcc) {
-            cppCompiler.args "--std=c++11",
-              "-I", "${lib_base_path}",
-              "-I", "${lib_base_path}${File.separator}include"
-            linker.args "-L", "${lib_linker_path}", "-lquad_keys",
-              "-Wl,-rpath,${lib_linker_path}"
-          } else if (toolChain in Clang) {
-            cppCompiler.args "--std=c++11",
-              "-I", "${lib_base_path}",
-              "-I", "${lib_base_path}${File.separator}include"
-            linker.args "-L", "${lib_linker_path}", "-lquad_keys",
-              "-Wl,-rpath,${lib_linker_path}"
-          } else {
-            throw GradleException("Tool chain " + toolChain +
-              " is not supported.")
-          }
-        }
-      }
-    }
-  }
-}
-
 dependencies {
-  testCompile "junit:junit:4.12"
+  testImplementation "junit:junit:4.12"
 }

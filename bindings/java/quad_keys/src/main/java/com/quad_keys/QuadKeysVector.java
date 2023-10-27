@@ -42,7 +42,7 @@ public class QuadKeysVector extends java.util.AbstractList<QuadKey> implements j
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        quad_key_javaJNI.delete_QuadKeysVector(swigCPtr);
+        quad_keys_javaJNI.delete_QuadKeysVector(swigCPtr);
       }
       swigCPtr = 0;
     }
@@ -98,59 +98,59 @@ public class QuadKeysVector extends java.util.AbstractList<QuadKey> implements j
   }
 
   public QuadKeysVector() {
-    this(quad_key_javaJNI.new_QuadKeysVector__SWIG_0(), true);
+    this(quad_keys_javaJNI.new_QuadKeysVector__SWIG_0(), true);
   }
 
   public QuadKeysVector(QuadKeysVector other) {
-    this(quad_key_javaJNI.new_QuadKeysVector__SWIG_1(QuadKeysVector.getCPtr(other), other), true);
+    this(quad_keys_javaJNI.new_QuadKeysVector__SWIG_1(QuadKeysVector.getCPtr(other), other), true);
   }
 
   public long capacity() {
-    return quad_key_javaJNI.QuadKeysVector_capacity(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKeysVector_capacity(swigCPtr, this);
   }
 
   public void reserve(long n) {
-    quad_key_javaJNI.QuadKeysVector_reserve(swigCPtr, this, n);
+    quad_keys_javaJNI.QuadKeysVector_reserve(swigCPtr, this, n);
   }
 
   public boolean isEmpty() {
-    return quad_key_javaJNI.QuadKeysVector_isEmpty(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKeysVector_isEmpty(swigCPtr, this);
   }
 
   public void clear() {
-    quad_key_javaJNI.QuadKeysVector_clear(swigCPtr, this);
+    quad_keys_javaJNI.QuadKeysVector_clear(swigCPtr, this);
   }
 
   public QuadKeysVector(int count, QuadKey value) {
-    this(quad_key_javaJNI.new_QuadKeysVector__SWIG_2(count, QuadKey.getCPtr(value), value), true);
+    this(quad_keys_javaJNI.new_QuadKeysVector__SWIG_2(count, QuadKey.getCPtr(value), value), true);
   }
 
   private int doSize() {
-    return quad_key_javaJNI.QuadKeysVector_doSize(swigCPtr, this);
+    return quad_keys_javaJNI.QuadKeysVector_doSize(swigCPtr, this);
   }
 
   private void doAdd(QuadKey x) {
-    quad_key_javaJNI.QuadKeysVector_doAdd__SWIG_0(swigCPtr, this, QuadKey.getCPtr(x), x);
+    quad_keys_javaJNI.QuadKeysVector_doAdd__SWIG_0(swigCPtr, this, QuadKey.getCPtr(x), x);
   }
 
   private void doAdd(int index, QuadKey x) {
-    quad_key_javaJNI.QuadKeysVector_doAdd__SWIG_1(swigCPtr, this, index, QuadKey.getCPtr(x), x);
+    quad_keys_javaJNI.QuadKeysVector_doAdd__SWIG_1(swigCPtr, this, index, QuadKey.getCPtr(x), x);
   }
 
   private QuadKey doRemove(int index) {
-    return new QuadKey(quad_key_javaJNI.QuadKeysVector_doRemove(swigCPtr, this, index), true);
+    return new QuadKey(quad_keys_javaJNI.QuadKeysVector_doRemove(swigCPtr, this, index), true);
   }
 
   private QuadKey doGet(int index) {
-    return new QuadKey(quad_key_javaJNI.QuadKeysVector_doGet(swigCPtr, this, index), false);
+    return new QuadKey(quad_keys_javaJNI.QuadKeysVector_doGet(swigCPtr, this, index), false);
   }
 
   private QuadKey doSet(int index, QuadKey val) {
-    return new QuadKey(quad_key_javaJNI.QuadKeysVector_doSet(swigCPtr, this, index, QuadKey.getCPtr(val), val), true);
+    return new QuadKey(quad_keys_javaJNI.QuadKeysVector_doSet(swigCPtr, this, index, QuadKey.getCPtr(val), val), true);
   }
 
   private void doRemoveRange(int fromIndex, int toIndex) {
-    quad_key_javaJNI.QuadKeysVector_doRemoveRange(swigCPtr, this, fromIndex, toIndex);
+    quad_keys_javaJNI.QuadKeysVector_doRemoveRange(swigCPtr, this, fromIndex, toIndex);
   }
 
 }

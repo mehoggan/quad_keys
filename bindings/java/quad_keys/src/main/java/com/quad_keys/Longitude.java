@@ -42,70 +42,70 @@ public class Longitude {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        quad_key_javaJNI.delete_Longitude(swigCPtr);
+        quad_keys_javaJNI.delete_Longitude(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public static double getMin_longitude() {
-    return quad_key_javaJNI.Longitude_min_longitude_get();
+    return quad_keys_javaJNI.Longitude_min_longitude_get();
   }
 
   public static double getMax_longitude() {
-    return quad_key_javaJNI.Longitude_max_longitude_get();
+    return quad_keys_javaJNI.Longitude_max_longitude_get();
   }
 
   public Longitude(double val) {
-    this(quad_key_javaJNI.new_Longitude__SWIG_0(val), true);
+    this(quad_keys_javaJNI.new_Longitude__SWIG_0(val), true);
   }
 
   public Longitude(Longitude other) {
-    this(quad_key_javaJNI.new_Longitude__SWIG_1(Longitude.getCPtr(other), other), true);
+    this(quad_keys_javaJNI.new_Longitude__SWIG_1(Longitude.getCPtr(other), other), true);
   }
 
   public Longitude assignLongitude(Longitude rhs) {
-    return new Longitude(quad_key_javaJNI.Longitude_assignLongitude(swigCPtr, this, Longitude.getCPtr(rhs), rhs), false);
+    return new Longitude(quad_keys_javaJNI.Longitude_assignLongitude(swigCPtr, this, Longitude.getCPtr(rhs), rhs), false);
   }
 
   public double val() {
-    return quad_key_javaJNI.Longitude_val(swigCPtr, this);
+    return quad_keys_javaJNI.Longitude_val(swigCPtr, this);
   }
 
   public boolean near(Longitude other, double eps) {
-    return quad_key_javaJNI.Longitude_near__SWIG_0(swigCPtr, this, Longitude.getCPtr(other), other, eps);
+    return quad_keys_javaJNI.Longitude_near__SWIG_0(swigCPtr, this, Longitude.getCPtr(other), other, eps);
   }
 
   public boolean near(Longitude other) {
-    return quad_key_javaJNI.Longitude_near__SWIG_1(swigCPtr, this, Longitude.getCPtr(other), other);
+    return quad_keys_javaJNI.Longitude_near__SWIG_1(swigCPtr, this, Longitude.getCPtr(other), other);
   }
 
   public boolean lessThan(Longitude rhs) {
-    return quad_key_javaJNI.Longitude_lessThan(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Longitude_lessThan(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
   }
 
   public boolean lessThanOrEqual(Longitude rhs) {
-    return quad_key_javaJNI.Longitude_lessThanOrEqual(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Longitude_lessThanOrEqual(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
   }
 
   public boolean greaterThan(Longitude rhs) {
-    return quad_key_javaJNI.Longitude_greaterThan(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Longitude_greaterThan(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
   }
 
   public boolean greaterThanOrEqual(Longitude rhs) {
-    return quad_key_javaJNI.Longitude_greaterThanOrEqual(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Longitude_greaterThanOrEqual(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
   }
 
   public boolean equalTo(Longitude rhs) {
-    return quad_key_javaJNI.Longitude_equalTo(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Longitude_equalTo(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
   }
 
   public boolean notEqualTo(Longitude rhs) {
-    return quad_key_javaJNI.Longitude_notEqualTo(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Longitude_notEqualTo(swigCPtr, this, Longitude.getCPtr(rhs), rhs);
   }
 
   public double longitudeDifference(Longitude subtrahend) {
-    return quad_key_javaJNI.Longitude_longitudeDifference(swigCPtr, this, Longitude.getCPtr(subtrahend), subtrahend);
+    return quad_keys_javaJNI.Longitude_longitudeDifference(swigCPtr, this, Longitude.getCPtr(subtrahend), subtrahend);
   }
 
 }

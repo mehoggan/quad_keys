@@ -42,70 +42,70 @@ public class Latitude {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        quad_key_javaJNI.delete_Latitude(swigCPtr);
+        quad_keys_javaJNI.delete_Latitude(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public static double getMin_latitude() {
-    return quad_key_javaJNI.Latitude_min_latitude_get();
+    return quad_keys_javaJNI.Latitude_min_latitude_get();
   }
 
   public static double getMax_latitude() {
-    return quad_key_javaJNI.Latitude_max_latitude_get();
+    return quad_keys_javaJNI.Latitude_max_latitude_get();
   }
 
   public Latitude(double val) {
-    this(quad_key_javaJNI.new_Latitude__SWIG_0(val), true);
+    this(quad_keys_javaJNI.new_Latitude__SWIG_0(val), true);
   }
 
   public Latitude(Latitude other) {
-    this(quad_key_javaJNI.new_Latitude__SWIG_1(Latitude.getCPtr(other), other), true);
+    this(quad_keys_javaJNI.new_Latitude__SWIG_1(Latitude.getCPtr(other), other), true);
   }
 
   public Latitude assignLatitude(Latitude rhs) {
-    return new Latitude(quad_key_javaJNI.Latitude_assignLatitude(swigCPtr, this, Latitude.getCPtr(rhs), rhs), false);
+    return new Latitude(quad_keys_javaJNI.Latitude_assignLatitude(swigCPtr, this, Latitude.getCPtr(rhs), rhs), false);
   }
 
   public double val() {
-    return quad_key_javaJNI.Latitude_val(swigCPtr, this);
+    return quad_keys_javaJNI.Latitude_val(swigCPtr, this);
   }
 
   public boolean near(Latitude other, double eps) {
-    return quad_key_javaJNI.Latitude_near__SWIG_0(swigCPtr, this, Latitude.getCPtr(other), other, eps);
+    return quad_keys_javaJNI.Latitude_near__SWIG_0(swigCPtr, this, Latitude.getCPtr(other), other, eps);
   }
 
   public boolean near(Latitude other) {
-    return quad_key_javaJNI.Latitude_near__SWIG_1(swigCPtr, this, Latitude.getCPtr(other), other);
+    return quad_keys_javaJNI.Latitude_near__SWIG_1(swigCPtr, this, Latitude.getCPtr(other), other);
   }
 
   public boolean lessThan(Latitude rhs) {
-    return quad_key_javaJNI.Latitude_lessThan(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Latitude_lessThan(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
   }
 
   public boolean lessThanOrEqual(Latitude rhs) {
-    return quad_key_javaJNI.Latitude_lessThanOrEqual(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Latitude_lessThanOrEqual(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
   }
 
   public boolean greaterThan(Latitude rhs) {
-    return quad_key_javaJNI.Latitude_greaterThan(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Latitude_greaterThan(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
   }
 
   public boolean greaterThanOrEqual(Latitude rhs) {
-    return quad_key_javaJNI.Latitude_greaterThanOrEqual(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Latitude_greaterThanOrEqual(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
   }
 
   public boolean equalTo(Latitude rhs) {
-    return quad_key_javaJNI.Latitude_equalTo(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Latitude_equalTo(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
   }
 
   public boolean notEqualTo(Latitude rhs) {
-    return quad_key_javaJNI.Latitude_notEqualTo(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
+    return quad_keys_javaJNI.Latitude_notEqualTo(swigCPtr, this, Latitude.getCPtr(rhs), rhs);
   }
 
   public double latitudeDifference(Latitude subtrahend) {
-    return quad_key_javaJNI.Latitude_latitudeDifference(swigCPtr, this, Latitude.getCPtr(subtrahend), subtrahend);
+    return quad_keys_javaJNI.Latitude_latitudeDifference(swigCPtr, this, Latitude.getCPtr(subtrahend), subtrahend);
   }
 
 }

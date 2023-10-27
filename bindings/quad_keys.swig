@@ -1,7 +1,7 @@
 #if defined(SWIGPYTHON)
-%module quad_key
+%module quad_keys
 #elif defined(SWIGJAVA)
-%module quad_key_java
+%module quad_keys_java
 #endif
 
 %{

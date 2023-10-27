@@ -1,35 +1,18 @@
-import com.quad_key.*;
+package com.quad_keys;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-public class system_test {
-
-  private boolean vectorContains(quad_key_vector vect, quad_key key) {
-    boolean found = false;
-    for (int i = 0; i < vect.size(); ++i) {
-      quad_key curr = vect.get(i);
-      if (curr.equal_to(key)) {
-        found = true;
-        break;
-      }
-    }
-    return found;
-  }
+public class SystemTest {
 
   @BeforeClass
   public static void setUpBeforeClass() throws Exception {
-    System.loadLibrary("quad_key_jni");
+    System.loadLibrary("quad_keys_java");
   }
 
   @Test
   public void is_valid_test() {
-    // See Testquad_key TestSpecificCtorTest.
+    // See TestQuadKey TestSpecificCtorTest.
   }
 
   @Test

@@ -330,7 +330,7 @@ SWIGINTERN void std_vector_Sl_quad_keys_QuadKey_Sg__doRemoveRange(std::vector< q
 extern "C" {
 #endif
 
-SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1min_1longitude_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1min_1longitude_1get(JNIEnv *jenv, jclass jcls) {
   jdouble jresult = 0 ;
   double result;
   
@@ -342,7 +342,7 @@ SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1min
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1max_1longitude_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1max_1longitude_1get(JNIEnv *jenv, jclass jcls) {
   jdouble jresult = 0 ;
   double result;
   
@@ -354,7 +354,7 @@ SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1max
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1Longitude_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1Longitude_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
   jlong jresult = 0 ;
   double arg1 ;
   quad_keys::Longitude *result = 0 ;
@@ -368,7 +368,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1Longitude_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1Longitude_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1Longitude_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::Longitude *arg1 = 0 ;
   quad_keys::Longitude *result = 0 ;
@@ -387,7 +387,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1Longitude_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1assignLongitude(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1assignLongitude(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -409,7 +409,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1assig
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1val(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1val(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   double result;
@@ -424,7 +424,7 @@ SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1val
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1near_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1near_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
   jboolean jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -448,7 +448,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1ne
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1near_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1near_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -470,7 +470,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1ne
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1lessThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1lessThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -492,7 +492,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1le
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1lessThanOrEqual(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1lessThanOrEqual(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -514,7 +514,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1le
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1greaterThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1greaterThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -536,7 +536,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1gr
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1greaterThanOrEqual(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1greaterThanOrEqual(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -558,7 +558,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1gr
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1equalTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1equalTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -580,7 +580,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1eq
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1notEqualTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1notEqualTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -602,7 +602,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1no
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1longitudeDifference(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Longitude_1longitudeDifference(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jdouble jresult = 0 ;
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
@@ -624,7 +624,7 @@ SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Longitude_1lon
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1Longitude(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_delete_1Longitude(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   quad_keys::Longitude *arg1 = (quad_keys::Longitude *) 0 ;
   
   (void)jenv;
@@ -634,7 +634,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1Longitude
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1min_1latitude_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1min_1latitude_1get(JNIEnv *jenv, jclass jcls) {
   jdouble jresult = 0 ;
   double result;
   
@@ -646,7 +646,7 @@ SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1min_
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1max_1latitude_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1max_1latitude_1get(JNIEnv *jenv, jclass jcls) {
   jdouble jresult = 0 ;
   double result;
   
@@ -658,7 +658,7 @@ SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1max_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1Latitude_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1Latitude_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
   jlong jresult = 0 ;
   double arg1 ;
   quad_keys::Latitude *result = 0 ;
@@ -672,7 +672,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1Latitude_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1Latitude_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1Latitude_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::Latitude *arg1 = 0 ;
   quad_keys::Latitude *result = 0 ;
@@ -691,7 +691,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1Latitude_1_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1assignLatitude(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1assignLatitude(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -713,7 +713,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1assign
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1val(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1val(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jdouble jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   double result;
@@ -728,7 +728,7 @@ SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1val(
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1near_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1near_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
   jboolean jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -752,7 +752,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1nea
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1near_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1near_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -774,7 +774,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1nea
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1lessThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1lessThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -796,7 +796,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1les
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1lessThanOrEqual(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1lessThanOrEqual(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -818,7 +818,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1les
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1greaterThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1greaterThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -840,7 +840,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1gre
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1greaterThanOrEqual(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1greaterThanOrEqual(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -862,7 +862,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1gre
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1equalTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1equalTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -884,7 +884,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1equ
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1notEqualTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1notEqualTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -906,7 +906,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1not
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1latitudeDifference(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_Latitude_1latitudeDifference(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jdouble jresult = 0 ;
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -928,7 +928,7 @@ SWIGEXPORT jdouble JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_Latitude_1lati
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1Latitude(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_delete_1Latitude(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   quad_keys::Latitude *arg1 = (quad_keys::Latitude *) 0 ;
   
   (void)jenv;
@@ -938,7 +938,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1Latitude(
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordinate2d_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1GeoCoordinate2d_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinate2d *result = 0 ;
   
@@ -950,7 +950,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordina
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordinate2d_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1GeoCoordinate2d_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   quad_keys::Longitude *arg1 = 0 ;
   quad_keys::Latitude *arg2 = 0 ;
@@ -976,7 +976,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordina
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordinate2d_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1GeoCoordinate2d_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinate2d *arg1 = 0 ;
   quad_keys::GeoCoordinate2d *result = 0 ;
@@ -995,7 +995,29 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordina
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1set_1longitude_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1assignGeoCoordinate2d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jlong jresult = 0 ;
+  quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
+  quad_keys::GeoCoordinate2d *arg2 = 0 ;
+  quad_keys::GeoCoordinate2d *result = 0 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(quad_keys::GeoCoordinate2d **)&jarg1; 
+  arg2 = *(quad_keys::GeoCoordinate2d **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "quad_keys::GeoCoordinate2d const & is null");
+    return 0;
+  } 
+  result = (quad_keys::GeoCoordinate2d *) &(arg1)->operator =((quad_keys::GeoCoordinate2d const &)*arg2);
+  *(quad_keys::GeoCoordinate2d **)&jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1set_1longitude_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   double arg2 ;
   
@@ -1008,7 +1030,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1set_1latitude_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1set_1latitude_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jdouble jarg2) {
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   double arg2 ;
   
@@ -1021,7 +1043,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1set_1longitude_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1set_1longitude_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   quad_keys::Longitude *arg2 = 0 ;
   
@@ -1039,7 +1061,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1set_1latitude_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1set_1latitude_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   quad_keys::Latitude *arg2 = 0 ;
   
@@ -1057,7 +1079,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1get_1longitude(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1get_1longitude(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   quad_keys::Longitude *result = 0 ;
@@ -1072,7 +1094,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1get_1latitude(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1get_1latitude(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   quad_keys::Latitude *result = 0 ;
@@ -1087,7 +1109,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1near_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1near_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_, jdouble jarg3) {
   jboolean jresult = 0 ;
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   quad_keys::GeoCoordinate2d *arg2 = 0 ;
@@ -1111,7 +1133,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate2d_1near_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1near_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   quad_keys::GeoCoordinate2d *arg2 = 0 ;
@@ -1133,7 +1155,51 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1GeoCoordinate2d(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1equalTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
+  quad_keys::GeoCoordinate2d *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(quad_keys::GeoCoordinate2d **)&jarg1; 
+  arg2 = *(quad_keys::GeoCoordinate2d **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "quad_keys::GeoCoordinate2d const & is null");
+    return 0;
+  } 
+  result = (bool)((quad_keys::GeoCoordinate2d const *)arg1)->operator ==((quad_keys::GeoCoordinate2d const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinate2d_1notEqualTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+  jboolean jresult = 0 ;
+  quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
+  quad_keys::GeoCoordinate2d *arg2 = 0 ;
+  bool result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  (void)jarg2_;
+  arg1 = *(quad_keys::GeoCoordinate2d **)&jarg1; 
+  arg2 = *(quad_keys::GeoCoordinate2d **)&jarg2;
+  if (!arg2) {
+    SWIG_JavaThrowException(jenv, SWIG_JavaNullPointerException, "quad_keys::GeoCoordinate2d const & is null");
+    return 0;
+  } 
+  result = (bool)((quad_keys::GeoCoordinate2d const *)arg1)->operator !=((quad_keys::GeoCoordinate2d const &)*arg2);
+  jresult = (jboolean)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_delete_1GeoCoordinate2d(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   quad_keys::GeoCoordinate2d *arg1 = (quad_keys::GeoCoordinate2d *) 0 ;
   
   (void)jenv;
@@ -1143,7 +1209,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1GeoCoordi
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordinateBoundingBox2d_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1GeoCoordinateBoundingBox2d_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinateBoundingBox2d *result = 0 ;
   
@@ -1155,7 +1221,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordina
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordinateBoundingBox2d_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1GeoCoordinateBoundingBox2d_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinate2d *arg1 = 0 ;
   quad_keys::GeoCoordinate2d *arg2 = 0 ;
@@ -1181,7 +1247,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1GeoCoordina
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBoundingBox2d_1contains(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinateBoundingBox2d_1contains(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::GeoCoordinateBoundingBox2d *arg1 = (quad_keys::GeoCoordinateBoundingBox2d *) 0 ;
   quad_keys::GeoCoordinate2d *arg2 = 0 ;
@@ -1203,7 +1269,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBoundingBox2d_1grow_1to_1contain(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinateBoundingBox2d_1grow_1to_1contain(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   quad_keys::GeoCoordinateBoundingBox2d *arg1 = (quad_keys::GeoCoordinateBoundingBox2d *) 0 ;
   quad_keys::GeoCoordinate2d *arg2 = 0 ;
   
@@ -1221,7 +1287,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBoun
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBoundingBox2d_1lower_1left(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinateBoundingBox2d_1lower_1left(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinateBoundingBox2d *arg1 = (quad_keys::GeoCoordinateBoundingBox2d *) 0 ;
   quad_keys::GeoCoordinate2d *result = 0 ;
@@ -1236,7 +1302,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBou
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBoundingBox2d_1upper_1right(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinateBoundingBox2d_1upper_1right(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinateBoundingBox2d *arg1 = (quad_keys::GeoCoordinateBoundingBox2d *) 0 ;
   quad_keys::GeoCoordinate2d *result = 0 ;
@@ -1251,7 +1317,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBou
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBoundingBox2d_1upper_1left(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinateBoundingBox2d_1upper_1left(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinateBoundingBox2d *arg1 = (quad_keys::GeoCoordinateBoundingBox2d *) 0 ;
   quad_keys::GeoCoordinate2d result;
@@ -1266,7 +1332,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBou
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBoundingBox2d_1lower_1right(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinateBoundingBox2d_1lower_1right(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::GeoCoordinateBoundingBox2d *arg1 = (quad_keys::GeoCoordinateBoundingBox2d *) 0 ;
   quad_keys::GeoCoordinate2d result;
@@ -1281,7 +1347,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBou
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinateBoundingBox2d_1is_1valid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_GeoCoordinateBoundingBox2d_1is_1valid(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   quad_keys::GeoCoordinateBoundingBox2d *arg1 = (quad_keys::GeoCoordinateBoundingBox2d *) 0 ;
   bool result;
@@ -1296,7 +1362,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_GeoCoordinate
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1GeoCoordinateBoundingBox2d(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_delete_1GeoCoordinateBoundingBox2d(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   quad_keys::GeoCoordinateBoundingBox2d *arg1 = (quad_keys::GeoCoordinateBoundingBox2d *) 0 ;
   
   (void)jenv;
@@ -1306,7 +1372,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1GeoCoordi
 }
 
 
-SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_type_1to_1string(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_type_1to_1string(JNIEnv *jenv, jclass jcls, jint jarg1) {
   jstring jresult = 0 ;
   quad_keys::Type arg1 ;
   std::string result;
@@ -1320,7 +1386,7 @@ SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_type_1to_1stri
 }
 
 
-SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1quadrant_1south_1west_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1quadrant_1south_1west_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   quad_keys::QuadKey::quadrant result;
   
@@ -1332,7 +1398,7 @@ SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1quadrant
 }
 
 
-SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1quadrant_1south_1east_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1quadrant_1south_1east_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   quad_keys::QuadKey::quadrant result;
   
@@ -1344,7 +1410,7 @@ SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1quadrant
 }
 
 
-SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1quadrant_1north_1west_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1quadrant_1north_1west_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   quad_keys::QuadKey::quadrant result;
   
@@ -1356,7 +1422,7 @@ SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1quadrant
 }
 
 
-SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1quadrant_1north_1east_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1quadrant_1north_1east_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   quad_keys::QuadKey::quadrant result;
   
@@ -1368,7 +1434,7 @@ SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1quadrant
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKey_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1QuadKey_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *result = 0 ;
   
@@ -1380,7 +1446,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKey_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKey_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1QuadKey_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jint jarg1) {
   jlong jresult = 0 ;
   quad_keys::Type arg1 ;
   quad_keys::QuadKey *result = 0 ;
@@ -1394,7 +1460,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKey_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKey_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jlong jarg3, jshort jarg4) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1QuadKey_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jlong jarg3, jshort jarg4) {
   jlong jresult = 0 ;
   quad_keys::Type arg1 ;
   std::uint32_t arg2 ;
@@ -1414,7 +1480,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKey_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKey_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1QuadKey_1_1SWIG_13(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = 0 ;
   quad_keys::QuadKey *result = 0 ;
@@ -1433,7 +1499,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKey_1_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1assignQuadKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1assignQuadKey(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::QuadKey *arg2 = 0 ;
@@ -1455,7 +1521,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1assignQ
 }
 
 
-SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1type(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1type(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::Type result;
@@ -1470,7 +1536,7 @@ SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1typ
 }
 
 
-SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1type_1as_1string(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1type_1as_1string(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::string result;
@@ -1485,7 +1551,7 @@ SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1type_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1row(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1row(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::uint32_t result;
@@ -1500,7 +1566,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1ro
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1col(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1col(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::uint32_t result;
@@ -1515,7 +1581,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1co
 }
 
 
-SWIGEXPORT jshort JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1depth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jshort JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1depth(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jshort jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::uint8_t result;
@@ -1530,7 +1596,7 @@ SWIGEXPORT jshort JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1d
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1is_1root_1key(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1is_1root_1key(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   bool result;
@@ -1545,7 +1611,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1is_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1parent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1parent(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::QuadKey result;
@@ -1560,7 +1626,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1pa
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1is_1my_1ancestor(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1is_1my_1ancestor(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::QuadKey *arg2 = 0 ;
@@ -1582,7 +1648,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1is_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1ancestor(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1ancestor(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::uint8_t arg2 ;
@@ -1599,7 +1665,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1an
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1child(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1child(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::QuadKey::quadrant arg2 ;
@@ -1616,7 +1682,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1ch
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1children(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1children(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::vector< quad_keys::QuadKey > result;
@@ -1631,7 +1697,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1ch
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1descendants(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1descendants(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::uint8_t arg2 ;
@@ -1648,7 +1714,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1de
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1siblings(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1siblings(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::vector< quad_keys::QuadKey > result;
@@ -1663,7 +1729,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1si
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1neighbors(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1neighbors(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::vector< quad_keys::QuadKey > result;
@@ -1678,7 +1744,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1ne
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1geo_1coordinate_1bounds2d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1geo_1coordinate_1bounds2d(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::GeoCoordinateBoundingBox2d *arg2 = 0 ;
   
@@ -1696,7 +1762,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1geo
 }
 
 
-SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1to_1internal_1string(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1to_1internal_1string(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jstring jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   std::string result;
@@ -1711,7 +1777,7 @@ SWIGEXPORT jstring JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1to_1i
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1from_1internal_1string(JNIEnv *jenv, jclass jcls, jint jarg1, jstring jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1from_1internal_1string(JNIEnv *jenv, jclass jcls, jint jarg1, jstring jarg2) {
   jlong jresult = 0 ;
   quad_keys::Type arg1 ;
   std::string *arg2 = 0 ;
@@ -1735,7 +1801,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1from_1i
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1key_1from_1longitude_1latitude_1at_1depth(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_, jshort jarg3) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1key_1from_1longitude_1latitude_1at_1depth(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_, jshort jarg3) {
   jlong jresult = 0 ;
   quad_keys::Type arg1 ;
   quad_keys::GeoCoordinate2d *arg2 = 0 ;
@@ -1758,7 +1824,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1ke
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1keys_1from_1longitude_1latitude_1bounding_1box(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_, jshort jarg3) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1get_1keys_1from_1longitude_1latitude_1bounding_1box(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_, jshort jarg3) {
   jlong jresult = 0 ;
   quad_keys::Type arg1 ;
   quad_keys::GeoCoordinateBoundingBox2d *arg2 = 0 ;
@@ -1781,7 +1847,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1get_1ke
 }
 
 
-SWIGEXPORT jshort JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1max_1depth(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT jshort JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1max_1depth(JNIEnv *jenv, jclass jcls, jint jarg1) {
   jshort jresult = 0 ;
   quad_keys::Type arg1 ;
   std::uint8_t result;
@@ -1795,7 +1861,7 @@ SWIGEXPORT jshort JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1max_1d
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1max_1rows(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1max_1rows(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
   jlong jresult = 0 ;
   quad_keys::Type arg1 ;
   std::uint8_t arg2 ;
@@ -1811,7 +1877,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1max_1ro
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1max_1cols(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1max_1cols(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
   jlong jresult = 0 ;
   quad_keys::Type arg1 ;
   std::uint8_t arg2 ;
@@ -1827,7 +1893,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1max_1co
 }
 
 
-SWIGEXPORT jobject JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1max_1tiles(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
+SWIGEXPORT jobject JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1max_1tiles(JNIEnv *jenv, jclass jcls, jint jarg1, jshort jarg2) {
   jobject jresult = 0 ;
   quad_keys::Type arg1 ;
   std::uint8_t arg2 ;
@@ -1860,7 +1926,7 @@ SWIGEXPORT jobject JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1max_1
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1lessThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1lessThan(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::QuadKey *arg2 = 0 ;
@@ -1882,7 +1948,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1less
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1equalTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1equalTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::QuadKey *arg2 = 0 ;
@@ -1904,7 +1970,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1equa
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1notEqualTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKey_1notEqualTo(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   jboolean jresult = 0 ;
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   quad_keys::QuadKey *arg2 = 0 ;
@@ -1926,7 +1992,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKey_1notE
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1QuadKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_delete_1QuadKey(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   quad_keys::QuadKey *arg1 = (quad_keys::QuadKey *) 0 ;
   
   (void)jenv;
@@ -1936,7 +2002,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1QuadKey(J
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKeysVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1QuadKeysVector_1_1SWIG_10(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   std::vector< quad_keys::QuadKey > *result = 0 ;
   
@@ -1948,7 +2014,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKeysVec
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKeysVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1QuadKeysVector_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< quad_keys::QuadKey > *arg1 = 0 ;
   std::vector< quad_keys::QuadKey > *result = 0 ;
@@ -1967,7 +2033,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKeysVec
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1capacity(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   std::vector< quad_keys::QuadKey >::size_type result;
@@ -1982,7 +2048,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1reserve(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   std::vector< quad_keys::QuadKey >::size_type arg2 ;
   
@@ -2000,7 +2066,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1r
 }
 
 
-SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1isEmpty(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jboolean jresult = 0 ;
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   bool result;
@@ -2015,7 +2081,7 @@ SWIGEXPORT jboolean JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVecto
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1clear(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   
   (void)jenv;
@@ -2026,7 +2092,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1c
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKeysVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_new_1QuadKeysVector_1_1SWIG_12(JNIEnv *jenv, jclass jcls, jint jarg1, jlong jarg2, jobject jarg2_) {
   jlong jresult = 0 ;
   jint arg1 ;
   quad_keys::QuadKey *arg2 = 0 ;
@@ -2052,7 +2118,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_new_1QuadKeysVec
 }
 
 
-SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1doSize(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   jint result;
@@ -2072,7 +2138,7 @@ SWIGEXPORT jint JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1d
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1doAdd_1_1SWIG_10(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   std::vector< quad_keys::QuadKey >::value_type *arg2 = 0 ;
   
@@ -2090,7 +2156,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1d
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1doAdd_1_1SWIG_11(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   jint arg2 ;
   std::vector< quad_keys::QuadKey >::value_type *arg3 = 0 ;
@@ -2115,7 +2181,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1d
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1doRemove(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   jint arg2 ;
@@ -2137,7 +2203,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1doGet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   jint arg2 ;
@@ -2159,7 +2225,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
+SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1doSet(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3, jobject jarg3_) {
   jlong jresult = 0 ;
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   jint arg2 ;
@@ -2188,7 +2254,7 @@ SWIGEXPORT jlong JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_QuadKeysVector_1doRemoveRange(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jint jarg3) {
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   jint arg2 ;
   jint arg3 ;
@@ -2208,7 +2274,7 @@ SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_QuadKeysVector_1d
 }
 
 
-SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1key_1javaJNI_delete_1QuadKeysVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_com_quad_1keys_quad_1keys_1javaJNI_delete_1QuadKeysVector(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   std::vector< quad_keys::QuadKey > *arg1 = (std::vector< quad_keys::QuadKey > *) 0 ;
   
   (void)jenv;

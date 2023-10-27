@@ -40,3 +40,7 @@ tags
 test-driver
 scripts/**.log
 **/.o
+bindings/java/quad_keys/.gradle/
+bindings/java/quad_keys/gradle/
+bindings/java/quad_keys/gradlew
+bindings/java/quad_keys/gradlew.bat

@@ -20,9 +20,9 @@
   %rename(notEqualTo) quad_keys::Latitude::operator!=;
   %rename(latitudeDifference) quad_keys::Latitude::operator-;
 
-  %rename(assignGeoCoordinate2d) quad_keys::geo_coordinate2d::operator=;
-  %rename(equalTo) quad_keys::geo_coordinate2d::operator==;
-  %rename(notEqualTo) quad_keys::geo_coordinate2d::operator!=;
+  %rename(assignGeoCoordinate2d) quad_keys::GeoCoordinate2d::operator=;
+  %rename(equalTo) quad_keys::GeoCoordinate2d::operator==;
+  %rename(notEqualTo) quad_keys::GeoCoordinate2d::operator!=;
 
   %rename(assignQuadKey) quad_keys::QuadKey::operator=;
   %rename(lessThan) quad_keys::QuadKey::operator<;

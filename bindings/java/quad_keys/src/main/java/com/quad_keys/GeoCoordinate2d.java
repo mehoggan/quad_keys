@@ -42,54 +42,66 @@ public class GeoCoordinate2d {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
-        quad_key_javaJNI.delete_GeoCoordinate2d(swigCPtr);
+        quad_keys_javaJNI.delete_GeoCoordinate2d(swigCPtr);
       }
       swigCPtr = 0;
     }
   }
 
   public GeoCoordinate2d() {
-    this(quad_key_javaJNI.new_GeoCoordinate2d__SWIG_0(), true);
+    this(quad_keys_javaJNI.new_GeoCoordinate2d__SWIG_0(), true);
   }
 
   public GeoCoordinate2d(Longitude longitude, Latitude latitude) {
-    this(quad_key_javaJNI.new_GeoCoordinate2d__SWIG_1(Longitude.getCPtr(longitude), longitude, Latitude.getCPtr(latitude), latitude), true);
+    this(quad_keys_javaJNI.new_GeoCoordinate2d__SWIG_1(Longitude.getCPtr(longitude), longitude, Latitude.getCPtr(latitude), latitude), true);
   }
 
   public GeoCoordinate2d(GeoCoordinate2d other) {
-    this(quad_key_javaJNI.new_GeoCoordinate2d__SWIG_2(GeoCoordinate2d.getCPtr(other), other), true);
+    this(quad_keys_javaJNI.new_GeoCoordinate2d__SWIG_2(GeoCoordinate2d.getCPtr(other), other), true);
+  }
+
+  public GeoCoordinate2d assignGeoCoordinate2d(GeoCoordinate2d rhs) {
+    return new GeoCoordinate2d(quad_keys_javaJNI.GeoCoordinate2d_assignGeoCoordinate2d(swigCPtr, this, GeoCoordinate2d.getCPtr(rhs), rhs), false);
   }
 
   public void set_longitude(double longit) {
-    quad_key_javaJNI.GeoCoordinate2d_set_longitude__SWIG_0(swigCPtr, this, longit);
+    quad_keys_javaJNI.GeoCoordinate2d_set_longitude__SWIG_0(swigCPtr, this, longit);
   }
 
   public void set_latitude(double latit) {
-    quad_key_javaJNI.GeoCoordinate2d_set_latitude__SWIG_0(swigCPtr, this, latit);
+    quad_keys_javaJNI.GeoCoordinate2d_set_latitude__SWIG_0(swigCPtr, this, latit);
   }
 
   public void set_longitude(Longitude longit) {
-    quad_key_javaJNI.GeoCoordinate2d_set_longitude__SWIG_1(swigCPtr, this, Longitude.getCPtr(longit), longit);
+    quad_keys_javaJNI.GeoCoordinate2d_set_longitude__SWIG_1(swigCPtr, this, Longitude.getCPtr(longit), longit);
   }
 
   public void set_latitude(Latitude latit) {
-    quad_key_javaJNI.GeoCoordinate2d_set_latitude__SWIG_1(swigCPtr, this, Latitude.getCPtr(latit), latit);
+    quad_keys_javaJNI.GeoCoordinate2d_set_latitude__SWIG_1(swigCPtr, this, Latitude.getCPtr(latit), latit);
   }
 
   public Longitude get_longitude() {
-    return new Longitude(quad_key_javaJNI.GeoCoordinate2d_get_longitude(swigCPtr, this), false);
+    return new Longitude(quad_keys_javaJNI.GeoCoordinate2d_get_longitude(swigCPtr, this), false);
   }
 
   public Latitude get_latitude() {
-    return new Latitude(quad_key_javaJNI.GeoCoordinate2d_get_latitude(swigCPtr, this), false);
+    return new Latitude(quad_keys_javaJNI.GeoCoordinate2d_get_latitude(swigCPtr, this), false);
   }
 
   public boolean near(GeoCoordinate2d other, double eps) {
-    return quad_key_javaJNI.GeoCoordinate2d_near__SWIG_0(swigCPtr, this, GeoCoordinate2d.getCPtr(other), other, eps);
+    return quad_keys_javaJNI.GeoCoordinate2d_near__SWIG_0(swigCPtr, this, GeoCoordinate2d.getCPtr(other), other, eps);
   }
 
   public boolean near(GeoCoordinate2d other) {
-    return quad_key_javaJNI.GeoCoordinate2d_near__SWIG_1(swigCPtr, this, GeoCoordinate2d.getCPtr(other), other);
+    return quad_keys_javaJNI.GeoCoordinate2d_near__SWIG_1(swigCPtr, this, GeoCoordinate2d.getCPtr(other), other);
+  }
+
+  public boolean equalTo(GeoCoordinate2d rhs) {
+    return quad_keys_javaJNI.GeoCoordinate2d_equalTo(swigCPtr, this, GeoCoordinate2d.getCPtr(rhs), rhs);
+  }
+
+  public boolean notEqualTo(GeoCoordinate2d rhs) {
+    return quad_keys_javaJNI.GeoCoordinate2d_notEqualTo(swigCPtr, this, GeoCoordinate2d.getCPtr(rhs), rhs);
   }
 
 }
