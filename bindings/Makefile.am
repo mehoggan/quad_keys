@@ -14,12 +14,12 @@ BINDINGS_DIR = $(abs_top_srcdir)/bindings
   	$(BINDINGS_DIR)/quad_keys.swig
 
 libquad_keys_java_la_SOURCES = \
-    ./java/quad_keys/src/main/jni/quad_keys_java.cpp
+	./java/quad_keys/src/main/jni/quad_keys_java.cpp
 
 libquad_keys_java_la_CPPFLAGS = -Werror -Wall -pedantic \
-    -I$(abs_top_srcdir)/include \
-		-I$(jni_home) \
-		-I$(jni_md_home)
+	-I$(abs_top_srcdir)/include \
+	-I$(jni_home) \
+	-I$(jni_md_home)
 
 libquad_keys_java_la_LIBADD = \
 		$(abs_top_builddir)/lib/libquad_keys.la
@@ -34,14 +34,15 @@ libquad_keys_java_la_LIBADD = \
   	$(BINDINGS_DIR)/quad_keys.swig
 
 libquad_keys_python_la_CPPFLAGS = -Werror -Wall -pedantic \
-		-Wno-deprecated-declarations \
-    -I$(abs_top_srcdir)/include \
-		-I$(python_includes)
+	-Wno-deprecated-declarations \
+	-I$(abs_top_srcdir)/include \
+	-I$(python_includes)
 
 libquad_keys_python_la_SOURCES = \
-    ./python/native/quad_keys_python.cpp
+	./python/native/quad_keys_python.cpp
 
 libquad_keys_python_la_LIBADD = \
 		$(abs_top_builddir)/lib/libquad_keys.la
 
-
+CLEANFILES = ./java/quad_keys/src/main/jni/quad_keys_java.cpp \
+	./python/native/quad_keys_python.cpp
