@@ -46,4 +46,9 @@ AC_CONFIG_FILES([
   bindings/Makefile
 ])
 
+AC_SUBST(java_home, [$JAVA_HOME])
+AC_MSG_RESULT([java_home=$java_home])
+FIND_JNI([$java_home], [jni_home])
+AC_MSG_RESULT([jni_home=$jni_home])
+
 AC_OUTPUT

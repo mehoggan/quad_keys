@@ -32,7 +32,7 @@ If you wish to clone all dependencies at once at the time of clone run:
 ## Build file generation and compiling library and executable Unix Systems
 
 ```sh
-> autoreconf -i
+> autoreconf -vis
 > rm -rf ./build && mkdir -p ./build
 > cd build/ && ../configure
 > cd ../
@@ -48,7 +48,7 @@ If you wish to clone all dependencies at once at the time of clone run:
 // run:
 > ./test/gtest_libquad_keys --gtest_filter=<name of test>
 // example of gtest_filter is:
-//   "TestYAMLDagDeserializer.make_dag_vertices_not_list_of_obj"
+//   "BINGSYSTEM.is_root_key"
 
 // If you cannot find the logs then you can simply just run:
 > ./test/gtest_libquad_keys

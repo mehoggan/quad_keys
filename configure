@@ -663,6 +663,7 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
+java_home
 HAVE_CXX17
 CXXCPP
 LT_SYS_LIBRARY_PATH
@@ -18376,6 +18377,14 @@ printf "%s\n" "#define HAVE_CXX17 1" >>confdefs.h
 
 ac_config_files="$ac_config_files Makefile lib/Makefile test/Makefile bindings/Makefile"
 
+
+java_home=$JAVA_HOME
+
+{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: java_home=$java_home" >&5
+printf "%s\n" "java_home=$java_home" >&6; }
+jni_home=$(dirname $(find $java_home -name "jni.h"))
+{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: jni_home=$jni_home" >&5
+printf "%s\n" "jni_home=$jni_home" >&6; }
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
