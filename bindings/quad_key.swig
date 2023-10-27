@@ -5,7 +5,7 @@
 #endif
 
 %{
-#include "quad_key/quad_key.h"
+#include "quad_keys/quad_key.h"
 %}
 
 %include "operators.i"

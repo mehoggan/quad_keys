@@ -240,7 +240,7 @@ template <typename T> T SwigValueInit() {
 #endif
 
 
-#include "quad_key/quad_key.h"
+#include "quad_keys/quad_key.h"
 
 
 #include <stdint.h>		// Use the C99 official header

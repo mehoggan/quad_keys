@@ -17,7 +17,12 @@ libquad_keys_java_la_SOURCES = \
     ./java/quad_keys/src/main/jni/quad_keys_java.cpp
 
 libquad_keys_java_la_CPPFLAGS = -Werror -Wall -pedantic \
-    -I$(abs_top_srcdir)/include
+    -I$(abs_top_srcdir)/include \
+		-I$(jni_home) \
+		-I$(jni_md_home)
+
+libquad_keys_java_la_LIBADD = \
+		$(abs_top_builddir)/lib/libquad_keys.la
 
 ./python/native/quad_keys_python.cpp: Makefile
 	swig \
@@ -33,5 +38,8 @@ libquad_keys_python_la_CPPFLAGS = -Werror -Wall -pedantic \
 
 libquad_keys_python_la_SOURCES = \
     ./python/native/quad_keys_python.cpp
+
+libquad_keys_python_la_LIBADD = \
+		$(abs_top_builddir)/lib/libquad_keys.la
 
 

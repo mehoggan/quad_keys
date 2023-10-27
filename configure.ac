@@ -47,8 +47,9 @@ AC_CONFIG_FILES([
 ])
 
 AC_SUBST(java_home, [$JAVA_HOME])
-AC_MSG_RESULT([java_home=$java_home])
 FIND_JNI([$java_home], [jni_home])
-AC_MSG_RESULT([jni_home=$jni_home])
+AC_SUBST([jni_home])
+FIND_JNI_MD([$java_home], [jni_md_home])
+AC_SUBST([jni_md_home])
 
 AC_OUTPUT
