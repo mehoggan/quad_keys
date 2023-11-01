@@ -21,8 +21,8 @@ jobs:
       run: autoheader
     - name: automake
       run: automake --force-missing --add-missing
-    - name: autoconf
-      run: autoconf
+    - name: autoreconf
+      run: autoreconf -vis
     - name: configure
       run: ./configure
     - name: make
