@@ -36,7 +36,7 @@ AM_CONDITIONAL([LINUX], [test "$build_linux" = "yes"])
 AM_CONDITIONAL([OSX], [test "$build_mac" = "yes"])
 LT_INIT()
 
-AX_CXX_COMPILE_STDCXX([17], [noext], [])
+AX_CXX_COMPILE_STDCXX([17], [noext], [mandatory])
 AC_CONFIG_SRCDIR([lib/quad_key.cpp])
 
 AC_CONFIG_FILES([

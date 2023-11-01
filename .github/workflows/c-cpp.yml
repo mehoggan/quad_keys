@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: autoconf-archive install
+      run: apt-get install -y autoconf-archive
     - name: libtoolize
       run: libtoolize --force
     - name: aclocal
@@ -22,7 +24,7 @@ jobs:
     - name: automake
       run: automake --force-missing --add-missing
     - name: autoreconf
-      run: autoreconf -vis
+      run: autoreconf -visf
     - name: configure
       run: ./configure
     - name: make
