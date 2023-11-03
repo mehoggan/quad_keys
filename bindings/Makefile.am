@@ -21,6 +21,7 @@ libquad_keys_java_la_SOURCES = \
 	./java/quad_keys/src/main/jni/quad_keys_java.cpp
 
 libquad_keys_java_la_CPPFLAGS = -Werror -Wall -pedantic \
+	-Wno-strict-aliasing \
 	-I$(abs_top_srcdir)/include \
 	-I$(jni_home) \
 	-I$(jni_md_home)

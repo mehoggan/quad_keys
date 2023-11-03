@@ -1,5 +1,6 @@
 #include "quad_keys/osgeo_system.h"
 
+#include <cstring>
 
 #define to_double(d) static_cast<double>((d))
 #define to_uint32(u) static_cast<std::uint32_t>((u))
