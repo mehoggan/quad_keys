@@ -663,7 +663,6 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
-python_includes
 jni_md_home
 jni_home
 java_home
@@ -700,6 +699,7 @@ CXXDEPMODE
 ac_ct_CXX
 CXXFLAGS
 CXX
+python_includes
 host_os
 host_vendor
 host_cpu
@@ -5007,6 +5007,8 @@ build_mac=no
 case "${host_os}" in
 	linux*)
 		build_linux=yes
+    python_includes=$(dirname $(find  -name "Python.h"))
+
 		ac_header= ac_cache=
 for ac_item in $ac_header_c_list
 do
@@ -5596,6 +5598,8 @@ printf "%s\n" "\"Going to use $CXX as compiler in Linux environment.\"" >&6; }
 		;;
 	darwin*)
 		build_mac=yes
+    python_includes=$(dirname $(find "/Library/Frameworks/Python.framework/Versions/3.9/include/python3.9" -name "Python.h"))
+
     ac_ext=cpp
 ac_cpp='$CXXCPP $CPPFLAGS'
 ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
@@ -18386,8 +18390,6 @@ java_home=$JAVA_HOME
 jni_home=$(dirname $(find $java_home -name "jni.h"))
 
 jni_md_home=$(dirname $(find $java_home -name "jni_md.h"))
-
-python_includes=$(dirname $(find $(dirname $(dirname $(which python3))) -name Python.h))
 
 
 cat >confcache <<\_ACEOF

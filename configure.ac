@@ -15,6 +15,8 @@ build_mac=no
 case "${host_os}" in
 	linux*)
 		build_linux=yes
+    FIND_PYTHON_H([], [python_includes])
+    AC_SUBST([python_includes])
 		AC_CHECK_HEADERS([limits.h])
 		AC_CHECK_LIB(m, sincos,
 			[LIBS="-lm $LIBS" AC_DEFINE(HAVE_LIBM, 1, [Define if you have m.])],
@@ -25,6 +27,9 @@ case "${host_os}" in
 		;;
 	darwin*)
 		build_mac=yes
+    FIND_PYTHON_H(["/Library/Frameworks/Python.framework/Versions/3.9/include/python3.9"],
+      [python_includes])
+    AC_SUBST([python_includes])
     AC_PROG_CXX([clang++])
     AC_MSG_RESULT(["Going to use $CXX as compiler in OSx environtment."])
 		;;
@@ -51,7 +56,5 @@ FIND_JNI([$java_home], [jni_home])
 AC_SUBST([jni_home])
 FIND_JNI_MD([$java_home], [jni_md_home])
 AC_SUBST([jni_md_home])
-FIND_PYTHON_H([python_includes])
-AC_SUBST([python_includes])
 
 AC_OUTPUT

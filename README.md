@@ -14,7 +14,7 @@ If you wish to clone all dependencies at once at the time of clone run:
 
 ```sh
 > brew install autoconf automake libtool autoconf-archive googletest gradle \
-  python3
+    python3 swig gradle
 ```
 
 ## Fedora DNF System Setup
