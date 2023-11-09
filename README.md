@@ -68,7 +68,7 @@ If you wish to clone all dependencies at once at the time of clone run:
 > pushd ./bindings/python
 > python setup.py build_ext --inplace
 > cp _quad_keys*.so ./quad_keys/
-> DYLD_LIBRARY_PATH=${root_dir}/build/lib/.libs/ pytest
+> DYLD_LIBRARY_PATH=${PWD}/../../build/lib/.libs/ pytest
 > popd
 ```
 
