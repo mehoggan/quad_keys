@@ -20,15 +20,6 @@ project.logger.info("project.buildDir = ${project.buildDir}")
 def library_path = "${project.buildDir}${File.separator}libs"
 project.logger.info("library_path = ${library_path}")
 
-def shared_lib_ext_wildcard = ""
-if (Os.isFamily(Os.FAMILY_MAC)) {
-  project.logger.info("Os is OsX")
-  shared_lib_ext_wildcard = "**/*.dylib*"
-} else if (Os.isFamily(Os.FAMILY_UNIX)) {
-  project.logger.info("Os is Unix")
-  shared_lib_ext_wildcard = "**/*.so*"
-}
-
 task copyLibs(type: Copy) {
   description = "Copies output of cmake build into same directory as " +
           " the jni built library."
@@ -60,6 +51,13 @@ task copyBindings(type: Copy) {
 compileJava.dependsOn copyLibs
 compileJava.dependsOn copyBindings
 
+task lsBuild(type: Exec) {
+  commandLine 'sh', '-x', 'ls', '-l', '$System.env.PWD'
+  commandLine 'sh', '-x', 'echo', '=====shit====='
+}
+
+compileTestJava.dependsOn lsBuild
+
 test {
   testLogging {
     showStandardStreams = true
@@ -68,7 +66,11 @@ test {
 
 tasks.withType(Test) {
   systemProperty "java.library.path", "${project.buildDir}${File.separator}libs"
-  environment("DYLD_LIBRARY_PATH", "${library_path}")
+  if (Os.isFamily(Os.FAMILY_MAC)) {
+    environment("DYLD_LIBRARY_PATH", "${library_path}")
+  } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+    environment("LD_LIBRARY_PATH", "${library_path}")
+  }
 }
 
 dependencies {

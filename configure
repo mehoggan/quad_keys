@@ -5007,7 +5007,7 @@ build_mac=no
 case "${host_os}" in
 	linux*)
 		build_linux=yes
-    python_includes=$(dirname $(find  -name "Python.h"))
+    python_includes=$(dirname $(find "/usr/include/python3.10" -name "Python.h"))
 
 		ac_header= ac_cache=
 for ac_item in $ac_header_c_list
