@@ -15,7 +15,7 @@ build_mac=no
 case "${host_os}" in
 	linux*)
 		build_linux=yes
-    FIND_PYTHON_H([], [python_includes])
+    FIND_PYTHON_H(["/usr/include/python3.10"], [python_includes])
     AC_SUBST([python_includes])
 		AC_CHECK_HEADERS([limits.h])
 		AC_CHECK_LIB(m, sincos,

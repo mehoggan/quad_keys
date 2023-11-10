@@ -17,7 +17,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential \
   autotools-dev autoconf-archive libgtest-dev libgmock-dev checkinstall \
   libtool libtool-bin make packaging-dev swig
 
-RUN apt install -y default-jdk
+RUN apt install -y default-jdk python-dev-is-python3 gradle python3-pytest \
+  python3-pip
+
+RUN pip3 install --no-input pytest
 
 # Add the source and build dependencies (actual setup)
 RUN mkdir -p /home/quad_keys
@@ -38,3 +41,16 @@ RUN rm -f ./configure config.* ./ltmain.sh m4/libtool.m4 m4/ltversion.m4 \
 
 # Verify the build was successful.
 RUN cd build && make check
+
+# Verify java/gradle build works
+RUN cd ./bindings/java/quad_keys && \
+    rm -f gradlew gradlew.bat && \
+    gradle build
+
+RUN pip3 install setuptools
+
+# Verify python3 build works
+RUN cd ./bindings/python && \
+  python3 setup.py build_ext --inplace && \
+  cp _quad_keys*.so ./quad_keys/ && \
+  LD_LIBRARY_PATH=${PWD}/../../build/lib/.libs/ python3 -m pytest .

@@ -1,5 +1,8 @@
 import org.apache.tools.ant.taskdefs.condition.Os
 
+// Note there are warnings and use of deprecated features to maintain compatibility with the ubuntu_22_04.docker
+// build within the <root> directory of this repository.
+
 apply plugin: 'java'
 
 repositories {
@@ -17,7 +20,7 @@ project.logger.info("project.buildDir = ${project.buildDir}")
 def library_path = "${project.buildDir}${File.separator}libs"
 project.logger.info("library_path = ${library_path}")
 
-String shared_lib_ext_wildcard = ""
+def shared_lib_ext_wildcard = ""
 if (Os.isFamily(Os.FAMILY_MAC)) {
   project.logger.info("Os is OsX")
   shared_lib_ext_wildcard = "**/*.dylib*"
@@ -26,23 +29,36 @@ if (Os.isFamily(Os.FAMILY_MAC)) {
   shared_lib_ext_wildcard = "**/*.so*"
 }
 
-tasks.register('copySharedLib', Copy) {
+task copyLibs(type: Copy) {
+  description = "Copies output of cmake build into same directory as " +
+          " the jni built library."
   from layout.buildDirectory.dir("${native_lib_dir}")
-  include(shared_lib_ext_wildcard)
   into layout.buildDirectory.dir("${project.buildDir}${File.separator}libs")
+  if (Os.isFamily(Os.FAMILY_MAC)) {
+    println "Os is OsX"
+    include("**/*.dylib*")
+  } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+    println "Os is Unix"
+    include("**/*.so*")
+  }
 }
 
-tasks.register('copySharedBindingsLib', Copy) {
+task copyBindings(type: Copy) {
+  description = "Copies output of cmake build into same directory as " +
+          " the jni built library."
   from layout.buildDirectory.dir("${native_bindings_dir}")
-  include(shared_lib_ext_wildcard)
   into layout.buildDirectory.dir("${project.buildDir}${File.separator}libs")
+  if (Os.isFamily(Os.FAMILY_MAC)) {
+    println "Os is OsX"
+    include("**/*.dylib*")
+  } else if (Os.isFamily(Os.FAMILY_UNIX)) {
+    println "Os is Unix"
+    include("**/*.so*")
+  }
 }
 
-compileJava.dependsOn(tasks.named('copySharedLib'))
-compileJava.dependsOn(tasks.named('copySharedBindingsLib'))
-
-compileTestJava.dependsOn(tasks.named('copySharedLib'))
-compileTestJava.dependsOn(tasks.named('copySharedBindingsLib'))
+compileJava.dependsOn copyLibs
+compileJava.dependsOn copyBindings
 
 test {
   testLogging {
@@ -50,7 +66,7 @@ test {
   }
 }
 
-tasks.withType(Test).configureEach {
+tasks.withType(Test) {
   systemProperty "java.library.path", "${project.buildDir}${File.separator}libs"
   environment("DYLD_LIBRARY_PATH", "${library_path}")
 }
