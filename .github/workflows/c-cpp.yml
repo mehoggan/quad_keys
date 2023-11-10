@@ -40,6 +40,6 @@ jobs:
         # - name: make distcheck
         #   run: make distcheck
     - name: test_java_bindings
-      run: cd ./bindings/java/quad_keys && rm -f gradlew gradlew.bat && gradle build
+      run: cd ./bindings/java/quad_keys && rm -f gradlew gradlew.bat && gradle build; ls -l ${PWD}
     - name: test_python_bindings
       run: cd ./bindings/python && python3 setup.py build_ext --inplace && cp _quad_keys*.so ./quad_keys/ && LD_LIBRARY_PATH=${PWD}/../../build/lib/.libs/ python3 -m pytest .
