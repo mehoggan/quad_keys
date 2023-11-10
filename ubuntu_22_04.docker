@@ -20,11 +20,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q build-essential \
 RUN apt install -y default-jdk python-dev-is-python3 gradle python3-pytest \
   python3-pip
 
-RUN pip3 install --no-input pytest
+RUN pip3 install --no-input pytest setuptools
 
 # Add the source and build dependencies (actual setup)
-RUN mkdir -p /home/quad_keys
-ADD . /home/quad_keys
+RUN mkdir -p /home/quad_keys ADD . /home/quad_keys
 WORKDIR /home/quad_keys
 
 # Now build the actual project
@@ -46,8 +45,6 @@ RUN cd build && make check
 RUN cd ./bindings/java/quad_keys && \
     rm -f gradlew gradlew.bat && \
     gradle build
-
-RUN pip3 install setuptools
 
 # Verify python3 build works
 RUN cd ./bindings/python && \
