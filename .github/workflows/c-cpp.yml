@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: apt-setup
-      run: sudo apt-get clean && apt update
+      run: sudo apt-get clean && sudo apt update
     - name: apt-install
       run: DEBIAN_FRONTEND=noninteractive sudo apt-get install -y build-essential autotools-dev autoconf-archive libgtest-dev libgmock-dev checkinstall libtool libtool-bin make packaging-dev swig default-jdk python-dev-is-python3 gradle python3-pytest python3-pip
     - name: pip-install
