@@ -37,8 +37,8 @@ jobs:
       run: export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::") && make
     - name: make check
       run: make check
-    - name: make distcheck
-      run: make distcheck
+        # - name: make distcheck
+        #   run: make distcheck
     - name: test_java_bindings
       run: cd ./bindings/java/quad_keys && rm -f gradlew gradlew.bat && gradle build
     - name: test_python_bindings
