@@ -52,8 +52,8 @@ compileJava.dependsOn copyLibs
 compileJava.dependsOn copyBindings
 
 task lsBuild(type: Exec) {
-  commandLine 'sh', '-x', 'ls', '-l', '$System.env.PWD'
-  commandLine 'sh', '-x', 'echo', '=====shit====='
+  commandLine 'sh', '-c', 'ls', '-l', '$System.env.PWD'
+  commandLine 'sh', '-c', 'echo', '=====shit====='
 }
 
 compileTestJava.dependsOn lsBuild
