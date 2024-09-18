@@ -3,18 +3,9 @@
 
 #include <string>
 
-namespace quad_keys
-{
-  enum class Type
-  {
-    Bing,
-    LatLon,
-    Morton,
-    None,
-    OsGeo,
-    UlpQnr
-  };
+namespace quad_keys {
+enum class Type { Bing, LatLon, Morton, None, OsGeo, UlpQnr };
 
-  std::string type_to_string(Type t);
-}
+std::string type_to_string(Type t);
+}  // namespace quad_keys
 #endif
